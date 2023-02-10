@@ -1,0 +1,6 @@
+!./main_SubsetSumOpt_1 1 20 50000 1
+
+recursive exhaustive CPU, res: 25616, elapsed: 187310.940981
+DP v1 CPU, res: 25616, elapsed: 66.305876
+DP v2 CPU, res: 25616, elapsed: 92.670202
+DP v3 CPU, res: 25616, elapsed: 51.218033
