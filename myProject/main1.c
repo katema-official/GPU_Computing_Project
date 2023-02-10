@@ -1,10 +1,12 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <assert.h>
+#include <math.h>
 #include "../common.h"
 
-#define max(a,b) (((a) > (b)) ? (a) : (b))
-
+#define DEBUG_1 1
+#define TRUE 1
+#define FALSE 0
 
 //------------------------------------------------------------------------------
 //------------------------------------------------------------------------------
@@ -12,46 +14,97 @@
 //------------------------------------------------------------------------------
 //------------------------------------------------------------------------------
 
-//v1: build a dynamic programming matrix of n_items rows and capacity+1 columns.
+//recursive approach with exhaustive search
+int subsetSumDecision_recursive(int* volumes, int capacity, int n_volumes){
+  if(capacity == 0) return TRUE;
+  if(n_volumes == 0) return FALSE;
+
+  return 
+    subsetSumDecision_recursive(&(volumes[1]), capacity - volumes[0], n_volumes-1) ||
+    subsetSumDecision_recursive(&(volumes[1]), capacity, n_volumes-1);
+
+}
+
+//just if someone wants to be sure, here is a version that also gives the elements of the solution
+//NOT NULL in solution = this is the solution that solves the problem with TRUE
+//NULL in solution: FALSE
+int* subsetSumDecision_recursive_solFound(int* volumes, int capacity, int n_volumes, int idx_current_elem){
+  if(capacity == 0){
+    int* sol = malloc(n_volumes * sizeof(int));
+    for(int i = 0; i < n_volumes; i++){
+      sol[i] = 0;
+    }
+    return sol;
+  }
+
+  if(n_volumes == idx_current_elem) return NULL;
+
+  int* a_sol = subsetSumDecision_recursive_solFound(volumes, capacity - volumes[idx_current_elem], n_volumes, idx_current_elem + 1);
+  int* b_sol = subsetSumDecision_recursive_solFound(volumes, capacity, n_volumes, idx_current_elem + 1);
+
+  if((a_sol == NULL) && (b_sol == NULL)){
+    return NULL;
+  }
+
+  if(a_sol != NULL){
+    a_sol[idx_current_elem] = 1;
+    return a_sol;
+  }
+
+  if(b_sol != NULL){
+    b_sol[idx_current_elem] = 0;
+    return b_sol;
+  }
+}
+
+
+
+
+
+//Dynamic programming approach
+
+//v1: build a dynamic programming matrix of n_items+1 rows and capacity+1 columns.
 //Inefficient from memory point of view
 //Inefficient because some operations are perfermed even when not necessary
 
-int solve_knapsack_v1(int* volumes, int n_items, int capacity){
-    int** B = (int**) malloc((n_items+1)*sizeof(int*));
+unsigned char subsetSumDecision_DP_v1(int* volumes, int n_items, int capacity){
+    unsigned char** B = (unsigned char**) malloc((n_items+1)*sizeof(unsigned char*));
     for(int i = 0; i < n_items+1; i++){
-        B[i] = (int*) malloc((capacity+1)*sizeof(int));
+        B[i] = (unsigned char*) malloc((capacity+1)*sizeof(unsigned char));
         if(B[i] == NULL){
             printf("Allocation failed\n");
         }
     }
     
-    //initialization: the subproblems without items or capacity have as best solution 0
+    //initialization: the subproblems without items and capacity 0 admit a solution
     for(int i = 0; i < n_items+1; i++){
-        B[i][0] = 0;
+        B[i][0] = TRUE;
     }
-    for(int i = 0; i < capacity+1; i++){
-        B[0][i] = 0;
+    //initialization: the subproblems without items but a bit of capacity don't admit a solution
+    for(int i = 1; i < capacity+1; i++){
+        B[0][i] = FALSE;
     }
-    printf("aaa1\n");
+
+    unsigned char res = 0;
 
     //now, the value of each cell of each row can be fully determined by the the previous row
     for(int row = 1; row < n_items + 1; row++){
         int volume_row = volumes[row-1];
         for(int col = 1; col < capacity + 1; col++){
-            if(volume_row <= col){  //this item could be part of the solution
-                if((volume_row + B[row-1][col - volume_row]) > B[row-1][col]){
-                    B[row][col] = volume_row + B[row-1][col - volume_row];
-                }else{
-                    B[row][col] = B[row-1][col];
-                }
+            if(col >= volume_row){
+              B[row][col] = B[row - 1][col] || B[row - 1][col - volume_row];
             }else{
-                B[row][col] = B[row - 1][col];  //the volume of this item is more than the current capacity
+              B[row][col] = B[row - 1][col];  //copy the previous entry
             }
         }
-    }
 
-    int res = B[n_items][capacity];
-    printf("aaa2\n");
+        if(DEBUG_1) printf("temporary result: %d\n", B[row][capacity]);
+
+        if(B[row][capacity] == 1){
+            res = B[row][capacity];
+            break;
+        }
+    }
 
     for(int i = 0; i < n_items+1; i++){
         free(B[i]);
@@ -61,37 +114,34 @@ int solve_knapsack_v1(int* volumes, int n_items, int capacity){
     return res;
 }
 
-
-
-
-
 //v2: same as before, but using only 2 rows to use less memory. There is however the added complexity of copying the new row in the old one.
 //Inefficient because of multiple memory copies
 //Still inefficient because some operations are performed even when not necessary
 
-int solve_knapsack_v2(int* volumes, int n_items, int capacity){
-    int** B = (int**) malloc(2*sizeof(int*));
+unsigned char subsetSumDecision_DP_v2(int* volumes, int n_items, int capacity){
+    unsigned char** B = (unsigned char**) malloc(2*sizeof(unsigned char*));
     for(int i = 0; i < 2; i++){
-        B[i] = (int*) malloc((capacity+1)*sizeof(int));
+        B[i] = (unsigned char*) malloc((capacity+1)*sizeof(unsigned char));
         if(B[i] == NULL){
-            printf("Allocation failed\n");
+          printf("Allocation failed\n");
         }
     }
     
-    //initialization: the subproblems without items or capacity have as best solution 0
     for(int i = 0; i < 2; i++){
-        B[i][0] = 0;
+        B[i][0] = TRUE;
     }
-    for(int i = 0; i < capacity+1; i++){
-        B[0][i] = 0;
+    for(int i = 1; i < capacity+1; i++){
+        B[0][i] = FALSE;
     }
+
+    unsigned char res = 0;
 
     //now, the value of each cell of each row can be fully determined by the the previous row
     for(int iteration = 0; iteration < n_items; iteration++){
         int volume_row = volumes[iteration];
         for(int col = 1; col < capacity + 1; col++){
-            if(volume_row <= col){  //this item could be part of the solution
-                B[1][col] = max(volume_row + B[0][col - volume_row], B[0][col]);
+            if(col >= volume_row){  //this item could be part of the solution
+                B[1][col] = B[0][col] || B[0][col - volume_row];
             }else{
                 B[1][col] = B[0][col];  //the volume of this item is more than the current capacity
             }
@@ -102,9 +152,14 @@ int solve_knapsack_v2(int* volumes, int n_items, int capacity){
             B[0][col] = B[1][col];
         }
 
-    }
+        if(DEBUG_1) printf("temporary result: %d\n", B[0][capacity]);
 
-    int res = B[1][capacity];
+        if(B[0][capacity] == 1){
+            res = B[1][capacity];
+            break;
+        }
+
+    }
 
     for(int i = 0; i < 2; i++){
         free(B[i]);
@@ -114,86 +169,44 @@ int solve_knapsack_v2(int* volumes, int n_items, int capacity){
     return res;
 }
 
+//v3: doing everything in one row. There is no overhead because of copy operations.
+//We also avoid performing useless operations.
 
-
-
-
-//v3: doing everything in one row. There is no overhead because of copy operations
-//Inefficient because some of the last operations could still be avoided
-//side note: might work more efficiently if the elements are already ordered
-
-int solve_knapsack_v3(int* volumes, int n_items, int capacity){
+unsigned char subsetSumDecision_DP_v3(int* volumes, int n_items, int capacity){
     if(capacity == 0 || n_items == 0){
         return 0;
     }
-    int* B = (int*) malloc((capacity+1)*sizeof(int));
-    for(int i = capacity; i >= volumes[0]; i--){
-        B[i] = volumes[0];
+    unsigned char* B = (unsigned char*) malloc((capacity+1)*sizeof(unsigned char));
+    for(int i = capacity; i >0; i--){
+        B[i] = FALSE;
     }
-    for(int i = volumes[0]-1; i >= 0; i--){
-        B[i] = 0;
-    }
+    B[0] = TRUE;
+
+    unsigned char res = 0;
 
     //now, the value of each cell of each row can be fully determined by the the previous row,
     //that is actually the same row
-    for(int iteration = 1; iteration < n_items; iteration++){
+    for(int iteration = 0; iteration < n_items; iteration++){
         int volume_row = volumes[iteration];
-        for(int col = capacity; col >=0; col--){
-            if(col >= volume_row){
-                B[col] = max(volume_row + B[col - volume_row], B[col]);
-            }//else don't do anything, no need to update.
+        for(int col = capacity; col >=volume_row; col--){
+            B[col] = B[col] || B[col - volume_row];
+            //printf("B[%d] = %d ", col, B[col]);
+        }
+
+        if(DEBUG_1) printf("temporary result: %d\n", B[capacity]);
+
+        if(B[capacity] == 1){
+            res = B[capacity];
+            break;
         }
     }
 
-    int res = B[capacity];
     free(B);
     return res;
 }
 
 
 
-
-
-//v4: the last elements require less calculations
-int solve_knapsack_v4(int* volumes, int n_items, int capacity){
-    if(capacity == 0 || n_items == 0){
-        return 0;
-    }
-    int* B = (int*) malloc((capacity+1)*sizeof(int));
-    for(int i = capacity; i >= volumes[0]; i--){
-        B[i] = volumes[0];
-    }
-    for(int i = (volumes[0]-1); i >= 0; i--){
-        B[i] = 0;
-    }
-
-    //now, the value of each cell of each row can be fully determined by the the previous row,
-    //that is actually the same row
-    for(int iteration = 1; iteration < n_items; iteration++){
-        int capacity_copy = capacity;
-        int min_index = 0;
-        for(int i = iteration+1; i < n_items; i++){
-            capacity_copy -= volumes[i];
-        }
-
-        if(capacity_copy <= 0){
-            min_index = 0;
-        }else{
-            min_index = capacity_copy;
-        }
-
-        int volume_row = volumes[iteration];
-        for(int col = capacity; col >=min_index; col--){
-            if(col >= volume_row){
-                B[col] = max(volume_row + B[col - volume_row], B[col]);
-            }//else don't do anything, no need to update.
-        }
-    }
-
-    int res = B[capacity];
-    free(B);
-    return res;
-}
 
 
 
@@ -201,56 +214,11 @@ int cmpfunc_increasing(const void * a, const void * b) {
    return (*(int*)a - *(int*)b);
 }
 
-int cmpfunc_decreasing(const void * a, const void * b) {
-   return (*(int*)b - *(int*)a);
-}
-
-
-
-
-
 //------------------------------------------------------------------------------
 //------------------------------------------------------------------------------
 //-----------------------------------GPU ZONE-----------------------------------
 //------------------------------------------------------------------------------
 //------------------------------------------------------------------------------
-
-__global__ void kernel_v1_a(int v, int* res_row, int capacity){
-  int idx = blockIdx.x * blockDim.x + threadIdx.x;
-
-  if(idx < v){
-    //the first item can't be placed if the current capacity is less than its volume
-    res_row[idx] = 0;
-  }else{
-    if(idx <= capacity + 1){
-      //just place the item
-      res_row[idx] = v;
-    }
-  }
-}
-
-__global__ void kernel_v1_b(int v, int* input_row, int* output_row, int capacity){
-  int idx = blockIdx.x * blockDim.x + threadIdx.x;
-
-  //each thread needs to put in the corrisponding cell (given by idx) the max
-  //value between:
-  //-the current one and the one where 
-  //-the value of this capacity minus v, plus v
-  
-  if(idx >= v){
-    //we can start thinking of placing the item only when there is enough
-    //current capacity
-    output_row[idx] = max(v + input_row[idx - v], input_row[idx]);
-  }else{
-    if(idx <= capacity + 1){
-      //for the first elements, just copy the previous entry
-      output_row[idx] = input_row[idx];
-    }
-  }
-}
-
-
-
 
 
 //to run as:
@@ -258,10 +226,39 @@ __global__ void kernel_v1_b(int v, int* input_row, int* output_row, int capacity
 
 int main(int argc, char **argv){
 
+  int prova[4] = {6,3,5,2};//{2,3,5,6}; 
+  int cap = 14;
+  int res = subsetSumDecision_recursive(prova, cap, 4);
+  printf("RES: %d\n", res);
+
+  int* sol = subsetSumDecision_recursive_solFound(prova, cap, 4, 0);
+  if(sol != NULL){
+    printf("SOL: ");
+    for(int i = 0; i < 4; i++){
+      if(sol[i] == 1){
+        printf("%d, ", prova[i]);
+      }
+    }
+    printf("\n");
+    free(sol);
+  }
+
+  unsigned char res_byte = subsetSumDecision_DP_v1(prova, 4, cap);
+  printf("RES AGAIN: %d\n", res_byte);
+
+  res_byte = subsetSumDecision_DP_v2(prova, 4, cap);
+  printf("RES AGAIN: %d\n", res_byte);
+
+  res_byte = subsetSumDecision_DP_v3(prova, 4, cap);
+  printf("RES AGAIN: %d\n", res_byte);
+
+  int log;
+  log = log2(16);
+  printf("log2(16) = %d", log);
   
 
   int n_vols = 32;
-  int vols[n_vols];
+  int* vols;
   int capacity = 10000;//12345678;
 
   //the first arguments tells if the sequence of volumes must be randomly generated (1)
@@ -278,6 +275,7 @@ int main(int argc, char **argv){
       n_vols = _n_vols;
     }
   }
+  vols = (int*) malloc(n_vols * sizeof(int));
 
   //the third argument is the total capacity. If 0, the default one is used.
   if(argc > 3){
@@ -320,130 +318,32 @@ int main(int argc, char **argv){
     }
   }
 
+  //actually, reasoning about it, the array of volumes must be ordered from
+  //lower volume to higher volume, otherwise some solutions might be lost
+  qsort(vols, n_vols, sizeof(int), cmpfunc_increasing);
+
+  //check the volumes
+  if(DEBUG_1){
+    for(int i = 0; i < n_vols; i++){
+      printf("vols[%d] = %d\n", i, vols[i]);
+    }
+  }
 
   
   //----------------------------------------------------------------------------
   //-------------------------------CPU ALGORITHMS-------------------------------
   //----------------------------------------------------------------------------
   
+  
   double start, end;
 
-  start = seconds();
-  int res = solve_knapsack_v1(vols, n_vols, capacity);
-  end = seconds() - start;
-  printf("v1 CPU, res: %d, elapsed: %f\n", res, end * 1000);
-
-
-  start = seconds();
-  res = solve_knapsack_v2(vols, n_vols, capacity);
-  end = seconds() - start;
-  printf("v2 CPU, res: %d, elapsed: %f\n", res, end * 1000);
-
-
-  start = seconds();
-  res = solve_knapsack_v3(vols, n_vols, capacity);
-  end = seconds() - start;
-  printf("v3 CPU, res: %d, elapsed: %f\n", res, end * 1000);
-
-  //let's try with the ordered volumes to see if we have a speedup
-  int vols_ordered_increasing[n_vols];
-  for(int i = 0; i < n_vols; i++){
-    vols_ordered_increasing[i] = vols[i];
-  }
-  qsort(vols_ordered_increasing, n_vols, sizeof(int), cmpfunc_increasing);  
-  start = seconds();
-  res = solve_knapsack_v3(vols_ordered_increasing, n_vols, capacity);
-  end = seconds() - start;
-  printf("v3 o CPU, res: %d, elapsed: %f\n", res, end * 1000);
-
-  //let's try also with the ordered volumes, but in reverse
-  int vols_ordered_decreasing[n_vols];
-  for(int i = 0; i < n_vols; i++){
-    vols_ordered_decreasing[i] = vols[i];
-  }
-  qsort(vols_ordered_decreasing, n_vols, sizeof(int), cmpfunc_decreasing);  
-  start = seconds();
-  res = solve_knapsack_v3(vols_ordered_decreasing, n_vols, capacity);
-  end = seconds() - start;
-  printf("v3 ro CPU, res: %d, elapsed: %f\n", res, end * 1000);
-
-
-  start = seconds();
-  res = solve_knapsack_v4(vols, n_vols, capacity);
-  end = seconds() - start;
-  printf("v4 CPU, res: %d, elapsed: %f\n", res, end * 1000);
-
-  //let's try (again) with the ordered volumes to see if we have a speedup
-  start = seconds();
-  res = solve_knapsack_v4(vols_ordered_increasing, n_vols, capacity);
-  end = seconds() - start;
-  printf("v4 o CPU, res: %d, elapsed: %f\n", res, end * 1000);
-
-  //let's try also with the ordered volumes, but in reverse
-  start = seconds();
-  res = solve_knapsack_v4(vols_ordered_decreasing, n_vols, capacity);
-  end = seconds() - start;
-  printf("v4 ro CPU, res: %d, elapsed: %f\n", res, end * 1000);
 
 
 
-  //----------------------------------------------------------------------------
-  //-------------------------------GPU ALGORITHMS-------------------------------
-  //----------------------------------------------------------------------------
-
-  dim3 block(1024);
-  dim3 grid((capacity + 1) + block.x - 1);
-
-
-  //first, we need to declare host and device memory, and initialize it
-  
-  int* row_h = (int*) malloc((capacity + 1) * sizeof(int));
-
-  int *old_row_d, *new_row_d;
-  cudaMalloc(&old_row_d, capacity + 1);
-  cudaMalloc(&new_row_d, capacity + 1);
-
-  start = seconds();
-  cudaEvent_t eStart, eEnd;
-  cudaEventCreate(&eStart);
-  cudaEventCreate(&eEnd);
-  cudaEventRecord(eStart);
-
-  //first step: create the initial row
-  kernel_v1_a<<<grid, block>>>(vols[0], old_row_d, capacity);
-  cudaDeviceSynchronize();
-  cudaMemcpy(row_h, old_row_d, capacity + 1, cudaMemcpyDeviceToHost);
-
-  //second step: create all the subsequent rows
-  for(int r = 1; r < n_vols; r++){
-    cudaMemcpy(old_row_d, row_h, capacity + 1, cudaMemcpyHostToDevice);
-    kernel_v1_b<<<grid, block>>>(vols[r], old_row_d, new_row_d, capacity);
-    cudaDeviceSynchronize();
-    cudaMemcpy(row_h, new_row_d, capacity + 1, cudaMemcpyDeviceToHost);
-  }
-
-  cudaEventRecord(eEnd);
-  cudaEventSynchronize(eEnd);
-
-  float msEvent;
-  cudaEventElapsedTime(&msEvent, eStart, eEnd);
-
-  end = seconds() - start;
-  printf("v1 GPU, res: %d, elapsed: %f, event time: %f\n", row_h[capacity], end * 1000, msEvent);
 
 
 
-  //finally, release the memory
-
-  cudaEventDestroy(eStart);
-  cudaEventDestroy(eEnd);
-
-  free(row_h);
-
-  cudaFree(old_row_d);
-  cudaFree(new_row_d);
 
 
-  return 0;
 
 }
