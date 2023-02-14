@@ -3,3 +3,6 @@ compile_main1: main1.cu CPU_dp.cu CPU_exhaustive_dec.cu CPU_exhaustive_opt.cu GP
 
 exec_main1_1:
 	./main1 1 100 1000000000 1
+
+exec_main1_2:
+	./main1 1 100 10000000000 1
