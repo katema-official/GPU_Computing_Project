@@ -2,64 +2,46 @@
 #include <string.h>
 #include <stdlib.h>
 #include <math.h>
+#include <unistd.h>
 
 #define BLOCK_DIM_X 128
 #define MAX(a,b) (((a)>(b))?(a):(b))
-#define N 10	//THIS IS PROBABLY THE MOST IMPORTANT THING: THE NUMBER OF VOLUMES IN THE PROBLEM (Must be set a priori, before COMPILING the code!)
+#define N 50	//THIS IS PROBABLY THE MOST IMPORTANT THING: THE NUMBER OF VOLUMES IN THE PROBLEM (Must be set a priori, before COMPILING the code!)
 
 
 //First, we need a very simple procedure to generate the bit string that will represent the current index
 //of the exhaustive search.
 //n: the total number of different items (copies included)
-char* produce_initial_string(int n){
-	char* res = (char*) malloc(n*sizeof(char));
-	for(int i = 0; i < n; i++){
+void produce_initial_string(char res[N]){
+	for(int i = 0; i < N; i++){
 		res[i] = '0';
 	}
-	return res;
 }
 
-//Second, to sum binary strings together, we need a procedure thatn makes a bit string as long as another one
-//Adapted from: https://www.geeksforgeeks.org/add-two-bit-strings/
-//We always assume that the length of to_modify is less or equal than n
-//Returns to_modify of the right length
-__host__ __device__ char* extend_bit_string(int n, char* to_modify, int n_to_modify){	
-	char* res = (char*) malloc(n * sizeof(char));
-	int j = n_to_modify - 1;
-	for(int i = n - 1; i >= n - n_to_modify; i--){
-		res[i] = to_modify[j];
-		j--;
-	}
-	for(int i = 0; i < n - n_to_modify; i++){
-		res[i] = '0';
-	}
-	return res; 
-}
-
-//Third, we need the actual code that sums two bit strings of the same length.
-//This assumes that the two strings have the same length n.
+//Second, we need the code that sums two bit strings of the same length.
+//This assumes that the two strings have the same length N.
 //The result is stored in the first string.
 //Adapted from: https://www.geeksforgeeks.org/add-two-bit-strings/
-__host__ __device__ void add_bit_strings(char** str1, char* str2, int n)
+__host__ __device__ void add_bit_strings(char str1[N], char str2[N])
 {
 	//Initialize carry
 	int carry = (int) '0'; 
 
 	//Add all bits one by one
-	for (int i = n - 1; i >= 0; i--)
+	for (int i = N - 1; i >= 0; i--)
 	{
-			int firstBit = (int) (*str1)[i];
-			int secondBit = (int) str2[i];
+		int firstBit = (int) str1[i];
+		int secondBit = (int) str2[i];
 
-			//Boolean expression for sum of 3 bits
-			int sum = (firstBit ^ secondBit ^ carry);
+		//Boolean expression for sum of 3 bits
+		int sum = (firstBit ^ secondBit ^ carry);
 
-			(*str1)[i] = (char) sum;
+		str1[i] = (char) sum;
 
-			// boolean expression for 3-bit addition
-			carry = (firstBit & secondBit) |
-								 (secondBit & carry) |
-									(firstBit & carry);
+		// boolean expression for 3-bit addition
+		carry = (firstBit & secondBit) |
+								(secondBit & carry) |
+								(firstBit & carry);
 	}
 
 	// if overflow, then add a leading 1
@@ -70,14 +52,14 @@ __host__ __device__ void add_bit_strings(char** str1, char* str2, int n)
 	}
 }
 
-//Fourth, a function that translates an integer into its bit string representation
-__host__ __device__ char* convert_to_binary(int n){
+//Third, a function that translates an integer into its bit string representation.
+//The char array in which the binary representation will be conserved is passed as argument
+__host__ __device__ void convert_to_binary(char res[N], int number){
 	int k;
-	int l = (int) log2f(n) + 1;
-	char* res = (char*) malloc(l * sizeof(char));
-	int i = 0;
+	int l = (int) log2f(number) + 1;
+	int i = N - l;
 	for(int c = l - 1; c >= 0; c--){
-		k = n >> c;
+		k = number >> c;
 		if (k & 1){
 			res[i] = '1';
 		}else{
@@ -85,12 +67,14 @@ __host__ __device__ char* convert_to_binary(int n){
 		}
 		i++;
 	}
-	return res;
+	for(int c = 0; c < N - l; c++){
+		res[c] = '0';
+	}
 }
 
-//Fifth, a function that checks whether two binary strings of the same length are the same or not
-int equal_bit_strings(char* str1, char* str2, int n){
-	for(int i = 0; i < n; i++){
+//Fourth, a function that checks whether two binary strings of the same length are the same or not
+int equal_bit_strings(char* str1, char* str2){
+	for(int i = 0; i < N; i++){
 		if(str1[i] != str2[i]){
 			return 0;
 		}
@@ -99,11 +83,11 @@ int equal_bit_strings(char* str1, char* str2, int n){
 	
 }
 
-//Sixth, a function that, given a binary string of n_volumes and the array of volumes, returns the
+//Fifth, a function that, given a binary string of n_volumes and the array of volumes, returns the
 //sum of the volumes with entry 1 in the binary string
-__host__ __device__ int value_of_solution(char* bit_string, int* volumes, int n){
+__host__ __device__ int value_of_solution(char bit_string[N], int volumes[N]){
 	int sum = 0;
-	for(int i = 0; i < n; i++){
+	for(int i = 0; i < N; i++){
 		sum = sum + ((bit_string[i] - '0') * volumes[i]);
 	}
 	return sum;
@@ -129,29 +113,37 @@ int comp_decr(const void * a, const void * b)
 //The idea is:
 //each thread, given the current global_index_counter and its thread+block index, determines its local index.
 //Then, it uses that index (together with the volumes) to compute the solution of this node of the exponential tree.
-__global__ void kernel_exhaustive(int* volumes, int n_volumes, int capacity, char* global_index_counter, int* partial_results){
+__global__ void kernel_exhaustive(int volumes[N], int capacity, char global_index_counter[N], int* partial_results){
 	//First: compute the global grid index of this thread.
 	int idx = blockIdx.x * blockDim.x + threadIdx.x;
 
-	//Second: convert it to its binary, extended representation.
-	char* binary_idx = convert_to_binary(idx);
-	char* extended_binary_idx = extend_bit_string(n_volumes, binary_idx, (int) log2f(idx) + 1);
-	printf("HIUIIII, idx = %d\n", idx);
-	free(binary_idx);
-	binary_idx = extended_binary_idx;
+	//Second: convert it to its binary representation.
+	char binary_idx[N];
+	convert_to_binary(binary_idx, idx);
+
+	//Third: make a copy of the global index counter
+	char global_index_counter_local[N];
+	for(int i = 0; i < N; i++){
+		global_index_counter_local[i] = global_index_counter[i];
+	}
 
 	//Third: add this value to the global_index_counter passed as argument
-	add_bit_strings(&global_index_counter, binary_idx, n_volumes);
+	add_bit_strings(global_index_counter_local, binary_idx);
+
+	/*printf("THIS THREAD'S BIT STRING: ");
+	for(int i = 0; i < N; i++){
+		printf("idx = %d, %d-th bit: %c\n", idx, i, global_index_counter_local[i]);
+	}
+	printf("\n");*/
 
 	//Fourth: compute the current solution
-	int sum = value_of_solution(global_index_counter, volumes, n_volumes);
+	int sum = value_of_solution(global_index_counter_local, volumes);
 
 	//Fifth: if the value of the current solution is legal (does not exceed capacity), we return it. Else,
 	//We return 0. Since from all the values computed by kernel instances of this kind only the maximum
 	//is returned as final result, this does not change the correctness of the algorithm.
 	//This introduces (possibly, only in some cases) a bit of divergence, but it's just a line of code
 	//(and I mean, it's an operation that before or after has to be performed).
-	printf("sum = %d, capacity = %d\n", sum, capacity);
 	if(sum > capacity) sum = 0;
 
 	//Fifth: store it in global memory
@@ -203,7 +195,7 @@ __global__ void reduceCompleteUnrollWarps8(int *g_idata, int *g_odata, int n){
 	__syncthreads();
 	if (blockDim.x>=256 && tid < 128) idata[tid] = MAX(idata[tid], idata[tid + 128]);
 	__syncthreads();
-	if (blockDim.x>=128 && tid < 64) idata[tid] += MAX(idata[tid], idata[tid + 64]);
+	if (blockDim.x>=128 && tid < 64) idata[tid] = MAX(idata[tid], idata[tid + 64]);
 	__syncthreads();
 	// unrolling warp
 	if (tid < 32) {
@@ -236,77 +228,97 @@ __global__ void reduceCompleteUnrollWarps8(int *g_idata, int *g_odata, int n){
 //capacity: the target value
 //n_volumes: the length of "volumes"
 //jump: a value that must be a power of 2, and that decides how big is a batch of elements to be examined.
-int subsetSumOptimization_exhaustive_GPU(int* volumes, int capacity, int n_volumes, int jump){
+int subsetSumOptimization_exhaustive_GPU(int volumes[N], int capacity, int jump){
 	
 	//First: order the volumes in decreasing order
-	qsort(volumes, n_volumes, sizeof(int), comp_decr);
+	qsort(volumes, N, sizeof(int), comp_decr);
 	
-	//Second: produce the initial bit string of length n_volumes
-	char* global_index_counter = produce_initial_string(n_volumes);
+	//Second: produce the initial bit string of length N (number of volumes)
+	char global_index_counter[N];
+	produce_initial_string(global_index_counter);
 	
 	//Third: translate the jump value into its binary form
-	char* jump_binary = convert_to_binary(jump);
-	
-	//Fourth: extend the jump binary representation to the length of the global index counter
-	char* jump_binary_extended = extend_bit_string(n_volumes, jump_binary, (int) log2f(jump) + 1);
-	free(jump_binary);
-	jump_binary = jump_binary_extended;
-	
-	char* starting_index = (char*) malloc(n_volumes * sizeof(char));
-	for(int i = 0; i < n_volumes; i++){
+	char jump_binary[N];
+	convert_to_binary(jump_binary, jump);
+
+	//Fourth: get a copy of the starting index, so that we know when to stop (when we overflow and reach the initial value again)
+	char starting_index[N];
+	for(int i = 0; i < N; i++){
 		starting_index[i] = global_index_counter[i];
 	}
 
+
+	//Now, we need to setup the CUDA environment.
+	//1) Declare block and grid size for the kernels
 	dim3 block(BLOCK_DIM_X);
 	dim3 grid((jump + block.x - 1) / block.x);
 	dim3 grid8((grid.x + 8 - 1)/8);
 
-	int* partial_results;
-	cudaMalloc((int**) &partial_results, jump * sizeof(int));
+	//2) allocate on the device enough memory to store the tentative results (of the problem) produced by each kernel (1)
+	int* partial_results_GPU;
+	cudaMalloc((int**) &partial_results_GPU, jump * sizeof(int));
 
-	int partial_reductions_len = ((grid.x + 8 - 1)/8);
+	//3) allocate on the device enough memory to store the reduction results (given by the previous kernel) that will be produced by the reduction kernel
+	int partial_reductions_len = grid8.x;
 	int* partial_reductions_GPU;
 	cudaMalloc((int**) &partial_reductions_GPU, partial_reductions_len * sizeof(int));
 
+	//4) allocate on the host enough memory to store the results of the reduction kernel, so that they can be further reduced
 	int* partial_reductions_CPU = (int*) malloc(partial_reductions_len * sizeof(int));
+
+	
+	//5) allocate on the device enough memory to store the current global index
+	char* global_index_counter_GPU;
+	cudaMalloc((char**) &global_index_counter_GPU, N * sizeof(char));
+
+	//6) allocate and copy on the device the volumes
+	int* volumes_GPU;
+	cudaMalloc((int**) &volumes_GPU, N * sizeof(int));
+	cudaMemcpy(volumes_GPU, volumes, N * sizeof(int), cudaMemcpyHostToDevice);
 	//setup phase ended
 
 	int FINAL_RESULT = 0;
 
 	do{
-		printf("global_index_counter = ");
-		for(int i = 0; i < n_volumes; i++){
-			printf("%c", global_index_counter[i]);
-		}
-		printf("\n");
-
-		//IF IL VALORE CORRENTE DELL'INDICE GLOBALE E' MINORE DELLA CAPACITA' ???
-		if(value_of_solution(global_index_counter, volumes, n_volumes) <= capacity){
-			printf("HI\n");
+		//If the current value of the global_index_counter, translated in a solution, is less than the capacity 
+		//(which means that this cunck of tentative solutions needs to be explored, because at least one solution is admissible)
+		if(value_of_solution(global_index_counter, volumes) <= capacity){
 			//This is the main loop that does the important computations.
-			//First: launch a kernel that will compute all the tentative solutions of index between
+
+			for(int i = 0; i < N; i++){
+				printf("%c", global_index_counter[i]);
+			}
+			printf("\n");
+
+			//First: copy the current global_index_counter value to the device
+			cudaMemcpy(global_index_counter_GPU, global_index_counter, N * sizeof(char), cudaMemcpyHostToDevice);
+
+			//Second: launch a kernel that will compute all the tentative solutions of index between
 			//"global_index_counter" and "global_index_counter" + "jump"
-			kernel_exhaustive<<<grid, block>>>(volumes, n_volumes, capacity, global_index_counter, partial_results);
+			kernel_exhaustive<<<grid, block>>>(volumes_GPU, capacity, global_index_counter_GPU, partial_results_GPU);
 
-			//Second: launch a second, reduction kernel, that will find, among these values, the one with
+			//Third: launch a second, reduction kernel, that will find, among these values, the one with
 			//the highest value (lower than capacity)
-			reduceCompleteUnrollWarps8<<<grid8, block>>>(partial_results, partial_reductions_GPU, grid.x * block.x);
+			reduceCompleteUnrollWarps8<<<grid8, block>>>(partial_results_GPU, partial_reductions_GPU, jump);
 
-			//Third: reduce one last time on the CPU
+			//Fourth: reduce one last time on the CPU
 			cudaMemcpy(partial_reductions_CPU, partial_reductions_GPU, partial_reductions_len * sizeof(int), cudaMemcpyDeviceToHost);
 			int new_solution = 0;
 			for(int i = 0; i < partial_reductions_len; i++){
-				new_solution += partial_reductions_CPU[i];
+				new_solution = MAX(new_solution, partial_reductions_CPU[i]);
 			}
 			
-			//Fourth: update the new best solution
+			//Fifth: update the new best solution
 			if(new_solution > FINAL_RESULT) FINAL_RESULT = new_solution;
+
+			//If we are very lucky...
+			//if(FINAL_RESULT == capacity) break;
 		}
 
-		//Fifth: update the index
-		add_bit_strings(&global_index_counter, jump_binary, n_volumes);
+		//Sixth: update the index
+		add_bit_strings(global_index_counter, jump_binary);
 		
-	}while(!equal_bit_strings(global_index_counter, starting_index, n_volumes));
+	}while(!equal_bit_strings(global_index_counter, starting_index));
 	
 	return FINAL_RESULT;	//needs to return the actual result of the whole problem
 	
@@ -322,14 +334,13 @@ int subsetSumOptimization_exhaustive_GPU(int* volumes, int capacity, int n_volum
 
 
 int main(){
-	int n = 10;
 	int c = 10000;
-	int j = 1024/8;
-	int* volumes = (int*) malloc(n*sizeof(int));
-	for(int i = 0; i < n; i++){
-		volumes[i] = i*10;
+	int j = pow(2, 30);
+	int volumes[N];
+	for(int i = 0; i < N; i++){
+		volumes[i] = i*100;
 	}
-	int res = subsetSumOptimization_exhaustive_GPU(volumes, c, n, j);
-	printf("result = %d", res);
+	int res = subsetSumOptimization_exhaustive_GPU(volumes, c, j);
+	printf("result = %d\n", res);
 	return 0;
 }
