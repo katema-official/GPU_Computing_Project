@@ -3,8 +3,8 @@
 #include <stdlib.h>
 #include <math.h>
 
-//#include "../common.h"
 #include "GPU_exhaustive_opt_common.h"
+#include "config.h"
 
 
 //First, we need a very simple procedure to generate the bit string that will represent the current index

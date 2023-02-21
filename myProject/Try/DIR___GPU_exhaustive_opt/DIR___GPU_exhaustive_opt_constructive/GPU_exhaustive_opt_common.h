@@ -1,9 +1,7 @@
 #ifndef GPU_EXHAUSTIVE_OPT_COMMON
 #define GPU_EXHAUSTIVE_OPT_COMMON
 
-#define MAX(a,b) (((a)>(b))?(a):(b))
-#define N 50	//THIS IS PROBABLY THE MOST IMPORTANT THING: THE NUMBER OF VOLUMES IN THE PROBLEM (Must be set a priori, before COMPILING the code!)
-
+#include "config.h"
 
 void produce_initial_string(char res[N]);
 __host__ __device__ void add_bit_strings(char str1[N], char str2[N]);
