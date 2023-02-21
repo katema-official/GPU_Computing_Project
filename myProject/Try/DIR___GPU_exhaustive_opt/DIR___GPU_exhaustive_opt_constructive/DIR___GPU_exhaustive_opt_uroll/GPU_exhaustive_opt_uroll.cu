@@ -31,7 +31,7 @@ __global__ void kernel_exhaustive(int volumes[N], int capacity, char global_inde
 	add_bit_strings(global_index_counter_local, binary_idx);
 
 	//Fourth: compute the current solution
-	int sum = value_of_solution(global_index_counter_local, volumes);
+	int sum = value_of_solution_device(global_index_counter_local, volumes);
 
 	//Fifth: if the value of the current solution is legal (does not exceed capacity), we return it. Else,
 	//We return 0. Since from all the values computed by kernel instances of this kind only the maximum
@@ -134,11 +134,6 @@ int subsetSumOptimization_exhaustive_GPU(int volumes[N], int capacity, int jump)
 	//Third: translate the jump value into its binary form
 	char jump_binary[N];
 	convert_to_binary(jump_binary, jump);
-
-	/*for(int i = 0; i < N; i++){
-		printf("%c", jump_binary[i]);
-	}
-	printf("\n");*/
 
 	//Fourth: get a copy of the starting index, so that we know when to stop (when we overflow and reach the initial value again)
 	char starting_index[N];

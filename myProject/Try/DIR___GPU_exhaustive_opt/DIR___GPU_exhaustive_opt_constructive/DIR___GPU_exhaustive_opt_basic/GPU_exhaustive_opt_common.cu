@@ -4,7 +4,7 @@
 #include <math.h>
 
 #include "GPU_exhaustive_opt_common.h"
-#include "config.h"
+#include "../config.h"
 
 
 //First, we need a very simple procedure to generate the bit string that will represent the current index
@@ -67,6 +67,7 @@ __host__ __device__ void convert_to_binary(char res[N], int number){
 	for(int c = 0; c < N - l; c++){
 		res[c] = '0';
 	}
+
 }
 
 //Fourth, a function that checks whether two binary strings of the same length are the same or not

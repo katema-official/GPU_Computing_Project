@@ -5,7 +5,7 @@
 #include <string.h>
 
 #include "../../../common.h"
-#include "GPU_exhaustive_opt_basic.h"
+#include "GPU_exhaustive_opt_uroll.h"
 
 
 
@@ -53,7 +53,7 @@ int main(int argc, char **argv){
 
     //end = seconds();
     msEvent = msEvent / 1000;
-    printf("recursive exhaustive GPU optimization, res: %d, event time: %f\n", res, msEvent);
+    printf("recursive exhaustive GPU optimization uroll, res: %d, event time: %f\n", res, msEvent);
 
     CHECK(cudaEventDestroy(eStart));
     CHECK(cudaEventDestroy(eEnd));

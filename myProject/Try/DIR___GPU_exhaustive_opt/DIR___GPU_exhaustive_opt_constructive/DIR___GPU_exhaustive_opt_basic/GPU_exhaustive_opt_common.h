@@ -1,7 +1,7 @@
 #ifndef GPU_EXHAUSTIVE_OPT_COMMON
 #define GPU_EXHAUSTIVE_OPT_COMMON
 
-#include "config.h"
+#include "../config.h"
 
 void produce_initial_string(char res[N]);
 __host__ __device__ void add_bit_strings(char str1[N], char str2[N]);
