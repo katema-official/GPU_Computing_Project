@@ -195,7 +195,7 @@ inline input_data initialize_1(int argc, char** argv){
 
 
     //check the volumes
-    if(DEBUG_1){
+    if(DEBUG_1 || 1){
         for(int i = 0; i < n_vols; i++){
             printf("vols[%d] = %d\n", i, vols[i]);
         }

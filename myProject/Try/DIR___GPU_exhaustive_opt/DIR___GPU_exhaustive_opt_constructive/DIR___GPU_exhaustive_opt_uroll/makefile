@@ -1,6 +1,6 @@
 objects = main.o GPU_exhaustive_opt_uroll.o GPU_exhaustive_opt_common.o
 
-config = ../config.h
+config = ../config.h ../../../common.h
 
 main.o: $(config)
 
