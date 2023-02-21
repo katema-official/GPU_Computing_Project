@@ -1,3 +1,5 @@
+#include "../common.h"
+
 //recursive approach with exhaustive search (for the subsetSumDecision, it will be useful in Chad Parry's algorithm)
 int subsetSumDecision_recursive(int* volumes, int capacity, int n_volumes){
   if(capacity == 0) return TRUE;

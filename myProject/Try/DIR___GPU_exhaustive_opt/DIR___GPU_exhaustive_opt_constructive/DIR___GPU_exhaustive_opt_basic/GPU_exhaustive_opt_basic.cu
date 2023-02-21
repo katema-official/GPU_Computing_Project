@@ -2,12 +2,10 @@
 #include <string.h>
 #include <stdlib.h>
 #include <math.h>
-#include <unistd.h>
 
-#define BLOCK_DIM_X 128
-#define MAX(a,b) (((a)>(b))?(a):(b))
-#define N 50	//THIS IS PROBABLY THE MOST IMPORTANT THING: THE NUMBER OF VOLUMES IN THE PROBLEM (Must be set a priori, before COMPILING the code!)
+#include "../../../common.h"
 
+#include "../config.h"
 
 //First, we need a very simple procedure to generate the bit string that will represent the current index
 //of the exhaustive search.
@@ -22,8 +20,7 @@ void produce_initial_string(char res[N]){
 //This assumes that the two strings have the same length N.
 //The result is stored in the first string.
 //Adapted from: https://www.geeksforgeeks.org/add-two-bit-strings/
-__host__ __device__ void add_bit_strings(char str1[N], char str2[N])
-{
+__host__ __device__ void add_bit_strings(char str1[N], char str2[N]){
 	//Initialize carry
 	int carry = (int) '0'; 
 
@@ -101,8 +98,7 @@ int comp_decr(const void * a, const void * b)
  return *(const int*)b - *(const int*)a;
 }
 
-
-
+//-----------------------------------------------------
 
 
 
@@ -129,12 +125,6 @@ __global__ void kernel_exhaustive(int volumes[N], int capacity, char global_inde
 
 	//Third: add this value to the global_index_counter passed as argument
 	add_bit_strings(global_index_counter_local, binary_idx);
-
-	/*printf("THIS THREAD'S BIT STRING: ");
-	for(int i = 0; i < N; i++){
-		printf("idx = %d, %d-th bit: %c\n", idx, i, global_index_counter_local[i]);
-	}
-	printf("\n");*/
 
 	//Fourth: compute the current solution
 	int sum = value_of_solution(global_index_counter_local, volumes);
@@ -253,6 +243,7 @@ int subsetSumOptimization_exhaustive_GPU(int volumes[N], int capacity, int jump)
 	dim3 block(BLOCK_DIM_X);
 	dim3 grid((jump + block.x - 1) / block.x);
 	dim3 grid8((grid.x + 8 - 1)/8);
+	printf("block.x = %d, grid.x = %d\n", block.x, grid.x);
 
 	//2) allocate on the device enough memory to store the tentative results (of the problem) produced by each kernel (1)
 	int* partial_results_GPU;
@@ -285,10 +276,10 @@ int subsetSumOptimization_exhaustive_GPU(int volumes[N], int capacity, int jump)
 		if(value_of_solution(global_index_counter, volumes) <= capacity){
 			//This is the main loop that does the important computations.
 
-			for(int i = 0; i < N; i++){
+			/*for(int i = 0; i < N; i++){
 				printf("%c", global_index_counter[i]);
 			}
-			printf("\n");
+			printf("\n");*/
 
 			//First: copy the current global_index_counter value to the device
 			cudaMemcpy(global_index_counter_GPU, global_index_counter, N * sizeof(char), cudaMemcpyHostToDevice);
@@ -325,22 +316,3 @@ int subsetSumOptimization_exhaustive_GPU(int volumes[N], int capacity, int jump)
 }
 
 
-
-
-
-
-
-
-
-
-int main(){
-	int c = 10000;
-	int j = pow(2, 30);
-	int volumes[N];
-	for(int i = 0; i < N; i++){
-		volumes[i] = i*100;
-	}
-	int res = subsetSumOptimization_exhaustive_GPU(volumes, c, j);
-	printf("result = %d\n", res);
-	return 0;
-}

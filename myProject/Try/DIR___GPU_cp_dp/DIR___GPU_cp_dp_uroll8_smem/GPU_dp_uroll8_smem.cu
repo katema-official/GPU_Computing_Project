@@ -1,4 +1,4 @@
-#include "common.h"
+#include "../../common.h"
 #include <stdio.h>
 
 //v2 uroll8 smem: as v2, but we give more work to each single thread with the unrolling technique, and we leverage on the shared memory

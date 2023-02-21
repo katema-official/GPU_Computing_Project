@@ -1,19 +1,37 @@
+#include <stdio.h>
+
+int subsetSumOptimization_recursive(int* volumes, int capacity, int n_volumes);
+int* subsetSumOptimization_recursive_solFound(int solution, int* volumes, int volume_occupied, int n_volumes, int idx_current_elem);
+int subsetSumOptimization_recursive_constructive(int* volumes, int capacity, int n_volumes);
+int SSO_rec_const(int accum, int* volumes, int capacity, int n_volumes);
+int subsetSumOptimization_recursive_destructive(int* volumes, int capacity, int n_volumes);
+int SSO_rec_dest(int accum, int* volumes, int capacity, int n_volumes);
+
+int subsetSumOptimization_recursive_copies(int* volumes, int* copies, int capacity, int n_volumes);
+int subsetSumOptimization_recursive_constructive_copies(int* volumes, int* copies, int capacity, int n_volumes);
+int SSO_rec_const_copies(int accum, int* volumes, int* copies, int capacity, int n_volumes);
+int subsetSumOptimization_recursive_destructive_copies(int* volumes, int* copies, int capacity, int n_volumes);
+int SSO_rec_dest_copies(int accum, int* volumes, int* copies, int capacity, int n_volumes);
+
+
 //recursive approach with exhaustive search (for the subsetSumOptimization)
-int subsetSumOptimization_recursive(int accum, int* volumes, int capacity, int n_volumes){
+int subsetSumOptimization_recursive(int* volumes, int capacity, int n_volumes){
 	int total_sum = 0;
 	for(int i = 0; i < n_volumes; i++){
 		total_sum += volumes[i];
 	}
 	
-	float mean = total_sum / total_n;
+	float mean = total_sum / n_volumes;
 	
 	int res;
 	
 	//if we estimate that more than half of the volumes are necessary to fill the capacity (at its best), we use the destructive approach.
 	//otherwise, we use the constructive one.
-	if((capacity / mean) > (total_n / 2)){
+	if((capacity / mean) > (n_volumes / 2)){
+		printf("destructive\n");
 		res = subsetSumOptimization_recursive_destructive(volumes, capacity, n_volumes);
 	}else{
+		printf("constructive\n");
 		res = subsetSumOptimization_recursive_constructive(volumes, capacity, n_volumes);
 	}
 	
@@ -93,7 +111,10 @@ int subsetSumOptimization_recursive_destructive(int* volumes, int capacity, int 
 }
 
 int SSO_rec_dest(int accum, int* volumes, int capacity, int n_volumes){
-	if(n_volumes == 0) return accum;
+	if(n_volumes == 0){
+		if(accum > capacity) accum = 0;	//trash unfeasible solutions
+		return accum;
+	}
 	if(accum <= capacity) return accum;
 	
 	int a = SSO_rec_dest(accum - volumes[0], &(volumes[1]), capacity, n_volumes - 1);
@@ -115,14 +136,14 @@ int SSO_rec_dest(int accum, int* volumes, int capacity, int n_volumes){
 
 
 //The version where two input arrays are given: one contains the volumes, the other their number of copies.
-int subsetSumOptimization_recursive(int* volumes, int* copies, int capacity, int n_volumes){
+int subsetSumOptimization_recursive_copies(int* volumes, int* copies, int capacity, int n_volumes){
 	int total_n = 0;
 	for(int i = 0; i < n_volumes; i++){
 			total_n += copies[i];
 	}
 	int total_sum = 0;
 	for(int i = 0; i < n_volumes; i++){
-		accum += copies[i]*volumes[i];
+		total_sum += copies[i]*volumes[i];
 	}
 	
 	float mean = total_sum / total_n;
@@ -132,9 +153,9 @@ int subsetSumOptimization_recursive(int* volumes, int* copies, int capacity, int
 	//if we estimate that more than half of the volumes are necessary to fill the capacity (at its best), we use the destructive approach.
 	//otherwise, we use the constructive one.
 	if((capacity / mean) > (total_n / 2)){
-		res = subsetSumOptimization_recursive_destructive(volumes, copies, capacity, n_volumes);
+		res = subsetSumOptimization_recursive_destructive_copies(volumes, copies, capacity, n_volumes);
 	}else{
-		res = subsetSumOptimization_recursive_constructive(volumes, copies, capacity, n_volumes);
+		res = subsetSumOptimization_recursive_constructive_copies(volumes, copies, capacity, n_volumes);
 	}
 	
 	return res;
@@ -146,45 +167,45 @@ int subsetSumOptimization_recursive(int* volumes, int* copies, int capacity, int
 
 //This algorithm is particularly efficient when it is known a priori that the number of items that make the optimal solution
 //is less or equal than (total number of volumes) / 2, where (total number of volumes) = sum of all the values in copies.
-int subsetSumOptimization_recursive_constructive(int* volumes, int* copies, int capacity, int n_volumes){
+int subsetSumOptimization_recursive_constructive_copies(int* volumes, int* copies, int capacity, int n_volumes){
 	int* copy = (int*) malloc(n_volumes * sizeof(int));
 	for(int i = 0; i < n_volumes; i++){
 		copy[i] = copies[i];
 	}
-	int res = SSO_rec_copies_const(0, volumes, copy, capacity, n_volumes);
+	int res = SSO_rec_const_copies(0, volumes, copy, capacity, n_volumes);
 	
 	free(copy);
 	
 	return res;
 }
 
-int SSO_rec_copies_const(int accum, int* volumes, int* copies, int capacity, int n_volumes){
+int SSO_rec_const_copies(int accum, int* volumes, int* copies, int capacity, int n_volumes){
 	if(n_volumes == 0) return accum;
 	
 	if(copies[0] == 1){
 		if(accum + volumes[0] <= capacity){
-			int a = SSO_rec_copies_const(accum + volumes[0], &(volumes[1]), &(copies[1]), capacity, n_volumes - 1);
-			int b = SSO_rec_copies_const(accum, &(volumes[1]), &(copies[1]), capacity, n_volumes - 1);
+			int a = SSO_rec_const_copies(accum + volumes[0], &(volumes[1]), &(copies[1]), capacity, n_volumes - 1);
+			int b = SSO_rec_const_copies(accum, &(volumes[1]), &(copies[1]), capacity, n_volumes - 1);
 			if(a >= b){
 				return a;
 			}else{
 				return b;
 			}
 		}else{
-			return SSO_rec_copies_const(accum, &(volumes[1]), &(copies[1]), capacity, n_volumes - 1);
+			return SSO_rec_const_copies(accum, &(volumes[1]), &(copies[1]), capacity, n_volumes - 1);
 		}
 	}else{
 		copies[0] = copies[0] - 1;
 		if(accum + volumes[0] <= capacity){
-			int a = SSO_rec_copies_const(accum + volumes[0], volumes, copies, capacity, n_volumes);
-			int b = SSO_rec_copies_const(accum, volumes, copies, capacity, n_volumes);
+			int a = SSO_rec_const_copies(accum + volumes[0], volumes, copies, capacity, n_volumes);
+			int b = SSO_rec_const_copies(accum, volumes, copies, capacity, n_volumes);
 			if(a >= b){
 				return a;
 			}else{
 				return b;
 			}
 		}else{
-			return SSO_rec_copies_const(accum, volumes, copies, capacity, n_volumes);
+			return SSO_rec_const_copies(accum, volumes, copies, capacity, n_volumes);
 		}
 	}
 }
@@ -195,7 +216,7 @@ int SSO_rec_copies_const(int accum, int* volumes, int* copies, int capacity, int
 
 //This algorithm is particularly efficient when it is known a priori that the number of items that make the optimal solution
 //is greater or equal than (total number of volumes) / 2, where (total number of volumes) = sum of all the values in copies.
-int subsetSumOptimization_recursive_destructive(int* volumes, int* copies, int capacity, int n_volumes){
+int subsetSumOptimization_recursive_destructive_copies(int* volumes, int* copies, int capacity, int n_volumes){
 	int* copy = (int*) malloc(n_volumes * sizeof(int));
 	for(int i = 0; i < n_volumes; i++){
 		copy[i] = copies[i];
@@ -204,24 +225,28 @@ int subsetSumOptimization_recursive_destructive(int* volumes, int* copies, int c
 	for(int i = 0; i < n_volumes; i++){
 		accum += copy[i]*volumes[i];
 	}
-	int res = SSO_rec_copies_dest(accum, volumes, copy, capacity, n_volumes);
+	int res = SSO_rec_dest_copies(accum, volumes, copy, capacity, n_volumes);
 	
 	free(copy);
 	
 	return res;
 }
 
-int SSO_rec_copies_dest(int accum, int* volumes, int* copies, int capacity, int n_volumes){
-	if(n_volumes == 0) return accum;
+int SSO_rec_dest_copies(int accum, int* volumes, int* copies, int capacity, int n_volumes){
+	if(n_volumes == 0){
+		if(accum > capacity) accum = 0;	//trash unfeasible solutions
+		return accum;
+	}
 	if(accum <= capacity) return accum;
 	
+	int a, b;
 	if(copies[0] == 1){
-		int a = SSO_rec_copies_dest(accum - volumes[0], &(volumes[1]), &(copies[1]), capacity, n_volumes - 1);
-		int b = SSO_rec_copies_dest(accum, &(volumes[1]), &(copies[1]), capacity, n_volumes - 1);
+		a = SSO_rec_dest_copies(accum - volumes[0], &(volumes[1]), &(copies[1]), capacity, n_volumes - 1);
+		b = SSO_rec_dest_copies(accum, &(volumes[1]), &(copies[1]), capacity, n_volumes - 1);
 	}else{
 		copies[0] = copies[0] - 1;
-		int a = SSO_rec_copies_dest(accum - volumes[0], volumes, copies, capacity, n_volumes);
-		int b = SSO_rec_copies_dest(accum, volumes, copies, capacity, n_volumes);
+		a = SSO_rec_dest_copies(accum - volumes[0], volumes, copies, capacity, n_volumes);
+		b = SSO_rec_dest_copies(accum, volumes, copies, capacity, n_volumes);
 	}
 	
 	if(a >= b){

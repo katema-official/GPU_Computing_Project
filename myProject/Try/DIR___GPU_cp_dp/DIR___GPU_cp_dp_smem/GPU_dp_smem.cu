@@ -1,4 +1,4 @@
-#include "common.h"
+#include "../../common.h"
 #include <stdio.h>
 
 //v2 smem: as v2, but we bring the necessary data in the shared memory, then we read the data from there

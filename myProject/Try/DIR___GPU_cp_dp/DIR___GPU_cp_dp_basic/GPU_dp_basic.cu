@@ -1,4 +1,4 @@
-#include "common.h"
+#include "../../common.h"
 #include <stdio.h>
 
 //v1: Compute on the device one row, than bring it back to the host.
