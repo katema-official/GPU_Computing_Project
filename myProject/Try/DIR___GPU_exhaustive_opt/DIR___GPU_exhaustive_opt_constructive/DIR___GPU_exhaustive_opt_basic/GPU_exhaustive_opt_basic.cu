@@ -135,10 +135,10 @@ int subsetSumOptimization_exhaustive_GPU(int volumes[N], int capacity, int jump)
 	char jump_binary[N];
 	convert_to_binary(jump_binary, jump);
 
-	/*for(int i = 0; i < N; i++){
+	for(int i = 0; i < N; i++){
 		printf("%c", jump_binary[i]);
 	}
-	printf("\n");*/
+	printf("\n");
 
 	//Fourth: get a copy of the starting index, so that we know when to stop (when we overflow and reach the initial value again)
 	char starting_index[N];

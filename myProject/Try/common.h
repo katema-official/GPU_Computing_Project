@@ -178,7 +178,7 @@ inline input_data initialize_1(int argc, char** argv){
         //-capacity = 10000;
 
         int lower = capacity/1000;
-        int upper = capacity/10;
+        int upper = capacity/100;   // /10;
         for(int i = 0; i < n_vols; i++){
             vols[i] = (rand() % (upper - lower + 1) + lower);
             //printf("vols[%d] = %d\n", i, vols[i]);
@@ -199,6 +199,13 @@ inline input_data initialize_1(int argc, char** argv){
         for(int i = 0; i < n_vols; i++){
             printf("vols[%d] = %d\n", i, vols[i]);
         }
+
+        int sum = 0;
+        for(int i = 0; i < n_vols; i++){
+            sum += vols[i];
+        }
+        printf("the sum of ALL volumes is %d\n", sum);
+
     }
 
 

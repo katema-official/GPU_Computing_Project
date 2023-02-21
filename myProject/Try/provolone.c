@@ -24,5 +24,18 @@ int main(){
     for(int i = 0; i < N; i++){
         printf("%d ", my_array[i]);
     }
+
+
+    char pippo[80];
+    for(int i = 0; i < 80; i++){
+        pippo[i] = '0';
+    }
+    for(int i = 0; i < 80; i++){
+        printf("%c",pippo[i]);
+    }
+    printf("\n");
+
+
+
     return 0;
 }
