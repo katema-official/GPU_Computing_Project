@@ -30,11 +30,11 @@ int main(int argc, char **argv){
     //Since here no shared memory is used...
     CHECK(cudaDeviceSetCacheConfig(cudaFuncCachePreferL1));
 
-    double start, end;
+    //double start, end;
     cudaEvent_t eStart, eEnd;
     float msEvent;
 
-    start = seconds();
+    //start = seconds();
 
     CHECK(cudaEventCreate(&eStart));
     CHECK(cudaEventCreate(&eEnd));
@@ -47,9 +47,9 @@ int main(int argc, char **argv){
 
     CHECK(cudaEventElapsedTime(&msEvent, eStart, eEnd));
 
-    end = seconds();
+    //end = seconds();
     msEvent = msEvent / 1000;
-    printf("recursive exhaustive GPU optimization, res: %d, elapsed: %f, event time: %f\n", res, elapsedTime(start, end), msEvent);
+    printf("recursive exhaustive GPU optimization, res: %d, event time: %f\n", res, msEvent);
 
     CHECK(cudaEventDestroy(eStart));
     CHECK(cudaEventDestroy(eEnd));
