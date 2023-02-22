@@ -17,33 +17,31 @@ __global__ void kernel_exhaustive(int volumes[N], int capacity, char global_inde
 	//First: compute the global grid index of this thread.
 	int idx = blockIdx.x * blockDim.x + threadIdx.x;
 
+	//Intermediate step: bring into shared memory the global_index_counter
+	__shared__ char global_index_counter_smem[N];
+	int workload_per_thread = (N + BLOCK_DIM_X - 1) / BLOCK_DIM_X;
+	int offset = threadIdx.x * workload_per_thread;
+	for(int i = 0; i < workload_per_thread; i++){
+		if(offset + i < N) global_index_counter_smem[offset + i] = global_index_counter[offset + i];
+	}
+	__syncthreads();
+
+
 	//Second: convert it to its binary representation.
 	char binary_idx[N];
 	convert_to_binary(binary_idx, idx);
 
 	//Third: make a copy of the global index counter
-	//Let's use unrolling also here. We propose an unrolling factor of 8
-	int uroll_iterations = N/8;
 	char global_index_counter_local[N];
-	for(int i = 0; i < uroll_iterations*8; i+=8){
-		global_index_counter_local[i] = global_index_counter[i];
-		global_index_counter_local[i + 1] = global_index_counter[i + 1];
-		global_index_counter_local[i + 2] = global_index_counter[i + 2];
-		global_index_counter_local[i + 3] = global_index_counter[i + 3];
-		global_index_counter_local[i + 4] = global_index_counter[i + 4];
-		global_index_counter_local[i + 5] = global_index_counter[i + 5];
-		global_index_counter_local[i + 6] = global_index_counter[i + 6];
-		global_index_counter_local[i + 7] = global_index_counter[i + 7];
-	}
-	for(int i = 8*uroll_iterations; i < N; i++){
-		global_index_counter_local[i] = global_index_counter[i];
+	for(int i = 0; i < N; i++){
+		global_index_counter_local[i] = global_index_counter_smem[i];
 	}
 
 	//Third: add this value to the global_index_counter passed as argument
 	add_bit_strings(global_index_counter_local, binary_idx);
 
 	//Fourth: compute the current solution
-	int sum = value_of_solution_device(global_index_counter_local, volumes);
+	int sum = value_of_solution(global_index_counter_local, volumes);
 
 	//Fifth: if the value of the current solution is legal (does not exceed capacity), we return it. Else,
 	//We return 0. Since from all the values computed by kernel instances of this kind only the maximum
@@ -146,6 +144,11 @@ int subsetSumOptimization_exhaustive_GPU(int volumes[N], int capacity, int jump)
 	//Third: translate the jump value into its binary form
 	char jump_binary[N];
 	convert_to_binary(jump_binary, jump);
+
+	for(int i = 0; i < N; i++){
+		printf("%c", jump_binary[i]);
+	}
+	printf("\n");
 
 	//Fourth: get a copy of the starting index, so that we know when to stop (when we overflow and reach the initial value again)
 	char starting_index[N];

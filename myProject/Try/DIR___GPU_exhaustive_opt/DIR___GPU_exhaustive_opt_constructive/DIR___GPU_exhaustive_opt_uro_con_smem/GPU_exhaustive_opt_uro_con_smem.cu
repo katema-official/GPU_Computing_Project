@@ -13,9 +13,19 @@
 //The idea is:
 //each thread, given the current global_index_counter and its thread+block index, determines its local index.
 //Then, it uses that index (together with the volumes) to compute the solution of this node of the exponential tree.
-__global__ void kernel_exhaustive(int volumes[N], int capacity, char global_index_counter[N], int* partial_results){
+__global__ void kernel_exhaustive(int capacity, char global_index_counter[N], int* partial_results){
 	//First: compute the global grid index of this thread.
 	int idx = blockIdx.x * blockDim.x + threadIdx.x;
+
+	//Intermediate step: bring into shared memory the global_index_counter
+	__shared__ char global_index_counter_smem[N];
+	int workload_per_thread = (N + BLOCK_DIM_X - 1) / BLOCK_DIM_X;
+	int offset = threadIdx.x * workload_per_thread;
+	for(int i = 0; i < workload_per_thread; i++){
+		if(offset + i < N) global_index_counter_smem[offset + i] = global_index_counter[offset + i];
+	}
+	__syncthreads();
+	
 
 	//Second: convert it to its binary representation.
 	char binary_idx[N];
@@ -26,24 +36,24 @@ __global__ void kernel_exhaustive(int volumes[N], int capacity, char global_inde
 	int uroll_iterations = N/8;
 	char global_index_counter_local[N];
 	for(int i = 0; i < uroll_iterations*8; i+=8){
-		global_index_counter_local[i] = global_index_counter[i];
-		global_index_counter_local[i + 1] = global_index_counter[i + 1];
-		global_index_counter_local[i + 2] = global_index_counter[i + 2];
-		global_index_counter_local[i + 3] = global_index_counter[i + 3];
-		global_index_counter_local[i + 4] = global_index_counter[i + 4];
-		global_index_counter_local[i + 5] = global_index_counter[i + 5];
-		global_index_counter_local[i + 6] = global_index_counter[i + 6];
-		global_index_counter_local[i + 7] = global_index_counter[i + 7];
+		global_index_counter_local[i] = global_index_counter_smem[i];
+		global_index_counter_local[i + 1] = global_index_counter_smem[i + 1];
+		global_index_counter_local[i + 2] = global_index_counter_smem[i + 2];
+		global_index_counter_local[i + 3] = global_index_counter_smem[i + 3];
+		global_index_counter_local[i + 4] = global_index_counter_smem[i + 4];
+		global_index_counter_local[i + 5] = global_index_counter_smem[i + 5];
+		global_index_counter_local[i + 6] = global_index_counter_smem[i + 6];
+		global_index_counter_local[i + 7] = global_index_counter_smem[i + 7];
 	}
 	for(int i = 8*uroll_iterations; i < N; i++){
-		global_index_counter_local[i] = global_index_counter[i];
+		global_index_counter_local[i] = global_index_counter_smem[i];
 	}
 
 	//Third: add this value to the global_index_counter passed as argument
 	add_bit_strings(global_index_counter_local, binary_idx);
 
 	//Fourth: compute the current solution
-	int sum = value_of_solution_device(global_index_counter_local, volumes);
+	int sum = value_of_solution_device(global_index_counter_local);
 
 	//Fifth: if the value of the current solution is legal (does not exceed capacity), we return it. Else,
 	//We return 0. Since from all the values computed by kernel instances of this kind only the maximum
@@ -127,8 +137,6 @@ __global__ void reduceCompleteUnrollWarps8(int *g_idata, int *g_odata, int n){
 
 
 
-
-
 //the function to call externally. Arguments:
 //volumes: the array of volumes, that can also have copies
 //capacity: the target value
@@ -146,6 +154,11 @@ int subsetSumOptimization_exhaustive_GPU(int volumes[N], int capacity, int jump)
 	//Third: translate the jump value into its binary form
 	char jump_binary[N];
 	convert_to_binary(jump_binary, jump);
+
+	for(int i = 0; i < N; i++){
+		printf("%c", jump_binary[i]);
+	}
+	printf("\n");
 
 	//Fourth: get a copy of the starting index, so that we know when to stop (when we overflow and reach the initial value again)
 	char starting_index[N];
@@ -178,10 +191,11 @@ int subsetSumOptimization_exhaustive_GPU(int volumes[N], int capacity, int jump)
 	char* global_index_counter_GPU;
 	cudaMalloc((char**) &global_index_counter_GPU, N * sizeof(char));
 
-	//6) allocate and copy on the device the volumes
-	int* volumes_GPU;
-	cudaMalloc((int**) &volumes_GPU, N * sizeof(int));
-	cudaMemcpy(volumes_GPU, volumes, N * sizeof(int), cudaMemcpyHostToDevice);
+	//6) [allocate and copy on the device the volumes] NO! Use constant memory instead!
+	init_volumes_constant(volumes);
+	
+	//cudaMalloc((int**) &volumes_GPU, N * sizeof(int));
+	//cudaMemcpy(volumes_GPU, volumes, N * sizeof(int), cudaMemcpyHostToDevice);
 	//setup phase ended
 
 	int FINAL_RESULT = 0;
@@ -202,7 +216,7 @@ int subsetSumOptimization_exhaustive_GPU(int volumes[N], int capacity, int jump)
 
 			//Second: launch a kernel that will compute all the tentative solutions of index between
 			//"global_index_counter" and "global_index_counter" + "jump"
-			kernel_exhaustive<<<grid, block>>>(volumes_GPU, capacity, global_index_counter_GPU, partial_results_GPU);
+			kernel_exhaustive<<<grid, block>>>(capacity, global_index_counter_GPU, partial_results_GPU);
 
 			//Third: launch a second, reduction kernel, that will find, among these values, the one with
 			//the highest value (lower than capacity)
