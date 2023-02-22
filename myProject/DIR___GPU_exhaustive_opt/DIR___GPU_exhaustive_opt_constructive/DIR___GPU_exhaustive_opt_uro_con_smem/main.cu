@@ -31,8 +31,8 @@ int main(int argc, char **argv){
         jump = atoi(argv[5]);
     }
 
-    //Since here no shared memory is used...
-    CHECK(cudaDeviceSetCacheConfig(cudaFuncCachePreferL1));
+    //Since here shared memory is used...
+    CHECK(cudaDeviceSetCacheConfig(cudaFuncCachePreferShared));
 
     //double start, end;
     cudaEvent_t eStart, eEnd;
@@ -53,7 +53,7 @@ int main(int argc, char **argv){
 
     //end = seconds();
     msEvent = msEvent / 1000;
-    printf("recursive exhaustive GPU optimization uroll + constant, res: %d, event time: %f\n", res, msEvent);
+    printf("recursive exhaustive GPU optimization uroll + constant + smem, res: %d, event time: %f\n", res, msEvent);
 
     CHECK(cudaEventDestroy(eStart));
     CHECK(cudaEventDestroy(eEnd));

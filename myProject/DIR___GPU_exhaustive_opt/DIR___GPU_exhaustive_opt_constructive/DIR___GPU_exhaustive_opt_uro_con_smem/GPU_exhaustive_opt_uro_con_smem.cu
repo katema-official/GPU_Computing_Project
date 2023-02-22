@@ -73,8 +73,10 @@ __global__ void reduceCompleteUnrollWarps8(int *g_idata, int *g_odata, int n){
 	// set thread ID
 	unsigned int tid = threadIdx.x;
 	unsigned int idx = blockIdx.x * blockDim.x * 8 + threadIdx.x;
-	// convert global data pointer to the local pointer of this block
-	int *idata = g_idata + blockIdx.x * blockDim.x * 8;
+	
+	//declare smem
+	__shared__ int smem[BLOCK_DIM_X];
+
 	// unrolling 8
 	int a1 = 0;
 	int a2 = 0;
@@ -102,20 +104,20 @@ __global__ void reduceCompleteUnrollWarps8(int *g_idata, int *g_odata, int n){
 		if(idx + 5 * blockDim.x < n) b2 = g_idata[idx + 5 * blockDim.x];
 		if(idx + 6 * blockDim.x < n) b3 = g_idata[idx + 6 * blockDim.x];
 	}
-	g_idata[idx] = MAX(a1, MAX(a2, MAX(a3, MAX(a4, MAX(b1, MAX(b2, MAX(b3, b4)))))));
+	smem[tid] = MAX(a1, MAX(a2, MAX(a3, MAX(a4, MAX(b1, MAX(b2, MAX(b3, b4)))))));
 	__syncthreads();
 	// in-place reduction and complete unroll
-	if (blockDim.x>=1024 && tid < 512) idata[tid] = MAX(idata[tid], idata[tid + 512]);
+	if (blockDim.x>=1024 && tid < 512) smem[tid] = MAX(smem[tid], smem[tid + 512]);
 	__syncthreads();
-	if (blockDim.x>=512 && tid < 256) idata[tid] = MAX(idata[tid], idata[tid + 256]);
+	if (blockDim.x>=512 && tid < 256) smem[tid] = MAX(smem[tid], smem[tid + 256]);
 	__syncthreads();
-	if (blockDim.x>=256 && tid < 128) idata[tid] = MAX(idata[tid], idata[tid + 128]);
+	if (blockDim.x>=256 && tid < 128) smem[tid] = MAX(smem[tid], smem[tid + 128]);
 	__syncthreads();
-	if (blockDim.x>=128 && tid < 64) idata[tid] = MAX(idata[tid], idata[tid + 64]);
+	if (blockDim.x>=128 && tid < 64) smem[tid] = MAX(smem[tid], smem[tid + 64]);
 	__syncthreads();
 	// unrolling warp
 	if (tid < 32) {
-		volatile int *vsmem = idata;
+		volatile int *vsmem = smem;
 		vsmem[tid] = MAX(vsmem[tid], vsmem[tid + 32]);
 		vsmem[tid] = MAX(vsmem[tid], vsmem[tid + 16]);
 		vsmem[tid] = MAX(vsmem[tid], vsmem[tid + 8]);
@@ -124,7 +126,7 @@ __global__ void reduceCompleteUnrollWarps8(int *g_idata, int *g_odata, int n){
 		vsmem[tid] = MAX(vsmem[tid], vsmem[tid + 1]);
 	}
 	// write result for this block to global mem
-	if (tid == 0) g_odata[blockIdx.x] = idata[0];
+	if (tid == 0) g_odata[blockIdx.x] = smem[0];
 }
 
 
