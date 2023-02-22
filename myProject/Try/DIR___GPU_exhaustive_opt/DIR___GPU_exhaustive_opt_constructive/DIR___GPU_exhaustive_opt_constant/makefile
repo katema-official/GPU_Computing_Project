@@ -1,4 +1,4 @@
-objects = main.o GPU_exhaustive_opt_uroll.o GPU_exhaustive_opt_common.o
+objects = main.o GPU_exhaustive_opt_constant.o GPU_exhaustive_opt_common.o
 
 config = ../config.h ../../../common.h
 
