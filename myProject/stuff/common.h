@@ -3,24 +3,6 @@
 #ifndef _COMMON_H
 #define _COMMON_H
 
-
-
-
-#define DEBUG_1 0
-#define TRUE 1
-#define FALSE 0
-#define PRINT_SUBSET_SOL 0
-
-#define BLOCK_DIM_X 128
-
-#define ON_MY_PC 1
-#define EXECUTE_CPU 0
-#define EXECUTE_GPU_INEFFICIENT 0
-
-
-
-
-
 #define CHECK(call)                                                            \
 {                                                                              \
     const cudaError_t error = call;                                            \
