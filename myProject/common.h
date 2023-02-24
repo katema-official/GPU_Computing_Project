@@ -10,11 +10,12 @@
 
 
 #define DEBUG_1 0
+#define DEBUG_ALL_FEASIBLE_SOLUTIONS 0
 #define TRUE 1
 #define FALSE 0
 #define PRINT_SUBSET_SOL 0
 
-#define BLOCK_DIM_X 128
+#define BLOCK_DIM_X 1024
 
 #define ON_MY_PC 1
 #define EXECUTE_GPU_INEFFICIENT 0
@@ -126,8 +127,8 @@ typedef struct{
 }input_data;
 
 
-//Function to be called by a main to initialize a bit the data of the problem (better procedres could be generated)
-//arguments for argc: [random_or_not] [n_vols] [capacity] [random_seed]
+//Function to be called by a main to initialize a bit the data of the problem (better procedures could be generated)
+//arguments for argc: [-] [random_or_not] [n_vols] [capacity] [random_seed]
 //returns the array of volumes
 inline input_data initialize_1(int argc, char** argv){
     int n_vols = 32;
@@ -136,16 +137,16 @@ inline input_data initialize_1(int argc, char** argv){
 
     input_data result;
 
-    //the first arguments tells if the sequence of volumes must be randomly generated (1)
+    //the first arguments (starting from 2) tells if the sequence of volumes must be randomly generated (1)
     //or not (0)
     int generate_randomly_flag = 0;
-    if(argc > 1){
-        generate_randomly_flag = atoi(argv[1]);
+    if(argc > 2){
+        generate_randomly_flag = atoi(argv[2]);
     }
 
     //the second argument is the number of volumes. If 0, the default one is used.
-    if(argc > 2){
-        int _n_vols = atoi(argv[2]);
+    if(argc > 3){
+        int _n_vols = atoi(argv[3]);
         if(_n_vols > 0){
             n_vols = _n_vols;
         }
@@ -153,8 +154,8 @@ inline input_data initialize_1(int argc, char** argv){
     vols = (int*) malloc(n_vols * sizeof(int));
 
     //the third argument is the total capacity. If 0, the default one is used.
-    if(argc > 3){
-        int _capacity = atoi(argv[3]);
+    if(argc > 4){
+        int _capacity = atoi(argv[4]);
         if(_capacity > 0){
             capacity = _capacity;
         }
@@ -165,8 +166,8 @@ inline input_data initialize_1(int argc, char** argv){
     if(generate_randomly_flag){
         int seed = 0;
         srand(time(0));
-        if(argc > 4){
-            seed = atoi(argv[4]);
+        if(argc > 5){
+            seed = atoi(argv[5]);
             if(seed != 0){
                 srand(seed);
             }
@@ -177,7 +178,7 @@ inline input_data initialize_1(int argc, char** argv){
         //-upper = 500 ==> upper = capacity/20
         //-capacity = 10000;
 
-        int lower = capacity/1000;
+        int lower = capacity/10000;
         int upper = capacity/100;   // /10;
         for(int i = 0; i < n_vols; i++){
             vols[i] = (rand() % (upper - lower + 1) + lower);
@@ -216,6 +217,221 @@ inline input_data initialize_1(int argc, char** argv){
 
     return result;
 }
+
+
+//Just a different input function to declare custom input values.
+inline input_data initialize_custom_1(){
+    int n_volumes = 36;
+    int vols[36] = {
+        185000,
+        185000,
+        12000,
+        12000,
+        12000,
+        12000,
+        12000,
+        12000,
+        12000,
+        12000,
+
+        12000,
+        12000,
+        12000,
+        12000,
+        3000,
+        3000,
+        3000,
+        3000,
+        3000,
+        3000,
+
+        3000,
+        3000,
+        3000,
+        3000,
+        180,
+        180,
+        180,
+        180,
+        180,
+        180,
+
+        125,
+        125,
+        125,
+        125,
+        40,
+        40
+        };
+    int capacity = 369000 * 10;
+
+    input_data result;
+
+    result.volumes = (int*) malloc(n_volumes*sizeof(int));
+
+    for(int i = 0; i < n_volumes; i++){
+        result.volumes[i] = vols[i] * 10;
+    }
+
+    result.capacity = capacity;
+    result.n_volumes = n_volumes;
+
+    return result;
+}
+
+
+inline input_data initialize_custom_2(){
+    /*int n_volumes = 36;
+    int vols[36] = {
+        8610420,
+        12678120,
+        3153601,
+        13893560,
+        13009122,
+        9472000,
+        15657250,
+        28006125,
+        28006125,
+        9358560,
+
+        10146627,
+        4988625,
+        12984399,
+        2026024,
+        2026024,
+        1722240,
+        2681775,
+        22231000,
+        13910520,
+        7612800,
+
+        7717892,
+        8640000,
+        18696600,
+        1412400,
+        1907400,
+        1907400,
+        14120000,
+        11339000,
+        15058659,
+        5641650,
+
+        27355420,
+        9111313,
+        8610420,
+        12595500,
+        9307919,
+        15407700
+        };
+    int capacity = 162368727;*/
+
+    int n_volumes = 100;
+    int vols[100] = {
+        960000, 960000,                                                                                                             //2
+        130000, 130000, 130000, 130000, 130000, 130000, 130000, 130000,                                                             //8
+        24000, 24000, 24000, 24000, 24000, 24000, 24000, 24000, 24000, 24000, 24000, 24000,                                         //12
+        11000, 11000, 11000, 11000, 11000, 11000, 11000, 11000,                                                                     //8
+        8000, 8000, 8000, 8000, 8000, 8000, 8000, 8000, 8000, 8000, 8000, 8000,                                                     //12
+        3000, 3000, 3000, 3000, 3000, 3000, 3000, 3000, 3000, 3000,                                                                 //10
+        1400, 1400, 1400, 1400, 1400, 1400,                                                                                         //6
+        190, 190, 190, 190, 190, 190, 190, 190, 190, 190, 190, 190, 190, 190,                                                       //14
+        170, 170, 170, 170, 170, 170, 170, 170,                                                                                     //8
+        55, 55, 55, 55, 55, 55,                                                                                                     //6
+        20, 20, 20, 20,                                                                                                             //4
+        8, 8, 8, 8,                                                                                                                 //4
+        3, 3, 3, 3, 3, 3                                                                                                            //6
+        };
+
+    int capacity = 2030529;     //optimal res: 2030529
+
+    input_data result;
+
+    result.volumes = (int*) malloc(n_volumes*sizeof(int));
+
+    for(int i = 0; i < n_volumes; i++){
+        result.volumes[i] = vols[i];
+    }
+
+    result.capacity = capacity;
+    result.n_volumes = n_volumes;
+
+    return result;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+//-------------------------------------------------------
+
+inline int comp_incr(const void * a, const void * b)
+{
+ return *(const int*)a - *(const int*)b;
+}
+
+//arguments:
+//1) an accum for the current solution
+//2) the volumes, the n_volumes and the capacity_max
+//3) an array in which the results will be stored
+//4) an index that contains the position in the result array to store the new result
+inline void print_all_recursive(int accum, int* volumes, int n_volumes, int capacity_max, int **results, int* index_result){
+  if(n_volumes == 0){
+    //if((*index_result) % ((int) pow(2,28)) == 0) printf("i = %d\n", *index_result);
+
+    if(accum >= capacity_max - 20000){
+        int b = 0;
+        for(int j = 0; j < *index_result; j++){
+            if((*results)[j] == accum){
+                b = 1;
+                break;
+            }
+        }
+
+        if(!b){
+            (*results)[*index_result] = accum;
+            *index_result += 1;
+        }
+    }
+    return;
+  }
+  
+  if(accum + volumes[0] <= capacity_max){
+    print_all_recursive(accum + volumes[0], &(volumes[1]), n_volumes - 1, capacity_max, results, index_result);
+  }
+  print_all_recursive(accum, &(volumes[1]), n_volumes - 1, capacity_max, results, index_result);
+}
+
+
+//function that prints all the subset sums that are lower than capacity_max, in increasing order
+inline void print_all(int* volumes, int n_volumes, int capacity_max){
+    int* results = (int*) malloc(pow(2, 29) * sizeof(int));
+
+    int i = 0;
+    print_all_recursive(0, volumes, n_volumes, capacity_max, &results, &i);
+
+    qsort(results, i, sizeof(int), comp_incr);
+
+    for(int j = 0; j < i; j++){
+        printf("res[%d] = %d\n", j, results[j]);
+    }
+}
+
+
+
+
+
+
+
+
+
 
 
 #endif // _COMMON_H

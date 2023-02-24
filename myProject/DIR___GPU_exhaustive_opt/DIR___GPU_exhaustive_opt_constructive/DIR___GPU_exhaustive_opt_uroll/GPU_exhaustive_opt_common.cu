@@ -57,11 +57,7 @@ __host__ __device__ void convert_to_binary(char res[N], int number){
 	int i = N - l;
 	for(int c = l - 1; c >= 0; c--){
 		k = number >> c;
-		if (k & 1){
-			res[i] = '1';
-		}else{
-			res[i] = '0';
-		}
+		res[i] = ((char) k&1) + '0';	//this avoids warp divergence
 		i++;
 	}
 	for(int c = 0; c < N - l; c++){

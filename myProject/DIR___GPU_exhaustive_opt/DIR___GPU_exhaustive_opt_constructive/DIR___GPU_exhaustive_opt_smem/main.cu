@@ -13,11 +13,23 @@
 
 
 //to run as:
-// ./main [random_or_not] [n_vols] [capacity] [random_seed] [jump]
+// ./main [initialize_type] [random_or_not] [n_vols] [capacity] [random_seed] [jump]
 //Note that n_vols MUST correspond to the N marco value
 //Moreover, jump must always be a power of 2
 int main(int argc, char **argv){
-    input_data data = initialize_1(argc, argv);
+    input_data data;
+    
+    switch(atoi(argv[1])){
+        case 0:
+            data = initialize_1(argc, argv);
+            break;
+        case 1:
+            data = initialize_custom_1();
+            break;
+        default:
+            break;
+    }
+    
 
     int* volumes = data.volumes;
     int capacity = data.capacity;
@@ -27,8 +39,8 @@ int main(int argc, char **argv){
     assert(N == n_volumes);
 
     int jump = 1024;
-    if(argc > 5){
-        jump = atoi(argv[5]);
+    if(argc > 6){
+        jump = atoi(argv[6]);
     }
 
     //Since here shared memory is used...
