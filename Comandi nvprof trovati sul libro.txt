@@ -1,0 +1,93 @@
+nvprof --metrics branch_efficiency ./simpleDivergence
+
+
+
+ nvprof --events branch,divergent_branch ./simpleDivergence ???
+
+
+
+PAGINA 94, INFO SU DEVICE
+
+
+Pagina 100:
+
+nvprof --metrics achieved_occupancy ./sumMatrix 32 32
+
+Pagina 101:
+
+nvprof --metrics gld_throughput./sumMatrix 32 32
+
+nvprof --metrics gld_efficiency ./sumMatrix 32 32
+
+
+Pagina 116:
+
+nvprof --metrics dram_read_throughput ./reduceInteger
+
+
+Pagina 118:
+
+nvprof --metrics stall_sync ./reduce
+
+
+Pagina 122:
+
+nvprof --metrics gld_efficiency,gst_efficiency ./reduceInteger
+
+(Pagina 160 per L1 disabled/enabled)
+
+
+Pagina 167:
+
+nvprof --devices 0 --metrics gld_transactions ./readSegment 0
+
+
+Pagina 177:
+
+nvprof --devices 0 --metrics gld_transactions,gst_transactions ./readSegmentUnroll 11
+
+
+Pagina 186:
+
+nvprof --devices 0 --metrics gld_throughput,gst_throughput ./transpose
+
+
+Pagina 220:
+
+shared_load_transactions_per_request
+shared_store_transactions_per_request
+
+
+Pagina 248:
+
+dram_read_throughput: Device Memory Read Throughput
+dram_write_throughput: Device Memory Write Throughput
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

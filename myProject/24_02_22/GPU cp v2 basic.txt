@@ -1,0 +1,163 @@
+block.x = 128, grid.x = 7812501
+DP v2 GPU, res: 530621875, elapsed: 51.573118, event time: 51,836765
+
+block.x = 128, grid.x = 7812501
+DP v2 GPU, res: 530621875, elapsed: 51.794637, event time: 51,962368
+
+block.x = 128, grid.x = 7812501
+DP v2 GPU, res: 530621875, elapsed: 53.402240, event time: 53,556637
+
+block.x = 128, grid.x = 7812501
+DP v2 GPU, res: 530621875, elapsed: 53.230293, event time: 53,428356
+
+block.x = 128, grid.x = 7812501
+DP v2 GPU, res: 530621875, elapsed: 52.120563, event time: 53,753044
+
+
+
+block.x = 256, grid.x = 3906251
+DP v2 GPU, res: 530621875, elapsed: 52.384067, event time: 52.563198
+
+block.x = 256, grid.x = 3906251
+DP v2 GPU, res: 530621875, elapsed: 52.388238, event time: 52.615417
+
+block.x = 256, grid.x = 3906251
+DP v2 GPU, res: 530621875, elapsed: 52.421060, event time: 52.636547
+
+block.x = 256, grid.x = 3906251
+DP v2 GPU, res: 530621875, elapsed: 52.298778, event time: 52.622196
+
+block.x = 256, grid.x = 3906251
+DP v2 GPU, res: 530621875, elapsed: 52.332583, event time: 52.567513
+
+
+
+block.x = 512, grid.x = 1953126
+DP v2 GPU, res: 530621875, elapsed: 52.943649, event time: 53.140438
+
+block.x = 512, grid.x = 1953126
+DP v2 GPU, res: 530621875, elapsed: 52.911272, event time: 53.142109
+
+block.x = 512, grid.x = 1953126
+DP v2 GPU, res: 530621875, elapsed: 52.945829, event time: 53.107109
+
+block.x = 512, grid.x = 1953126
+DP v2 GPU, res: 530621875, elapsed: 52.888788, event time: 53.146851
+
+block.x = 512, grid.x = 1953126
+DP v2 GPU, res: 530621875, elapsed: 52.502114, event time: 52.629414
+
+
+
+block.x = 1024, grid.x = 976563
+DP v2 GPU, res: 530621875, elapsed: 55.202140, event time: 55.421139
+
+block.x = 1024, grid.x = 976563
+DP v2 GPU, res: 530621875, elapsed: 55.187416, event time: 55.454586
+
+block.x = 1024, grid.x = 976563
+DP v2 GPU, res: 530621875, elapsed: 55.150633, event time: 55.418789
+
+block.x = 1024, grid.x = 976563
+DP v2 GPU, res: 530621875, elapsed: 55.279284, event time: 55.423023
+
+block.x = 1024, grid.x = 976563
+DP v2 GPU, res: 530621875, elapsed: 55.267413, event time: 55.465378
+
+
+
+
+
+
+block.x = 128, grid.x = 7812501
+DP v1 GPU, res: 530621875, elapsed: 921.361363, event time: 922.991272
+DP v2 GPU, res: 530621875, elapsed: 53.444424, event time: 53.546379
+
+block.x = 256, grid.x = 3906251
+DP v1 GPU, res: 530621875, elapsed: 927.252164, event time: 932.092773
+DP v2 GPU, res: 530621875, elapsed: 52.372226, event time: 52.579292
+
+block.x = 512, grid.x = 1953126
+DP v1 GPU, res: 530621875, elapsed: 923.387757, event time: 925.151550
+
+block.x = 1024, grid.x = 976563
+DP v1 GPU, res: 530621875, elapsed: 923.948580, event time: 925.771912
+
+
+
+//basic v1 custom
+
+block.x = 128, grid.x = 28829
+DP v1 GPU, res: 3606600, elapsed: 1.710427, event time: 1,710033
+
+block.x = 128, grid.x = 28829
+DP v1 GPU, res: 3606600, elapsed: 1.729120, event time: 1,731151
+
+block.x = 128, grid.x = 28829
+DP v1 GPU, res: 3606600, elapsed: 1.737494, event time: 1,740753
+
+block.x = 128, grid.x = 28829
+DP v1 GPU, res: 3606600, elapsed: 1.735398, event time: 1,773585
+
+block.x = 128, grid.x = 28829
+DP v1 GPU, res: 3606600, elapsed: 1.843904, event time: 1,847195
+
+
+
+block.x = 256, grid.x = 14415
+DP v1 GPU, res: 3606600, elapsed: 1.843320, event time: 1,843474
+
+block.x = 256, grid.x = 14415
+DP v1 GPU, res: 3606600, elapsed: 1.718804, event time: 1,718922
+
+block.x = 256, grid.x = 14415
+DP v1 GPU, res: 3606600, elapsed: 1.696415, event time: 1,698479
+
+block.x = 256, grid.x = 14415
+DP v1 GPU, res: 3606600, elapsed: 1.792303, event time: 1,806398
+
+block.x = 256, grid.x = 14415
+DP v1 GPU, res: 3606600, elapsed: 1.704976, event time: 1,739771
+
+
+
+
+block.x = 512, grid.x = 7208
+DP v1 GPU, res: 3606600, elapsed: 1.838436, event time: 1,840636
+
+block.x = 512, grid.x = 7208
+DP v1 GPU, res: 3606600, elapsed: 1.891201, event time: 1,917715
+
+block.x = 512, grid.x = 7208
+DP v1 GPU, res: 3606600, elapsed: 1.811037, event time: 1,818185
+
+block.x = 512, grid.x = 7208
+DP v1 GPU, res: 3606600, elapsed: 1.824538, event time: 1,826110
+
+block.x = 512, grid.x = 7208
+DP v1 GPU, res: 3606600, elapsed: 1.808097, event time: 1,813923
+
+
+
+
+block.x = 1024, grid.x = 3604
+DP v1 GPU, res: 3606600, elapsed: 1.870658, event time: 1,885752
+
+block.x = 1024, grid.x = 3604
+DP v1 GPU, res: 3606600, elapsed: 1.721849, event time: 1,723537
+
+block.x = 1024, grid.x = 3604
+DP v1 GPU, res: 3606600, elapsed: 1.817668, event time: 1,819643
+
+block.x = 1024, grid.x = 3604
+DP v1 GPU, res: 3606600, elapsed: 1.757131, event time: 1,789204
+
+block.x = 1024, grid.x = 3604
+DP v1 GPU, res: 3606600, elapsed: 1.723943, event time: 1,728052
+
+
+
+
+
+
+
