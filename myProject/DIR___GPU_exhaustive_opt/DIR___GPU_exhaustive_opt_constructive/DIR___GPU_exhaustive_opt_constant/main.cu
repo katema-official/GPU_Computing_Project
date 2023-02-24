@@ -26,6 +26,9 @@ int main(int argc, char **argv){
         case 1:
             data = initialize_custom_1();
             break;
+        case 2:
+            data = initialize_custom_2();
+            break;
         default:
             break;
     }

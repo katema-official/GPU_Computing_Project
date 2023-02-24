@@ -15,7 +15,7 @@
 #define FALSE 0
 #define PRINT_SUBSET_SOL 0
 
-#define BLOCK_DIM_X 1024
+#define BLOCK_DIM_X 128
 
 #define ON_MY_PC 1
 #define EXECUTE_GPU_INEFFICIENT 0

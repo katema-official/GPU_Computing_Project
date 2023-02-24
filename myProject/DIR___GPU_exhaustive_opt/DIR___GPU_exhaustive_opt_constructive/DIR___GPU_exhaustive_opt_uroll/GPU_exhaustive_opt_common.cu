@@ -63,6 +63,7 @@ __host__ __device__ void convert_to_binary(char res[N], int number){
 	for(int c = 0; c < N - l; c++){
 		res[c] = '0';
 	}
+	
 }
 
 //Fourth, a function that checks whether two binary strings of the same length are the same or not
