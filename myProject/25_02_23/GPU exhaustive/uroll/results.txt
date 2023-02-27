@@ -1,0 +1,65 @@
+./main 1 1 36 100000 1 16777216
+N = 36, n = 36
+block.x = 128, grid.x = 131072
+recursive exhaustive GPU optimization uroll, res: 3606600, event time: 39.503956
+block.x = 128, grid.x = 131072
+recursive exhaustive GPU optimization uroll, res: 3606600, event time: 39.314468
+block.x = 128, grid.x = 131072
+recursive exhaustive GPU optimization uroll, res: 3606600, event time: 38.501030
+block.x = 128, grid.x = 131072
+recursive exhaustive GPU optimization uroll, res: 3606600, event time: 39.279060
+block.x = 128, grid.x = 131072
+recursive exhaustive GPU optimization uroll, res: 3606600, event time: 38.777512
+
+
+
+./main 1 1 36 100000 1 16777216
+N = 36, n = 36
+block.x = 256, grid.x = 65536
+recursive exhaustive GPU optimization uroll, res: 3606600, event time: 38.995209
+block.x = 256, grid.x = 65536
+recursive exhaustive GPU optimization uroll, res: 3606600, event time: 38.149399
+block.x = 256, grid.x = 65536
+recursive exhaustive GPU optimization uroll, res: 3606600, event time: 37.777691
+block.x = 256, grid.x = 65536
+recursive exhaustive GPU optimization uroll, res: 3606600, event time: 38.176338
+block.x = 256, grid.x = 65536
+recursive exhaustive GPU optimization uroll, res: 3606600, event time: 37.663723
+
+
+
+./main 1 1 36 100000 1 16777216
+N = 36, n = 36
+block.x = 512, grid.x = 32768
+recursive exhaustive GPU optimization uroll, res: 3606600, event time: 39.261711
+block.x = 512, grid.x = 32768
+recursive exhaustive GPU optimization uroll, res: 3606600, event time: 38.528374
+block.x = 512, grid.x = 32768
+recursive exhaustive GPU optimization uroll, res: 3606600, event time: 38.371593
+block.x = 512, grid.x = 32768
+recursive exhaustive GPU optimization uroll, res: 3606600, event time: 38.582508
+block.x = 512, grid.x = 32768
+recursive exhaustive GPU optimization uroll, res: 3606600, event time: 38.376255
+
+
+
+./main 1 1 36 100000 1 16777216
+N = 36, n = 36
+block.x = 1024, grid.x = 16384
+recursive exhaustive GPU optimization uroll, res: 3606600, event time: 43.413712
+block.x = 1024, grid.x = 16384
+recursive exhaustive GPU optimization uroll, res: 3606600, event time: 43.265751
+block.x = 1024, grid.x = 16384
+recursive exhaustive GPU optimization uroll, res: 3606600, event time: 43.306370
+block.x = 1024, grid.x = 16384
+recursive exhaustive GPU optimization uroll, res: 3606600, event time: 43.290287
+block.x = 1024, grid.x = 16384
+recursive exhaustive GPU optimization uroll, res: 3606600, event time: 43.273930
+
+
+
+
+
+
+
+

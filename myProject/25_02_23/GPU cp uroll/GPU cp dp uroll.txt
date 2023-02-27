@@ -1,50 +1,50 @@
 block.x = 128, grid.x = 7812501
-DP v2 uroll8 GPU, res: 530621875, elapsed: 30.101287, event time: 30.193602
-DP v2 uroll8 GPU, res: 530621875, elapsed: 30.454238, event time: 30.707230
-DP v2 uroll8 GPU, res: 530621875, elapsed: 31.020678, event time: 31.185658
-DP v2 uroll8 GPU, res: 530621875, elapsed: 30.916843, event time: 30.975801
-DP v2 uroll8 GPU, res: 530621875, elapsed: 30.755955, event time: 30.863310
-DP v2 uroll16 GPU, res: 530621875, elapsed: 50.586052, event time: 50.806286
-DP v2 uroll16 GPU, res: 530621875, elapsed: 51.444563, event time: 51.642052
-DP v2 uroll16 GPU, res: 530621875, elapsed: 51.253431, event time: 51.489895
-DP v2 uroll16 GPU, res: 530621875, elapsed: 51.353224, event time: 51.470913
-DP v2 uroll16 GPU, res: 530621875, elapsed: 51.347912, event time: 51.473568
+DP v2 uroll8 GPU, res: 530621875, elapsed: 30.101287, event time: 30,193602
+DP v2 uroll8 GPU, res: 530621875, elapsed: 30.454238, event time: 30,707230
+DP v2 uroll8 GPU, res: 530621875, elapsed: 31.020678, event time: 31,185658
+DP v2 uroll8 GPU, res: 530621875, elapsed: 30.916843, event time: 30,975801
+DP v2 uroll8 GPU, res: 530621875, elapsed: 30.755955, event time: 30,863310
+DP v2 uroll16 GPU, res: 530621875, elapsed: 50.586052, event time: 50,806286
+DP v2 uroll16 GPU, res: 530621875, elapsed: 51.444563, event time: 51,642052
+DP v2 uroll16 GPU, res: 530621875, elapsed: 51.253431, event time: 51,489895
+DP v2 uroll16 GPU, res: 530621875, elapsed: 51.353224, event time: 51,470913
+DP v2 uroll16 GPU, res: 530621875, elapsed: 51.347912, event time: 51,473568
 
 block.x = 256, grid.x = 3906251
-DP v2 uroll8 GPU, res: 530621875, elapsed: 30.580410, event time: 30.713205
-DP v2 uroll8 GPU, res: 530621875, elapsed: 31.109601, event time: 31.206713
-DP v2 uroll8 GPU, res: 530621875, elapsed: 30.783180, event time: 30.912642
-DP v2 uroll8 GPU, res: 530621875, elapsed: 30.701629, event time: 30.797184
-DP v2 uroll8 GPU, res: 530621875, elapsed: 30.796668, event time: 30.944527
-DP v2 uroll16 GPU, res: 530621875, elapsed: 50.663841, event time: 50.806793
-DP v2 uroll16 GPU, res: 530621875, elapsed: 50.576376, event time: 50.801529
-DP v2 uroll16 GPU, res: 530621875, elapsed: 50.682986, event time: 50.868622
-DP v2 uroll16 GPU, res: 530621875, elapsed: 50.651757, event time: 50.914364
-DP v2 uroll16 GPU, res: 530621875, elapsed: 50.751195, event time: 50.929413
+DP v2 uroll8 GPU, res: 530621875, elapsed: 30.580410, event time: 30,713205
+DP v2 uroll8 GPU, res: 530621875, elapsed: 31.109601, event time: 31,206713
+DP v2 uroll8 GPU, res: 530621875, elapsed: 30.783180, event time: 30,912642
+DP v2 uroll8 GPU, res: 530621875, elapsed: 30.701629, event time: 30,797184
+DP v2 uroll8 GPU, res: 530621875, elapsed: 30.796668, event time: 30,944527
+DP v2 uroll16 GPU, res: 530621875, elapsed: 50.663841, event time: 50,806793
+DP v2 uroll16 GPU, res: 530621875, elapsed: 50.576376, event time: 50,801529
+DP v2 uroll16 GPU, res: 530621875, elapsed: 50.682986, event time: 50,868622
+DP v2 uroll16 GPU, res: 530621875, elapsed: 50.651757, event time: 50,914364
+DP v2 uroll16 GPU, res: 530621875, elapsed: 50.751195, event time: 50,929413
 
 block.x = 512, grid.x = 1953126
-DP v2 uroll8 GPU, res: 530621875, elapsed: 30.775883, event time: 30.895056
-DP v2 uroll8 GPU, res: 530621875, elapsed: 30.866093, event time: 31.026178
-DP v2 uroll8 GPU, res: 530621875, elapsed: 30.774526, event time: 30.879026
-DP v2 uroll8 GPU, res: 530621875, elapsed: 30.876696, event time: 30.961418
-DP v2 uroll8 GPU, res: 530621875, elapsed: 30.875686, event time: 30.989479
-DP v2 uroll16 GPU, res: 530621875, elapsed: 50.424697, event time: 50.674911
-DP v2 uroll16 GPU, res: 530621875, elapsed: 50.319718, event time: 50.560051
-DP v2 uroll16 GPU, res: 530621875, elapsed: 50.498996, event time: 50.656757
-DP v2 uroll16 GPU, res: 530621875, elapsed: 50.482419, event time: 50.609215
-DP v2 uroll16 GPU, res: 530621875, elapsed: 50.186971, event time: 50.679070
+DP v2 uroll8 GPU, res: 530621875, elapsed: 30.775883, event time: 30,895056
+DP v2 uroll8 GPU, res: 530621875, elapsed: 30.866093, event time: 31,026178
+DP v2 uroll8 GPU, res: 530621875, elapsed: 30.774526, event time: 30,879026
+DP v2 uroll8 GPU, res: 530621875, elapsed: 30.876696, event time: 30,961418
+DP v2 uroll8 GPU, res: 530621875, elapsed: 30.875686, event time: 30,989479
+DP v2 uroll16 GPU, res: 530621875, elapsed: 50.424697, event time: 50,674911
+DP v2 uroll16 GPU, res: 530621875, elapsed: 50.319718, event time: 50,560051
+DP v2 uroll16 GPU, res: 530621875, elapsed: 50.498996, event time: 50,656757
+DP v2 uroll16 GPU, res: 530621875, elapsed: 50.482419, event time: 50,609215
+DP v2 uroll16 GPU, res: 530621875, elapsed: 50.186971, event time: 50,679070
 
 block.x = 1024, grid.x = 976563
-DP v2 uroll8 GPU, res: 530621875, elapsed: 31.710007, event time: 31.786615
-DP v2 uroll8 GPU, res: 530621875, elapsed: 31.688187, event time: 31.806183
-DP v2 uroll8 GPU, res: 530621875, elapsed: 31.800416, event time: 31.884233
-DP v2 uroll8 GPU, res: 530621875, elapsed: 31.518809, event time: 32.010864
-DP v2 uroll8 GPU, res: 530621875, elapsed: 31.941320, event time: 32.058788
-DP v2 uroll16 GPU, res: 530621875, elapsed: 51.644797, event time: 51.798176
-DP v2 uroll16 GPU, res: 530621875, elapsed: 51.623760, event time: 51.798309
-DP v2 uroll16 GPU, res: 530621875, elapsed: 51.620918, event time: 51.802116
-DP v2 uroll16 GPU, res: 530621875, elapsed: 51.608131, event time: 51.783112
-DP v2 uroll16 GPU, res: 530621875, elapsed: 51.665757, event time: 51.771023
+DP v2 uroll8 GPU, res: 530621875, elapsed: 31.710007, event time: 31,786615
+DP v2 uroll8 GPU, res: 530621875, elapsed: 31.688187, event time: 31,806183
+DP v2 uroll8 GPU, res: 530621875, elapsed: 31.800416, event time: 31,884233
+DP v2 uroll8 GPU, res: 530621875, elapsed: 31.518809, event time: 32,010864
+DP v2 uroll8 GPU, res: 530621875, elapsed: 31.941320, event time: 32,058788
+DP v2 uroll16 GPU, res: 530621875, elapsed: 51.644797, event time: 51,798176
+DP v2 uroll16 GPU, res: 530621875, elapsed: 51.623760, event time: 51,798309
+DP v2 uroll16 GPU, res: 530621875, elapsed: 51.620918, event time: 51,802116
+DP v2 uroll16 GPU, res: 530621875, elapsed: 51.608131, event time: 51,783112
+DP v2 uroll16 GPU, res: 530621875, elapsed: 51.665757, event time: 51,771023
 
 
 

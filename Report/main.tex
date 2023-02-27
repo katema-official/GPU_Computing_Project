@@ -142,6 +142,56 @@ The second instance instead will be called \label{random-1} \emph{random\_1}, na
 This instance, differently from the previous one, has no real meaning, and is such that actually the optimal solution requires to take all of the volumes. But, being it very large both in termis of \emph{n} and \emph{c}, it will be useful to compare fast GPU-based implementations.\newline
 \newline
 For each algorithm, we will execute each considered instance \textbf{five} times (if not specified otherwise), reporting the minimum, maximum and average time of execution. For the GPU, other profiling data could be presented.
+\subsection{Used GPUs}
+To test the parallel algorithms, the code was run on a Tesla T4 GPU, in which we were able to collect some metrics using Nsight compute CLI. The metrics that might appear are listed in the following table.
+\begin{center}
+\begin{tabular}{| m{5cm} | m{12cm}|}
+ \hline
+ Short name & Full metric name\\
+ \hline
+ Achieved occupancy & sm\_\_warps\_active.avg.pct\_of\_peak\_sustained\_active\\
+ \hline
+ Branch efficiency & smsp\_\_sass\_average\_branch\_targets\_threads\_uniform.pct\\
+ \hline
+ Global load efficiency & smsp\_\_sass\_average\_data\_bytes\_per\_sector\_mem\_global\_op\_ld.pct\\
+ \hline
+ Global store efficiency & smsp\_\_sass\_average\_data\_bytes\_per\_sector\_mem\_global\_op\_st.pct\\
+ \hline
+ Global load throughput & l1tex\_\_t\_bytes\_pipe\_lsu\_mem\_global\_op\_ld.sum.per\_second\\
+ \hline
+ Global store throughput & l1tex\_\_t\_bytes\_pipe\_lsu\_mem\_global\_op\_st.sum.per\_second\\
+ \hline
+ Dram read throughput & dram\_\_bytes\_read.sum.per\_second\\
+ \hline
+ Dram write throughput & dram\_\_bytes\_write.sum.per\_second\\
+ \hline
+ Shared efficiency & smsp\_\_sass\_average\_data\_bytes\_per\_wavefront\_mem\_shared.pct\\
+ \hline
+ Shared load throughput & l1tex\_\_data\_pipe\_lsu\_wavefronts\_mem\_shared\_op\_ld.sum.per\_second\\
+ \hline
+ Shared load transactions & l1tex\_\_data\_pipe\_lsu\_wavefronts\_mem\_shared\_op\_ld.sum\\
+ \hline
+ Shared store throughput & l1tex\_\_data\_pipe\_lsu\_wavefronts\_mem\_shared\_op\_st.sum.per\_second\\
+ \hline
+ Shared store transactions & l1tex\_\_data\_pipe\_lsu\_wavefronts\_mem\_shared\_op\_st.sum\\
+ \hline
+ Shared utilization & l1tex\_\_data\_pipe\_lsu\_wavefronts\_mem\_shared.avg.pct\_of\_peak\newline \_sustained\_elapsed\\
+ \hline
+ Shared load bank conflict & l1tex\_\_data\_bank\_conflicts\_pipe\_lsu\_mem\_shared\_op\_ld.sum\\
+ \hline
+ Shared store bank conflict & l1tex\_\_data\_bank\_conflicts\_pipe\_lsu\_mem\_shared\_op\_st.sum\\
+ \hline
+\end{tabular}
+\end{center}
+Depending on the implementation taken into account, only some metrics will be analyzed. We would like to give an additional description abuot some of them:
+\begin{itemize}
+    \item Global load/store throughput: the amount of data requested by instructions from/to the global address space. Includes transactions served by the L1 and L2 caches.
+    \item Dram read/write througput: the amount of data requested by instructions from/to the global address space. It measures only the throughput between L2 and device memory.
+\end{itemize}
+Most of our applications run the same kernel multiple times (sometimes even thousands). The profiling tool gives, for each and every run, a full report about all the metrics asked. Reporting all of these metrics would be excessive and dispersive. In order to be concise, we decided to write down only the metrics of the first kernel launch, as all of them have the same global behaviour, and what changes is just some of the input data (a volume value, the content of a binary array...), without drastically affecting the overall performance.\newline
+Sometimes, to test even further the code, we tried to run it also on another GPU, a GeForce RTX 3060, altought we weren't able to use profiling tools for that. This will still come in handy in some particular cases, to see if the same code run on a different hardware can give us better or worse performances.\newline
+Lastly, note that the execution times reported for the GPU runs were measured using the CUDA events (scheduled on the default stream).
+
 \section{CPU (Sequential) algorithms: exhaustive search}
 \subsection{SSO: Exhaustive search}
 \label{SSO-exhaustive-search}
@@ -502,9 +552,9 @@ The main drawback of this approach is that it makes a lot of copies from the hos
 The code for this algorithm can be found in \emph{myProject/DIR\_\_\_GPU\_cp\_dp}, in the file \emph{GPU\_dp\_basic.cu}.\newline
 Its performances are reported in the following table. Since in CUDA an important factor is also the block dimension, from now on we will execute the algorithm with multiple block configurations and see how the performances change. The ones we chose are 128, 256, 512 and 1024, since are usually the most meaningful.
 \begin{center}
-\begin{tabular}{ | m{2.2cm} | m{2.2cm} | m{2.4cm} | m{2.4cm} | m{2.4cm} |}
+\begin{tabular}{ | m{2.2cm} | m{3cm} | m{2.4cm} | m{2.4cm} | m{2.4cm} |}
  \hline
- Instance & Block dim. & Min & Max & Avg\\
+ Instance & Block dimension & Min & Max & Avg\\
  \hline
  custom\_1 & 128 & 1.710427 s & 1.843904 s & 1.760543 s\\
  \hline
@@ -548,25 +598,36 @@ Its performances are reported in the following table.
  \hline
  Instance & Block dimension & Min & Max & Avg\\
  \hline
- custom\_1 & 128 & boh & bih & bah\\
+ random\_1 & 128 & 51.836765 s & 53.753044 s & 52.907434 s\\
  \hline
- custom\_1 & 256 & boh & bih & bah\\
+ random\_1 & 256 & 52.563198 s & 52.636547 s & 52.600974 s\\
  \hline
- custom\_1 & 512 & boh & bih & bah\\
+ random\_1 & 512 & 52.629414 s & 53.146851 s & 53.033184 s\\
  \hline
- custom\_1 & 1024 & boh & bih & bah\\
- \hline
- random\_1 & 128 & boh & bih & bah\\
- \hline
- random\_1 & 256 & boh & bih & bah\\
- \hline
- random\_1 & 512 & boh & bih & bah\\
- \hline
- random\_1 & 1024 & boh & bih & bah\\
+ random\_1 & 1024 & 55.418789 s & 55.465378 s & 55.436583 s\\
  \hline
  \end{tabular}
  \end{center}
-Also forse altre considerazioni sui trasferimenti di memoria?\newline
+ While some metrics collected can be found in the following table.
+\begin{center}
+\noindent%
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{ | m{2cm} | m{1.3cm} | m{2.2cm} | m{2.2cm} | m{2.2cm} | m{2.2cm} | m{1.9cm} | m{2.1cm} | m{1.9cm} | m{1.9cm} |}
+ \hline
+ Instance & Block dimension & Dram read throughput & Dram write throughput & Global load throughput & Global store throughput & Achieved occupancy & Branch efficiency & Global ld. efficiency & Global st. efficiency\\
+ \hline
+ random\_1 & 128 & 58.09 GB/s & 26.51 GB/s & 67.69 GB/s & 22.80 GB/s & 83.94\% & 100.00\% & 66.70\% & 100.00\%\\
+ \hline
+ random\_1 & 256 & 57.62 GB/s & 26.57 GB/s & 67.01 GB/s & 22.52 GB/s & 83.00\% & 100.00\% & 66.70\% & 100.00\%\\
+ \hline
+ random\_1 & 512 & 56.96 GB/s & 25.80 GB/s & 65.26 GB/s & 21.92 GB/s & 82.13\% & 100.00\% & 66.70\% & 100.00\%\\
+ \hline
+ random\_1 & 1024 & 54.13 GB/s & 24.79 GB/s & 61.40 GB/s & 20.67 GB/s & 90.06\% & 100.00\% & 66.70\% & 100.00\%\\
+ \hline
+ \end{tabular}%
+}
+\end{center}
+Althought the best performances are reached with the second configuration, the highest occupancy is given by the fourth one, which instead gives the worst performance. This apparent contraddiction is probably explained by the overall throughput, that is higher in the first two configurations.\newline
 Please also note that the following sections of this chapter will start from this implementation, trying to improve it with different CUDA features.
 \subsection{SSD: Unrolling}
 The \emph{unrolling} is a common technique in CUDA programming, that aims to improve the performance of kernels. The main idea is to take a for loop performed in a thread, and reduce the number of times it is executed by writing its body multiple times. This has two major advantages:
@@ -605,41 +666,80 @@ Its performances are reported in the following table.
  \hline
  Instance & Block dimension & Min & Max & Avg\\
  \hline
- custom\_1 & 128 & boh & bih & bah\\
+ random\_1 & 128 & 30.193602 s & 31.185658 s & 30.785120 s\\
  \hline
- custom\_1 & 256 & boh & bih & bah\\
+ random\_1 & 256 & 30.713205 s & 31.206713 s & 30.914854 s\\
  \hline
- custom\_1 & 512 & boh & bih & bah\\
+ random\_1 & 512 & 30.879026 s & 31.026178 s & 30.950231 s\\
  \hline
- custom\_1 & 1024 & boh & bih & bah\\
+ random\_1 & 1024 & 31.786615 s & 32.058788 s & 31.909336 s\\
  \hline
  \end{tabular}
  \end{center}
-In this case, the use of L1 cache can improve a bit the overall performances. To see that, run first the application with the L1 cache enabled (using \emph{-Xptxas -dlcm=ca}), then run again with it disabled (using \emph{-Xptxas -dlcm=cg}).\newline
-Once again performance bla bla bla e oh, giusto metti a confronto diverse dimensioni di blocco
+ While some metrics collected can be found in the following table.
+\begin{center}
+\noindent%
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{ | m{2cm} | m{1.3cm} | m{2.3cm} | m{2.2cm} | m{2.3cm} | m{2.3cm} | m{1.9cm} | m{2.1cm} | m{1.9cm} | m{1.9cm} |}
+ \hline
+ Instance & Block dimension & Dram read throughput & Dram write throughput & Global load throughput & Global store throughput & Achieved occupancy & Branch 
+ \newline efficiency & Global ld. efficiency & Global st. efficiency\\
+ \hline
+ random\_1 & 128 & 135.78 GB/s & 41.71 GB/s & 597.63 GB/s & 282.02 GB/s & 90.30\% & 100.00\% & 11.77\% & 12.50\%\\
+ \hline
+ random\_1 & 256 & 136.53 GB/s & 41.84 GB/s & 602.38 GB/s & 284.19 GB/s & 89.27\% & 100.00\% & 11.77\% & 12.50\%\\
+ \hline
+ random\_1 & 512 & 137.49 GB/s & 41.98 GB/s & 605.49 GB/s & 285.63 GB/s & 88.25\% & 100.00\% & 11.77\% & 12.50\%\\
+ \hline
+ random\_1 & 1024 & 122.70 GB/s & 39.39 GB/s & 571.21 GB/s & 269.29 GB/s & 93.46\% & 100.00\% & 11.77\% & 12.50\%\\
+ \hline
+ \end{tabular}%
+}
+\end{center}
+As expected, the unrolling provided, thanks to multiple independent memory operations, a drastic increase in the throughput, granting a considerable speedup.
+In this case, the use of L1 cache can improve a bit the overall performances. To see that, run first the application with the L1 cache enabled (using \emph{-Xptxas -dlcm=ca}), then run again with it disabled (using \emph{-Xptxas -dlcm=cg}). The results reported used, of course, the L1 cache.
 \subsubsection{Unrolling factor 16}
 The improved performances of the last kernel suggest us to try to push even further the unrolling factor. Let's then try to set $k=16$. This time, each thread computes its first index as
 \[idx = blockIdx.x * blockDim.x * 16 + threadIdx.x * 16 \]
 and the fifteen following ones by summing 1, 2, $\dots$, 15 to \emph{idx}. The logic behind this implementation is unchanged with respect to the preceeding one.\newline
 The code for this algorithm can be found in\newline \emph{myProject/DIR\_\_\_GPU\_cp\_dp/DIR\_\_\_GPU\_cp\_dp\_uroll}, in the file \emph{GPU\_dp\_uroll.cu}.\newline
-Its performances are reported in the following table. However, this time we didn't have an improvement, but instead a worsening.
+Its performances are reported in the following table.
 \begin{center}
 \begin{tabular}{ | m{2.2cm} | m{3.2cm} | m{2.2cm} | m{2.2cm} | m{2.2cm} |}
  \hline
  Instance & Block dimension & Min & Max & Avg\\
  \hline
- custom\_1 & 128 & boh & bih & bah\\
+ random\_1 & 128 & 50.806286 s & 51.642052 s & 51.376543 s\\
  \hline
- custom\_1 & 256 & boh & bih & bah\\
+ random\_1 & 256 & 50.801529 s & 50.929413 s & 50.864144 s\\
  \hline
- custom\_1 & 512 & boh & bih & bah\\
+ random\_1 & 512 & 50.560051 s & 50.679070 s & 50.636001 s\\
  \hline
- custom\_1 & 1024 & boh & bih & bah\\
+ random\_1 & 1024 & 51.771023 s & 51.802116 s & 51.790547 s\\
  \hline
  \end{tabular}
  \end{center}
-bla bla di nuovo le performance\newline
-This is probably due to the fact that, with such an unrolling factor, a single thread is tasked with too many memory operations that can't be parallelized completely, and so we lose parallelism. 
+ While some metrics collected can be found in the following table.
+\begin{center}
+\noindent%
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{ | m{2cm} | m{1.3cm} | m{2.3cm} | m{2.2cm} | m{2.3cm} | m{2.3cm} | m{1.9cm} | m{2.1cm} | m{1.9cm} | m{1.9cm} |}
+ \hline
+ Instance & Block dimension & Dram read throughput & Dram write throughput & Global load throughput & Global store throughput & Achieved occupancy & Branch 
+ \newline efficiency & Global ld. efficiency & Global st. efficiency\\
+ \hline
+ random\_1 & 128 & 69.62 GB/s & 21.35 GB/s & 587.07 GB/s & 285.78 GB/s & 95.02\% & 100.00\% & 6.07\% & 6.25\%\\
+ \hline
+ random\_1 & 256 & 69.34 GB/s & 21.26 GB/s & 585.09 GB/s & 284.81 GB/s & 93.84\% & 100.00\% & 6.07\% & 6.25\%\\
+ \hline
+ random\_1 & 512 & 69.92 GB/s & 21.52 GB/s & 592.00 GB/s & 288.16 GB/s & 93.72\% & 100.00\% & 6.07\% & 6.25\%\\
+ \hline
+ random\_1 & 1024 & 66.24 GB/s & 21.13 GB/s & 573.93 GB/s & 279.36 GB/s & 95.97\% & 100.00\% & 6.07\% & 6.25\%\\
+ \hline
+ \end{tabular}%
+}
+\end{center}
+However, this time we didn't have an improvement, but instead a worsening. Althought the occupancy slightly increases, the main difference lies in the dram read and write throughput, that is basically halved with respect to the urolling 8. This might be caused by an excessive cache miss, due to the high number of data asked by each thread. 
 \subsection{SSD: Shared Memory}
 Another CUDA feature that allows programmers to achieve potential speedup in their applications is a program-managed, on-chip (so, per-Streaming Multiprocessor) cache. It is known as \emph{Shared Memory} (SMEM), and it shares the same on-chip physical memory of the L1 cache. For this reason only, load/store operations performed by a thread to the SMEM are much faster than those performed towards the global memory. However, to fully exploit its capabilities, one must know how data are organized and accessed in this memory.\newline
 When designing a kernel, a certain amount of Shared Memory can be declared, either statically or dynamically. During the execution, each \emph{block} of the kernel has a certain amount of SMEM associated to it. This is an important point because the SMEM serves also as an intra-block communication mechanism. This means that threads of the same block can see and manage the same Shared Memory (the name \emph{shared} it's not random), but have no access whatsoever to that of any other thread block. This has two consequences:
@@ -647,7 +747,7 @@ When designing a kernel, a certain amount of Shared Memory can be declared, eith
     \item Given that a single Streaming Multiprocessor can host multiple blocks at the same time, one should know how much SMEM can be given to a block in order not to affect the performances of the application. If a block requires a lot of SMEM, the hardware, that will associate that block to a SM, will also reserve enough Shared Memory for it, possibly preventing other blocks to be allocated on that same SM because of a lack of SMEM.
     \item When designing a Shared Memory based application, the programmer should reason about what the individual blocks of the grid will do, and how the threads will access to the SMEM.
 \end{itemize}
-The last point is particularly important because of the fact that the Shared Memory is organized in \emph{Memory Banks}. Basically, the entire Shared Memory can be divided into 32 parts, or banks. When a warp issues a SMEM load/store request, this results more or less efficient depending on (once again) the number of memory transactions needed to satisfy such request. In general, the SMEM is organized in rows, and each row is composed of 32 $\times$ 4 bytes, where every 4 consecutive bytes belong to the same bank (let's call a group of 4 bytes belonging to the same bank \emph{address}. Some architectures enlarge the bank width up to 8, althought this does not change the principles explained here). If a warp SMEM access is such that \textbf{at most} one address per bank is requested, then the memory request is said to be conflictless, and just one memory transaction is necessary to satisfy the overall request. This is the case every programmer should strive to achieve. Of course, a conflictless access to the Shared Memory is possible when the memory addresses requested are aligned (with respect to the shared memory rows) and coalesced, but in general, the important part consists in building a memory access pattern such that it is conflictless.\newline
+The last point is particularly important because of the fact that the Shared Memory is organized in \emph{Memory Banks}. Basically, the entire Shared Memory can be divided into 32 parts, or banks. When a warp issues a SMEM load/store request, this results more or less efficient depending on (once again) the number of memory transactions needed to satisfy such request. In general, the SMEM is organized in rows, and each row is composed of 32 $\times$ 4 bytes, where every 4 consecutive bytes, called \emph{word}, belong to the same bank (some architectures enlarge the bank width up to 8, althought this does not change the principles explained here). If a warp SMEM access is such that \textbf{at most} one word per bank is requested, then the memory request is said to be conflictless, and just one memory transaction is necessary to satisfy the overall request. This is the case every programmer should strive to achieve. Of course, a conflictless access to the Shared Memory is possible when the memory word requested are aligned (with respect to the shared memory rows) and coalesced, but in general, the important part consists in building a memory access pattern such that it is conflictless.\newline
 
 In our proposed implementation, each block requires \emph{blockDim.x} $\times$ 2 bytes of Shared Memory. In this way, every thread can move inside of it the two elements of the previous row necessary to compute the new one. If a thread is such that $idx < A[i]$, just $A[i-1]$ is copied in the SMEM. The actual address in which an element is copied depends on the \emph{warp index} and the \emph{thread index} of the current thread. The warp index is computed as
 \[threadIdx.x / 32\]
@@ -655,7 +755,7 @@ while the thread index is simply \emph{threadIdx.x}.\newline
 Each warp uses 64 contiguous bytes of memory. The main operations performed are:
 \begin{enumerate}
     \item Load from the global memory the $idx$-th and (in case) the ($idx - A[i]$)-th elements of the previous row, storing their values in the Shared Memory. Each warp uses the bytes that range from index $warp\_id \times 64$ included to $(warp\_id + 1) \times 64$ excluded, so that no data is overwritten during the lifetime of a kernel.
-    \item Then, the two values are read from the shared memory and put inside two local variables. If one element is not available, it is simply set to \emph{false}.
+    \item Then, the two values are read from the Shared Memory and put inside two local variables. If one element is not available, it is simply set to \emph{false}.
     \item Finally, the value for the $idx$-th entry is computed as $a \lor b$ and brought back to global memory.
 \end{enumerate}
 Since each warp writes and reads a chunk of 64 contiguous bytes from the Shared Memory, with its starting index being a multiple of 64, the access is always coalesced and aligned, and can be satisfied with only one memory transaction.\newline
@@ -666,20 +766,113 @@ Its performances are reported in the following table.
  \hline
  Instance & Block dimension & Min & Max & Avg\\
  \hline
- custom\_1 & 128 & boh & bih & bah\\
+ random\_1 & 128 & 51.365772 s & 51.723152 s & 51.538487 s\\
  \hline
- custom\_1 & 256 & boh & bih & bah\\
+ random\_1 & 256 & 51.338116 s & 51.758690 s & 51.523809 s\\
  \hline
- custom\_1 & 512 & boh & bih & bah\\
+ random\_1 & 512 & 54.096416 s & 54.631626 s & 54.312395 s\\
  \hline
- custom\_1 & 1024 & boh & bih & bah\\
+ random\_1 & 1024 & 61.635738 s & 62.138893 s & 61.804496 s\\
  \hline
  \end{tabular}
  \end{center}
-The overall result is not bad at all: for large instances, we even save some seconds.\newline
-bla bla fai vedere i risultati e qualcosa sulle performance, buttaci dentro anche i risultati di diversi blocchi.
+ While some metrics collected can be found in the following table.
+\begin{center}
+\noindent%
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{ | m{2cm} | m{1.3cm} | m{2.2cm} | m{2.2cm} | m{2.2cm} | m{2.2cm} | m{1.9cm} | m{2.1cm} | m{1.9cm} | m{1.9cm} |}
+ \hline
+ Instance & Block dimension & Dram read throughput & Dram write throughput & Global load throughput & Global store throughput & Achieved occupancy & Branch efficiency & Global ld. efficiency & Global st. efficiency\\
+ \hline
+ random\_1 & 128 & 74.89 GB/s & 35.11 GB/s & 88.58 GB/s & 30.02 GB/s & 77.90\% & 100.00\% & 66.70\% & 100.00\%\\
+ \hline
+ random\_1 & 256 & 73.39 GB/s & 33.98 GB/s & 85.58 GB/s & 28.87 GB/s & 76.90\% & 100.00\% & 66.70\% & 100.00\%\\
+ \hline
+ random\_1 & 512 & 71.03 GB/s & 31.47 GB/s & 78.82 GB/s & 26.68 GB/s & 75.13\% & 100.00\% & 66.70\% & 100.00\%\\
+ \hline
+ random\_1 & 1024 & 65.07 GB/s & 27.37 GB/s & 65.83 GB/s & 22.80 GB/s & 84.72\% & 100.00\% & 66.70\% & 100.00\%\\
+ \hline
+ \end{tabular}%
+}
+\end{center}
+The metrics regarding the shared memory specifically are reported here:
+\begin{center}
+\begin{tabular}{ | m{2cm} | m{2cm} | m{3cm} | m{3cm} |}
+ \hline
+ Instance & Block\newline dimension & Shared load\newline bank conflicts & Shared store\newline bank conflicts\\
+ \hline
+ random\_1 & 128 & 0 & 1,121,338\\
+ \hline
+ random\_1 & 256 & 0 & 1,086,880\\
+ \hline
+ random\_1 & 512 & 0 & 1,131,275\\
+ \hline
+ random\_1 & 1024 & 0 & 3,877,240\\
+ \hline
+ \end{tabular}
+\end{center}
+We clearly have something strange here. The execution times reported are as bad as the ones of the basic v2 version, if not worse. But one could argue that this is due to the apparently enormous amount of Shared Memory bank conflicts during the storing operations. Now, this would actually make sense... if it wasn't for the fact that, after some hours of testing, we found out what was causing all these conflicts. It was not the way the data were organized in the shared memory, but instead, it was just one line of code:
+\begin{center}
+    CHECK(cudaDeviceSetCacheConfig(cudaFuncCachePreferShared));
+\end{center}
+In fact, after commenting this line of code, we obtained the following results. Pay attention specifically to the third table, that reports the bank conflicts: they have now disappeared.
+\begin{center}
+\begin{tabular}{ | m{2.2cm} | m{3.2cm} | m{2.2cm} | m{2.2cm} | m{2.2cm} |}
+ \hline
+ Instance & Block dimension & Min & Max & Avg\\
+ \hline
+ random\_1 & 128 & 51.003735 s & 53.052624 s & 52.472406 s\\
+ \hline
+ random\_1 & 256 & 52.623817 s & 53.271679 s & 52.848441 s\\
+ \hline
+ random\_1 & 512 & 55.497005 s & 55.944008 s & 55.722385 s\\
+ \hline
+ random\_1 & 1024 & 63.210556 s & 63.763607 s & 63.462196 s\\
+ \hline
+ \end{tabular}
+ \end{center}
+\begin{center}
+\noindent%
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{ | m{2cm} | m{1.3cm} | m{2.2cm} | m{2.2cm} | m{2.2cm} | m{2.2cm} | m{1.9cm} | m{2.1cm} | m{1.9cm} | m{1.9cm} |}
+ \hline
+ Instance & Block dimension & Dram read throughput & Dram write throughput & Global load throughput & Global store throughput & Achieved occupancy & Branch efficiency & Global ld. efficiency & Global st. efficiency\\
+ \hline
+ random\_1 & 128 & 74.89 GB/s & 35.11 GB/s & 88.60 GB/s & 30.03 GB/s & 77.90\% & 100.00\% & 66.70\% & 100.00\%\\
+ \hline
+ random\_1 & 256 & 73.39 GB/s & 33.99 GB/s & 85.60 GB/s & 28.88 GB/s & 76.86\% & 100.00\% & 66.70\% & 100.00\%\\
+ \hline
+ random\_1 & 512 & 70.61 GB/s & 31.30 GB/s & 78.40 GB/s & 26.54 GB/s & 75.20\% & 100.00\% & 66.70\% & 100.00\%\\
+ \hline
+ random\_1 & 1024 & 64.70 GB/s & 27.22 GB/s & 65.47 GB/s & 22.68 GB/s & 84.78\% & 100.00\% & 66.70\% & 100.00\%\\
+ \hline
+ \end{tabular}%
+}
+\end{center}
+\begin{center}
+\begin{tabular}{ | m{2cm} | m{2cm} | m{3cm} | m{3cm} |}
+ \hline
+ Instance & Block\newline dimension & Shared load\newline bank conflicts & Shared store\newline bank conflicts\\
+ \hline
+ random\_1 & 128 & 0 & 0\\
+ \hline
+ random\_1 & 256 & 0 & 0\\
+ \hline
+ random\_1 & 512 & 0 & 0\\
+ \hline
+ random\_1 & 1024 & 0 & 0\\
+ \hline
+ \end{tabular}
+\end{center}
+This is actually even stranger, because:
+\begin{itemize}
+    \item The only way in which the bank conflicts could be explained in the first case is that the data, before being brought into the shared memory, get carried into the L1 cache, that is subject to many misses because of the on-chip memory preference set to the Shared one. Still, it doesn't sound like a very convincing argument.
+    \item Apparently, even if the difference is small, having zero conflicts results in a slightly longer execution time.
+\end{itemize}
+We could study other metrics to try to explain this strange phenomena. But in the last section of this chapter, where we'll run the code on the GeForce RTX 3060 GPU, we'll see that instead the Shared Memory actually brings an advantage.\newline
+These results leave us with a moral dilemma: should we use the incriminated line of code in the following kernels that use the Shared Memory, having better executions times but more conflicts, or should we delete it, so as to remove all the bank conflicts and theoretically have a more scalable application, in spite of longer execution times? We decided to go for the second way. The absence of bank conflicts can't possibly be a bad thing, and the execution times are not that different regardless. So, keep in mind that, in every kernel that follows using Shared Memory, we will always have zero conflicts.
 \subsection{SSD: Unrolling 8 + Shared Memory}
-So far in this chapter, the unrolling technique with unrolling factor $k = 8$ and the Shared Memory brought us the best speedup to the standard Dynamic Programming parallel (v2) approach. It comes natural to think that merging these two approaches can give us even better performaces. Let's see if that's true.\newline
+So far in this chapter, the unrolling technique with unrolling factor $k = 8$ and the Shared Memory brought us the best speedup (for the SMEM, this is true only with the GeForce RTX 3060 GPU) to the standard Dynamic Programming parallel (v2) approach. It comes natural to think that merging these two approaches can give us even better performaces. Let's see if that's true.\newline
 With the Shared Memory approach, each thread had to bring into the on-chip cache at most two bytes from the previous row. In total, a warp managed 64 bytes of the SMEM.\newline
 In the unrolling approach with factor $k = 8$, each thread had to read up to 16 bytes from the previous row, in order to determine 8 new values. Basically, each warp managed 16 $\times$ 32 = 512 bytes.\newline
 Combining these approaches, we would have threads that bring 16 bytes of data from global memory to the Shared Memory, for a total of \emph{blockDim.x} $\times$ 2 $\times$ 8 bytes of SMEM necessary for each block. Each warp still manages 512 bytes in total, so a minimum of four rows of SMEM are necessary to contain them. If these bytes are coalesced and aligned in the Shared Memory, exactly four rows need to be accessed by a warp to fulfill a memory request.\newline
@@ -704,18 +897,56 @@ Its performances are reported in the following table.
  \hline
  Instance & Block dimension & Min & Max & Avg\\
  \hline
- custom\_1 & 128 & boh & bih & bah\\
+ random\_1 & 128 & 35.535706 s & 36.506088 s & 36.030728 s\\
  \hline
- custom\_1 & 256 & boh & bih & bah\\
+ random\_1 & 256 & 36.008530 s & 36.347065 s & 36.143403 s\\
  \hline
- custom\_1 & 512 & boh & bih & bah\\
+ random\_1 & 512 & 36.322014 s & 36.610592 s & 36.480317 s\\
  \hline
- custom\_1 & 1024 & boh & bih & bah\\
+ random\_1 & 1024 & 39.713650 s & 39.971500 s & 39.865581 s\\
  \hline
  \end{tabular}
  \end{center}
-The rusulting execution times show that, indeed, the Shared Memory - Unrolling 8 combo is effective, and outperforms the other ones. We could try doing the same with an unrolling factor of $k=16$, but since that unrolling wasn't that effective in the first place, it probably wouldn't improve with the help of the Shared Memory.
-bla bla mostra i tempi di esecuzione
+ While some metrics collected can be found in the following table.
+\begin{center}
+\noindent%
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{ | m{2cm} | m{1.3cm} | m{2.3cm} | m{2.2cm} | m{2.3cm} | m{2.3cm} | m{1.9cm} | m{2.1cm} | m{1.9cm} | m{1.9cm} |}
+ \hline
+ Instance & Block dimension & Dram read throughput & Dram write throughput & Global load throughput & Global store throughput & Achieved occupancy & Branch efficiency & Global ld. efficiency & Global st. efficiency\\
+ \hline
+ random\_1 & 128 & 150.47 GB/s & 47.87 GB/s & 681.94 GB/s & 321.81 GB/s & 71.79\% & 100.00\% & 11.77\% & 12.50\%\\
+ \hline
+ random\_1 & 256 & 150.21 GB/s & 47.33 GB/s & 675.33 GB/s & 318.63 GB/s & 70.51\% & 100.00\% & 11.77\% & 12.50\%\\
+ \hline
+ random\_1 & 512 & 151.61 GB/s & 46.57 GB/s & 665.67 GB/s & 314.02 GB/s & 75.90\% & 100.00\% & 11.77\% & 12.50\%\\
+ \hline
+ random\_1 & 1024 & 112.15 GB/s & 35.68 GB/s & 515.51 GB/s & 243.06 GB/s & 80.35\% & 100.00\% & 11.77\% & 12.50\%\\
+ \hline
+ \end{tabular}%
+}
+\end{center}
+Once again, the Shared Memory seems to ``bring down'' the performances, while the unrolling still grants us a good speedup. The overall result is better than the base case, but worse than the unrolling 8 one.
+\subsection{Results on the GeForce RTX 3060}
+The following table shows the results obtained by running all the algorithms on our GeForce RTX 3060 GPU. The instance used is always \hyperref[random-1]{\emph{random\_1}}, and given the results obtained in the last experiments, we will fix the block size at 256, which seems to give the best overall results. Also, since as we've seen the execution times tend to not change so much, we run each approach just once.
+\begin{center}
+\begin{tabular}{ | m{3.2cm} | m{3.2cm} |}
+ \hline
+ Approach & Execution time\\
+ \hline
+ Basic v2 & 40.223137 s\\
+ \hline
+ uroll8 & 28.227880 s\\
+ \hline
+ uroll16 & 53.374401 s\\
+ \hline
+ smem & 38.298553 s\\
+ \hline
+ uroll8 + smem & 20.191149 s\\
+ \hline
+ \end{tabular}
+ \end{center}
+As stated before, the Shared Memory here seems to provide a meaningful speedup, expecially when paired with the unrolling.
 \section{GPU (Parallel) algorithms: exhaustive search}
 \label{GPU-exhaustive-section}
 The approach seen in the previous chapter is extremely good, but has one unsolvable problem: the memory limit. In order for the Dynamic Programming parallel approach to work, in fact, we need to allocate $(c + 1) \times 2$ bytes on the device global memory. If the instance is such that the capacity is greater than half the total size of the global memory, this approach cannot be used. However, one approach that didn't have any memory problem was the exhaustive one (since its space complexity was $\mathcal{O}(n)$). Althought intrinsically inefficient time-wise, it has no rivals space-wise. So, we could think of a parallel implementation of this approach.\newline
@@ -737,15 +968,24 @@ To make up an algorithm from this idea, we have to answer two questions:
 In order to answer in an effective way these questions, we have to describe what we actually want to do in our code. To do so, we have many different intuitions hat need to be exposed.
 \subsubsection{Intuition 1}
 Given that our search space is the powerset of the set of volumes, how can we explicitly represent and identify one of its elements (a tentative solution, a subset of the volumes set)? In the sequential implementation, the solutions were generated implicitly: when the bottom of the recursion was reached, the \emph{accum} variable held all the volumes considered by the solution generated, and so, indirectly, also the ignored volumes. But in this case we want to explicitly say, in a tentative solution: ``this volume is part of the sum; this other volume is not; this one more is part of the solution'', etc.. How can we do that?\newline
-Since the presence or absence of a volume in a solution is a binary information, one bit will suffice.
-
-
-When we deal with the binary representation of positive numbers, we have an interesting property: \emph{the rightmost bits refer to lowest powers of two, while the leftmost ones refer to the highest powers of two}.
-We can define the order in which the solutions will be visited.\newline
-
-
-HAHAHA cattivo. 7 5 5 5 3 3 
-
+Since the presence or absence of a volume in a solution is a binary information, one bit will suffice. Therefore, given an \emph{a priori ordering of the volumes, such that it won't ever be changed}, we can represent a tentative solution as a binary string of length $n$. Its $i-$th bit will be 1 if the $i-$th element of the ordering is present in the solution, 0 otherwise. The question now becomes: \emph{which ordering should we use?} An arbitrary one, or something more elaborated?
+\subsubsection{Intuition 2}
+When we deal with the binary representation of positive numbers, we have an interesting property: \emph{the rightmost bits refer to lower powers of two, while the leftmost ones refer to higher powers of two}. More generally, we can say that the rightmost bits represent lower values, while the leftmost ones represent higher values. Reasoning by analogy, we can decide to order the volumes in a decreasing way. First, we'll have the largest, represented by the leftmost bits of the binary representation of a solution. In the last positions, we'll have the smallest, represented by the rightmost bits of the binary string. \emph{But does this particular bit string representation give us any advantage?}
+\subsubsection{The ``Binary Decreasing'' representation}
+Yes, it does! So, generally speaking, when we are presented with a Subset Sum Optimization problem instance, where we have $n$ volumes in total in an array called $A$, we can sort this array in decreasing order, and start visiting (with basicaly a \emph{constructive approach}) the search space by generating all the binary strings associated to $A$ in the usual order.\newline
+The important thing to note is an interesting property of the bit strings generated in this way: \textbf{if we partition the search space of the bit strings in contiguous chunks, where}:
+\begin{itemize}
+    \item \textbf{The chunk size is always a fixed power of 2};
+    \item \textbf{The first index of each chunk is an even multiple of the chosen chunk dimension;}
+\end{itemize}
+\textbf{then we are sure that, for each chunk, its \emph{minimum} value is the very first, and the \emph{maximum} value is the last one}. In this way, if the chosen power of 2 is $p$, we have partitioned the search space into $2^{n} / p$ subsets, and some of them don't need to be explored, as we can find out immediately if they \emph{might} contain the optimal solution or they \emph{surely} don't. If the first element of the subset is lower or equal than the capacity value, then that subset contains for sure at least one feasible solution (the first one, or the minimum for that chunk), and as such must be explored. \textbf{But}, if instead the first value is greater than the capcity, then the subset contains only unfeasible solutions, since that first value is the minimum for that chunk.
+\newline
+Let's see an example of this. Suppose we have an instance with:
+\begin{itemize}
+    \item $n = 6$
+    \item $A = [5, 3, 5, 7, 3, 5]$
+\end{itemize}
+The first thing to do is to order $A$ in decreasing order. In this way, we have $A = [7, 5, 5, 3, 3, 3]$. The following table reports all the tentative solutions for this instance, specifying their bit string, the elements that correspond to it, and the actual value. The latter columns show how dividing the search space in contiguous chunks of power of 2 elements makes each chunk such that the first element is the minimum, while the last is the maximum (there isn't any ``Distance 2'' column as it would have been identical to the ``Value'' column).
 \begin{center}
 \begin{tabular}{ | m{1.5cm} | m{1.7cm} | m{3cm} | m{1.2cm} | m{1.3cm} | m{1.3cm} | m{1.5cm} | m{1.5cm} |}
  \hline
@@ -893,34 +1133,109 @@ HAHAHA cattivo. 7 5 5 5 3 3
  \cline{1-4}
  63 & 111111 & 7+5+5+5+3+3 & 28 &                     28 & 28                 & 28                 & 28\\
  \cline{1-8}
-
- 
  \end{tabular}
  \end{center}
 
+ \subsubsection{Data representation and the general algorithm}
+ Provided that the Binary Decreasing representation is how we want to describe our data at an abstract level, we now have to punctualize the corresponding code implementation for such data. Given the array of volumes (immediately sorted in decreasing order), the integer values $n$ and $c$, and a $jump$ value, that is a power of 2 and represents the size of a chunk, we will build a char array of length $n$ that will represent the current solution. Let's call this array, as well as the binary representation of the solution it holds, \emph{global\_index\_counter}. At an abstract level, the algorithm used to apply this exhaustive search works as follows:
+ \begin{enumerate}
+     \item Generate a bit string of $n$ bits set to 0, and save this value in the \emph{global\_index\_counter}.
+     \item Take the $jump$ integer value and convert it into its binary form using exactly $n$ bits.
+     \item Initialize a variable, \emph{final\_result}, to 0. This variable will progressively hold the best solution found so far.
+     \item For $2^{n} / jump$ times, repeat:
+    \begin{enumerate}
+        \item If the solution represented by the current value of \emph{global\_index\_counter} is unfeasible, skip directly to step g) (we basically skip the current chunk as it only contains unfeasible solutions).
+        \item Launch a kernel that will compute, in parallel, all the solutions from \emph{global\_index\_counter} (included) to \emph{global\_index\_counter} + $jump$ (excluded). The feasible solutions produced by this kernel are then collected in an array.
+        \item Launch a reduction kernel that will take the maximum value out of the array produced during the last step.
+        \item Execute one last reduction on the CPU. The value obtained in this way, let's call it $s$, is the best feasible solution of the current chunk.
+        \item If $s > final\_solution$, update \emph{final\_solution} with $s$.
+        \item Optionally (althought there is no reason not to perform this operation) check if \emph{final\_result} is equal to $c$. If it is, terminate the algorithm, as the optimal solution is exactly $c$.
+        \item \emph{global\_index\_counter} = \emph{global\_index\_counter} + $jump$.
+    \end{enumerate}
+    \item Return \emph{final\_result}.
+ \end{enumerate}
+ One might argue that we could have represented the index of the current solution in base 10 (an integer) and not in base 2 (a binary array). After all, it's easy to convert a base 10 number into its binary representation, and as such find out which are the elements to take into account for the current solution. But using an integer index would limit us once again, as the maximum value that an $int$ variable can hold is $2^{32}$ or $2^{64}$ if we are using a \emph{long int}. This would limit the maximum number of input volumes to 32 or 64. Instead, the \emph{char array} representation doesn't give any limit to the number of possible volumes (well technically \emph{it does}, as the memory is limited for whatever hardware, but the point is that even having 1000 distinct volumes would simply imply to use a 1000 byte array, which is very simple to allocate and manage. Basically, the $int$ data type gives us a strict upper bound on the number of indexes we can manage, while the \emph{char array} doesn't).\newline
+ The operations stated above are performed by a collection of functions that can be found in each \emph{GPU\_exhaustive\_opt\_common.cu} file. These files are found in each directory inside the \emph{DIR\_\_\_GPU\_exhaustive\_opt/DIR\_\_\_GPU\_exhaustive\_opt\_constructive} directory, which is also the place in which all the following implementations proposed in this chapter lie. Each implementation might change a bit their code, but the main behaviour is always the same:
+ \begin{itemize}
+     \item \emph{produce\_initial\_string}: creates a char array of length $n$ with all zeros.
+     \item \emph{add\_bit\_strings}: given two binary strings of the same length, this function sums them, storing the result in the first argument.
+     \item \emph{convert\_to\_binary}: converts an integer number into a binary char arrray of length $n$. Little trivia: originally, the function used an \emph{if} statement to determine whether the current bit value had to be 0 or 1. This was later changed into one line of code \textbf{(res[i] = ((char) k\&1) + '0';)} that doesn't involve conditional statements, thus avoiding warp divergence.
+     \item \emph{equal\_bit\_strings}: checks whether two bit strings are the same or not.
+     \item \emph{value\_of\_solution}: takes a bit string of length $n$, as well as the volumes array, and gives the corresponding Subset Sum value of that solution.
+ \end{itemize}
+ Some of the functions stated above are marked with the \emph{\_\_host\_\_ \_\_device\_\_} qualifiers, so that they can be called both by the host code and device code.
+ \subsection{Jump value}
+ The \emph{jump} value determines how big is the kernel launched, if it is launched in the first place. Generally speaking, this value should be neither too low nor too high. If too low, the kernels launched would be very small, possibly achieving small occupancy, and we would have a lot of overhead due to the large number of control operations of the main \emph{for} loop. If too large, we risk to partition the search space in regions that contain many unfeasible solutions alongside few feasible ones. This is bad, because we are then forced to compute a lot of useless solutions to consider just a minority of feasible ones. In the benchmarks that follows, the value will be always set to $2^{24}$, which seemed reasonable to us.
+ \subsection{The reduction kernel}
+ The reduction kernel used is adapted by the one present in the CUDA C programming book\cite{cuda_c_programming:textbook}, and therefore its performances won't be stated here. The only difference is that instead of performing a sum of the input elements, it returns the maximum value. Note that it uses both the unrolling technique as well as the Shared Memory, making it extremely efficient.
+ 
+\subsection{SSO: Basic}
+The first implementation we propose is the CUDA C code transposition of the pesudo-code we gave earlier.\newline
+The code for this algorithm can be found in the files contained in the directory\newline \emph{myProject/DIR\_\_\_GPU\_exhaustive\_opt/DIR\_\_\_GPU\_exhaustive\_opt\_constructive/\newline DIR\_\_\_GPU\_exhaustive\_opt\_basic}. Its performances are reported in the following table.
+\begin{center}
+\begin{tabular}{ | m{2.2cm} | m{3.2cm} | m{2.2cm} | m{2.2cm} | m{2.2cm} |}
+ \hline
+ Instance & Block dimension & Min & Max & Avg\\
+ \hline
+ random\_1 & 128 & 38.313484 s & 39.111614 s & 38.743160 s\\
+ \hline
+ random\_1 & 256 & 38.455868 s & 38.611488 s & 38.542525 s\\
+ \hline
+ random\_1 & 512 & 38.506222 s & 38.720413 s & 38.577960 s\\
+ \hline
+ random\_1 & 1024 & 43.258228 s & 43.423359 s & 43.313046 s\\
+ \hline
+ \end{tabular}
+ \end{center}
+ While some metrics collected can be found in the following table.
+\begin{center}
+\noindent%
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{ | m{2cm} | m{1.3cm} | m{2.3cm} | m{2.3cm} | m{2.3cm} | m{2.3cm} | m{1.9cm} | m{2.1cm} | m{1.9cm} | m{1.9cm} |}
+ \hline
+ Instance & Block dimension & Dram read throughput & Dram write throughput & Global load throughput & Global store throughput & Achieved occupancy & Branch 
+ \newline efficiency & Global ld. efficiency & Global st. efficiency\\
+ \hline
+ random\_1 & 128 & 9.98 GB/s & 107.54 GB/s & 70.29 GB/s & 3.90 GB/s & 94.43\% & 100.00\% & 12.50\% & 156.25\%\\
+ \hline
+ random\_1 & 256 & 9.96 GB/s & 108.68 GB/s & 71.02 GB/s & 3.95 GB/s & 90.06\% & 100.00\% & 12.50\% & 156.25\%\\
+ \hline
+ random\_1 & 512 & 9.57 GB/s & 101.13 GB/s & 67.06 GB/s & 3.73 GB/s & 92.88\% & 100.00\% & 12.50\% & 156.25\%\\
+ \hline
+ random\_1 & 1024 & 15.26 GB/s & 92.19 GB/s & 58.16 GB/s & 3.23 GB/s & 97.10\% & 100.00\% & 12.50\% & 156.25\%\\
+ \hline
+ \end{tabular}%
+}
+\end{center}
+\subsection{Other approaches}
+We also tried five more approaches to improve the base implementation:
+\begin{enumerate}
+    \item \emph{Constant Memory}: since the volumes don't change during the execution, we made a variant that stores them in the Constan Memory of the device.
+    \item \emph{Unroll}: since in this application there are many for loop, we tried to unroll some of them with an unrolling factor of 8.
+    \item \emph{Smem}: each thread needs to read the same starting binary index from the global memory, which then modifies it in-place to obtain its effective index. We decided to import the starting index in the Shared Memory, since every thread of a block needs to access it.
+    \item \emph{Unroll and Constant Memory}: the combination of the Unrolling and the Constant variants.
+    \item \emph{Unrolling, Constant and Shared Memory}: the combination of all the variants.
+\end{enumerate}
+Sadly, none of these implementations gave us noticeable speedups, so we won't report here their performances, as they are extremely similar to the ones of the basic approach. This might be due to the fact that the main core of the application lies in a \emph{for} loop performed by the host, which implicitly sets a bound to the speedup we can achieve. Moreover, the partitions of the search space are visited sequentially, and if there are many unfeasible regions that divide two feasible ones, many idle iterations could delay the start of the execution of the next kernel. 
+\section{Future directions}
+While for the Chad Parry's algorithm we examinated in a satisfying way many approaches (althought the Tesla T4 GPU still hides some secrets, with its whacky Shared Memory...), there is still margin of improvement for the Exhaustive one. Being this a potentially scalable approach with no limit to the maximum amount of capacity, it can be interesting to study other ways to speedup the application. Some changes that we might make in the future are:
+\begin{itemize}
+    \item Introducing Streams in the CPU \emph{for} loop. CUDA Streams allow to schedule multiple kernel launches simultaneously on different execution streams. The result is that the work put on different Streams can be executed concurrently, provided that there are enough hardware resources on the device. Althought this is usually done to overlap kernel execution with data transfer from host to device or viceversa, here, since not much data needs to be transfered, this mechanism would be used to:
+    \begin{itemize}
+        \item Overlap a reduction kernel of a certain partition with the main kernel of a following partition;
+        \item Overlap general kernel execution on the GPU with idle cycles on the CPU. While a parition is being explored by a grid, the main \emph{for} loop can go on, discarding the useless partitions without waiting for the last kernel to end.
+    \end{itemize}
+    \item As for now the \emph{jump} value is passed exactly as a power of two, and as such, it can't be greater than $2^{32}$ or $2^{64}$. It won't be difficult to change the code in such a way that just the exponent needs to be passed as input, so that the jump value can be an arbitrarily high power of 2.
+    \item Another idea could be to increase the \emph{jump} value when it's safe to do so, for example, when we expect that many of the following partitions will be unfeasible. Increasing this value would avoid us many idle, and so useless, cycles.
+\end{itemize}
 
-
-\begin{tabular}{| m{2.4cm} | m{2.4cm} | m{3cm} | m{2.2cm} | m{2.2cm} |}
-\hline
- Index base 2 & Index base 10 & Subset sum & Value & Distance 4\\
- & 1 & 2 \multirow{4}{*}{Foo}\\
-    & 1 & 2 \\
-    \cline{2-3}
-    & 1 & 2 \\
-    & 1 & 2 \\
-    \hline
-\multirow{4}{*}{Bar} & 1 & 2 \\
-    & 1 & 2 \\
-    \cline{2-3}
-    & 1 & 2 \\
-    & 1 & 2 \\
-    \hline
-\end{tabular}
 
 
 \bibliographystyle{unsrt} % We choose the "plain" reference style
 \clearpage
 \bibliography{refs}
+
+
 
 \end{document}
 

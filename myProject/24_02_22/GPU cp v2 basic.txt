@@ -16,53 +16,53 @@ DP v2 GPU, res: 530621875, elapsed: 52.120563, event time: 53,753044
 
 
 block.x = 256, grid.x = 3906251
-DP v2 GPU, res: 530621875, elapsed: 52.384067, event time: 52.563198
+DP v2 GPU, res: 530621875, elapsed: 52.384067, event time: 52,563198
 
 block.x = 256, grid.x = 3906251
-DP v2 GPU, res: 530621875, elapsed: 52.388238, event time: 52.615417
+DP v2 GPU, res: 530621875, elapsed: 52.388238, event time: 52,615417
 
 block.x = 256, grid.x = 3906251
-DP v2 GPU, res: 530621875, elapsed: 52.421060, event time: 52.636547
+DP v2 GPU, res: 530621875, elapsed: 52.421060, event time: 52,636547
 
 block.x = 256, grid.x = 3906251
-DP v2 GPU, res: 530621875, elapsed: 52.298778, event time: 52.622196
+DP v2 GPU, res: 530621875, elapsed: 52.298778, event time: 52,622196
 
 block.x = 256, grid.x = 3906251
-DP v2 GPU, res: 530621875, elapsed: 52.332583, event time: 52.567513
+DP v2 GPU, res: 530621875, elapsed: 52.332583, event time: 52,567513
 
 
 
 block.x = 512, grid.x = 1953126
-DP v2 GPU, res: 530621875, elapsed: 52.943649, event time: 53.140438
+DP v2 GPU, res: 530621875, elapsed: 52.943649, event time: 53,140438
 
 block.x = 512, grid.x = 1953126
-DP v2 GPU, res: 530621875, elapsed: 52.911272, event time: 53.142109
+DP v2 GPU, res: 530621875, elapsed: 52.911272, event time: 53,142109
 
 block.x = 512, grid.x = 1953126
-DP v2 GPU, res: 530621875, elapsed: 52.945829, event time: 53.107109
+DP v2 GPU, res: 530621875, elapsed: 52.945829, event time: 53,107109
 
 block.x = 512, grid.x = 1953126
-DP v2 GPU, res: 530621875, elapsed: 52.888788, event time: 53.146851
+DP v2 GPU, res: 530621875, elapsed: 52.888788, event time: 53,146851
 
 block.x = 512, grid.x = 1953126
-DP v2 GPU, res: 530621875, elapsed: 52.502114, event time: 52.629414
+DP v2 GPU, res: 530621875, elapsed: 52.502114, event time: 52,629414
 
 
 
 block.x = 1024, grid.x = 976563
-DP v2 GPU, res: 530621875, elapsed: 55.202140, event time: 55.421139
+DP v2 GPU, res: 530621875, elapsed: 55.202140, event time: 55,421139
 
 block.x = 1024, grid.x = 976563
-DP v2 GPU, res: 530621875, elapsed: 55.187416, event time: 55.454586
+DP v2 GPU, res: 530621875, elapsed: 55.187416, event time: 55,454586
 
 block.x = 1024, grid.x = 976563
-DP v2 GPU, res: 530621875, elapsed: 55.150633, event time: 55.418789
+DP v2 GPU, res: 530621875, elapsed: 55.150633, event time: 55,418789
 
 block.x = 1024, grid.x = 976563
-DP v2 GPU, res: 530621875, elapsed: 55.279284, event time: 55.423023
+DP v2 GPU, res: 530621875, elapsed: 55.279284, event time: 55,423023
 
 block.x = 1024, grid.x = 976563
-DP v2 GPU, res: 530621875, elapsed: 55.267413, event time: 55.465378
+DP v2 GPU, res: 530621875, elapsed: 55.267413, event time: 55,465378
 
 
 

@@ -1,77 +1,77 @@
 brutto:
 
 block.x = 128, grid.x = 7812501
-DP v2 smem GPU, res: 530621875, elapsed: 51.513669, event time: 51.723152
-DP v2 smem GPU, res: 530621875, elapsed: 51.221321, event time: 51.365772
-DP v2 smem GPU, res: 530621875, elapsed: 51.406148, event time: 51.590008
-DP v2 smem GPU, res: 530621875, elapsed: 51.279469, event time: 51.461578
-DP v2 smem GPU, res: 530621875, elapsed: 51.393560, event time: 51.551926
+DP v2 smem GPU, res: 530621875, elapsed: 51.513669, event time: 51,723152
+DP v2 smem GPU, res: 530621875, elapsed: 51.221321, event time: 51,365772
+DP v2 smem GPU, res: 530621875, elapsed: 51.406148, event time: 51,590008
+DP v2 smem GPU, res: 530621875, elapsed: 51.279469, event time: 51,461578
+DP v2 smem GPU, res: 530621875, elapsed: 51.393560, event time: 51,551926
 
 bello:
 
 block.x = 128, grid.x = 7812501
-DP v2 smem GPU, res: 530621875, elapsed: 50.899286, event time: 51.003735
-DP v2 smem GPU, res: 530621875, elapsed: 52.874299, event time: 53.052624
-DP v2 smem GPU, res: 530621875, elapsed: 52.548281, event time: 52.627972
-DP v2 smem GPU, res: 530621875, elapsed: 52.806241, event time: 52.926903
-DP v2 smem GPU, res: 530621875, elapsed: 52.609075, event time: 52.750797
+DP v2 smem GPU, res: 530621875, elapsed: 50.899286, event time: 51,003735
+DP v2 smem GPU, res: 530621875, elapsed: 52.874299, event time: 53,052624
+DP v2 smem GPU, res: 530621875, elapsed: 52.548281, event time: 52,627972
+DP v2 smem GPU, res: 530621875, elapsed: 52.806241, event time: 52,926903
+DP v2 smem GPU, res: 530621875, elapsed: 52.609075, event time: 52,750797
 
 
 
 brutto:
 
 block.x = 256, grid.x = 3906251
-DP v2 smem GPU, res: 530621875, elapsed: 51.583951, event time: 51.758690
-DP v2 smem GPU, res: 530621875, elapsed: 51.153844, event time: 51.338116
-DP v2 smem GPU, res: 530621875, elapsed: 51.338211, event time: 51.559399
-DP v2 smem GPU, res: 530621875, elapsed: 51.262880, event time: 51.461578
-DP v2 smem GPU, res: 530621875, elapsed: 51.320125, event time: 51.501263
+DP v2 smem GPU, res: 530621875, elapsed: 51.583951, event time: 51,758690
+DP v2 smem GPU, res: 530621875, elapsed: 51.153844, event time: 51,338116
+DP v2 smem GPU, res: 530621875, elapsed: 51.338211, event time: 51,559399
+DP v2 smem GPU, res: 530621875, elapsed: 51.262880, event time: 51,461578
+DP v2 smem GPU, res: 530621875, elapsed: 51.320125, event time: 51,501263
 
 bello:
 
-DP v2 smem GPU, res: 530621875, elapsed: 53.065411, event time: 53.271679
-DP v2 smem GPU, res: 530621875, elapsed: 52.301481, event time: 52.623817
-DP v2 smem GPU, res: 530621875, elapsed: 52.580167, event time: 52.796162
-DP v2 smem GPU, res: 530621875, elapsed: 52.649846, event time: 52.794628
-DP v2 smem GPU, res: 530621875, elapsed: 52.608847, event time: 52.755920
+DP v2 smem GPU, res: 530621875, elapsed: 53.065411, event time: 53,271679
+DP v2 smem GPU, res: 530621875, elapsed: 52.301481, event time: 52,623817
+DP v2 smem GPU, res: 530621875, elapsed: 52.580167, event time: 52,796162
+DP v2 smem GPU, res: 530621875, elapsed: 52.649846, event time: 52,794628
+DP v2 smem GPU, res: 530621875, elapsed: 52.608847, event time: 52,755920
 
 
 
 brutto:
 
 block.x = 512, grid.x = 1953126
-DP v2 smem GPU, res: 530621875, elapsed: 54.418793, event time: 54.631626
-DP v2 smem GPU, res: 530621875, elapsed: 53.908327, event time: 54.096416
-DP v2 smem GPU, res: 530621875, elapsed: 54.097771, event time: 54.305058
-DP v2 smem GPU, res: 530621875, elapsed: 53.993757, event time: 54.252014
-DP v2 smem GPU, res: 530621875, elapsed: 54.078335, event time: 54.276859
+DP v2 smem GPU, res: 530621875, elapsed: 54.418793, event time: 54,631626
+DP v2 smem GPU, res: 530621875, elapsed: 53.908327, event time: 54,096416
+DP v2 smem GPU, res: 530621875, elapsed: 54.097771, event time: 54,305058
+DP v2 smem GPU, res: 530621875, elapsed: 53.993757, event time: 54,252014
+DP v2 smem GPU, res: 530621875, elapsed: 54.078335, event time: 54,276859
 
 bello:
 
 block.x = 512, grid.x = 1953126
-DP v2 smem GPU, res: 530621875, elapsed: 55.689245, event time: 55.944008
-DP v2 smem GPU, res: 530621875, elapsed: 55.278054, event time: 55.497005
-DP v2 smem GPU, res: 530621875, elapsed: 55.554578, event time: 55.782333
-DP v2 smem GPU, res: 530621875, elapsed: 55.452260, event time: 55.681911
-DP v2 smem GPU, res: 530621875, elapsed: 55.539757, event time: 55.706669
+DP v2 smem GPU, res: 530621875, elapsed: 55.689245, event time: 55,944008
+DP v2 smem GPU, res: 530621875, elapsed: 55.278054, event time: 55,497005
+DP v2 smem GPU, res: 530621875, elapsed: 55.554578, event time: 55,782333
+DP v2 smem GPU, res: 530621875, elapsed: 55.452260, event time: 55,681911
+DP v2 smem GPU, res: 530621875, elapsed: 55.539757, event time: 55,706669
 
 
 
 brutto:
 
 block.x = 1024, grid.x = 976563
-DP v2 smem GPU, res: 530621875, elapsed: 61.948570, event time: 62.138893
-DP v2 smem GPU, res: 530621875, elapsed: 61.409418, event time: 61.635738
-DP v2 smem GPU, res: 530621875, elapsed: 61.486875, event time: 61.749313
-DP v2 smem GPU, res: 530621875, elapsed: 61.511114, event time: 61.758434
-DP v2 smem GPU, res: 530621875, elapsed: 61.580557, event time: 61.740101
+DP v2 smem GPU, res: 530621875, elapsed: 61.948570, event time: 62,138893
+DP v2 smem GPU, res: 530621875, elapsed: 61.409418, event time: 61,635738
+DP v2 smem GPU, res: 530621875, elapsed: 61.486875, event time: 61,749313
+DP v2 smem GPU, res: 530621875, elapsed: 61.511114, event time: 61,758434
+DP v2 smem GPU, res: 530621875, elapsed: 61.580557, event time: 61,740101
 
 bello:
 
 block.x = 1024, grid.x = 976563
-DP v2 smem GPU, res: 530621875, elapsed: 63.521289, event time: 63.763607
-DP v2 smem GPU, res: 530621875, elapsed: 63.006304, event time: 63.210556
-DP v2 smem GPU, res: 530621875, elapsed: 63.211533, event time: 63.409153
-DP v2 smem GPU, res: 530621875, elapsed: 63.210425, event time: 63.434299
-DP v2 smem GPU, res: 530621875, elapsed: 63.200462, event time: 63.493366
+DP v2 smem GPU, res: 530621875, elapsed: 63.521289, event time: 63,763607
+DP v2 smem GPU, res: 530621875, elapsed: 63.006304, event time: 63,210556
+DP v2 smem GPU, res: 530621875, elapsed: 63.211533, event time: 63,409153
+DP v2 smem GPU, res: 530621875, elapsed: 63.210425, event time: 63,434299
+DP v2 smem GPU, res: 530621875, elapsed: 63.200462, event time: 63,493366
 

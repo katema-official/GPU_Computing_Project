@@ -1,0 +1,96 @@
+./main 1 1 36 100000 1 16777216
+N = 36, n = 36
+000000000001000000000000000000000000
+block.x = 128, grid.x = 131072
+recursive exhaustive GPU optimization uroll + constant, res: 3606600, event time: 38.113335
+000000000001000000000000000000000000
+block.x = 128, grid.x = 131072
+recursive exhaustive GPU optimization uroll + constant, res: 3606600, event time: 38.235886
+000000000001000000000000000000000000
+block.x = 128, grid.x = 131072
+recursive exhaustive GPU optimization uroll + constant, res: 3606600, event time: 38.472214
+000000000001000000000000000000000000
+block.x = 128, grid.x = 131072
+recursive exhaustive GPU optimization uroll + constant, res: 3606600, event time: 38.588669
+000000000001000000000000000000000000
+block.x = 128, grid.x = 131072
+recursive exhaustive GPU optimization uroll + constant, res: 3606600, event time: 38.722839
+
+
+
+
+
+
+
+./main 1 1 36 100000 1 16777216
+N = 36, n = 36
+000000000001000000000000000000000000
+block.x = 256, grid.x = 65536
+recursive exhaustive GPU optimization uroll + constant, res: 3606600, event time: 38.330914
+000000000001000000000000000000000000
+block.x = 256, grid.x = 65536
+recursive exhaustive GPU optimization uroll + constant, res: 3606600, event time: 38.397472
+000000000001000000000000000000000000
+block.x = 256, grid.x = 65536
+recursive exhaustive GPU optimization uroll + constant, res: 3606600, event time: 38.497421
+000000000001000000000000000000000000
+block.x = 256, grid.x = 65536
+recursive exhaustive GPU optimization uroll + constant, res: 3606600, event time: 38.580135
+000000000001000000000000000000000000
+block.x = 256, grid.x = 65536
+recursive exhaustive GPU optimization uroll + constant, res: 3606600, event time: 38.636246
+
+
+
+
+
+
+
+
+./main 1 1 36 100000 1 16777216
+N = 36, n = 36
+000000000001000000000000000000000000
+block.x = 512, grid.x = 32768
+recursive exhaustive GPU optimization uroll + constant, res: 3606600, event time: 38.710579
+000000000001000000000000000000000000
+block.x = 512, grid.x = 32768
+recursive exhaustive GPU optimization uroll + constant, res: 3606600, event time: 38.678814
+000000000001000000000000000000000000
+block.x = 512, grid.x = 32768
+recursive exhaustive GPU optimization uroll + constant, res: 3606600, event time: 38.709545
+000000000001000000000000000000000000
+block.x = 512, grid.x = 32768
+recursive exhaustive GPU optimization uroll + constant, res: 3606600, event time: 38.738605
+000000000001000000000000000000000000
+block.x = 512, grid.x = 32768
+recursive exhaustive GPU optimization uroll + constant, res: 3606600, event time: 38.759789
+
+
+
+
+
+./main 1 1 36 100000 1 16777216
+N = 36, n = 36
+000000000001000000000000000000000000
+block.x = 1024, grid.x = 16384
+recursive exhaustive GPU optimization uroll + constant, res: 3606600, event time: 41.908150
+000000000001000000000000000000000000
+block.x = 1024, grid.x = 16384
+recursive exhaustive GPU optimization uroll + constant, res: 3606600, event time: 42.574623
+000000000001000000000000000000000000
+block.x = 1024, grid.x = 16384
+recursive exhaustive GPU optimization uroll + constant, res: 3606600, event time: 42.288231
+000000000001000000000000000000000000
+block.x = 1024, grid.x = 16384
+recursive exhaustive GPU optimization uroll + constant, res: 3606600, event time: 42.435230
+000000000001000000000000000000000000
+block.x = 1024, grid.x = 16384
+recursive exhaustive GPU optimization uroll + constant, res: 3606600, event time: 42.381500
+
+
+
+
+
+
+
+
