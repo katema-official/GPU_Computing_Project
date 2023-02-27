@@ -47,7 +47,7 @@ int main(int argc, char **argv){
     }
 
     //Since here shared memory is used...
-    CHECK(cudaDeviceSetCacheConfig(cudaFuncCachePreferShared));
+    //CHECK(cudaDeviceSetCacheConfig(cudaFuncCachePreferShared)); <--- why does this make it so bad
 
     //double start, end;
     cudaEvent_t eStart, eEnd;

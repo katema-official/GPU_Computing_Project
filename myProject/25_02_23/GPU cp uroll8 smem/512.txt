@@ -1,0 +1,1290 @@
+==PROF== Connected to process 33480 (/content/myProject/DIR___GPU_cp_dp/DIR___GPU_cp_dp_uroll8_smem/main)
+==PROF== Profiling "kernel_v2_a_uroll8_smem" - 0: 0%....50%....100% - 5 passes
+==PROF== Profiling "kernel_v2_b_uroll8_smem" - 1: 0%....50%....100% - 5 passes
+==PROF== Profiling "kernel_v2_b_uroll8_smem" - 2: 0%....50%....100% - 5 passes
+==PROF== Profiling "kernel_v2_b_uroll8_smem" - 3: 0%....50%....100% - 5 passes
+==PROF== Profiling "kernel_v2_b_uroll8_smem" - 4: 0%....50%....100% - 5 passes
+==PROF== Profiling "kernel_v2_b_uroll8_smem" - 5: 0%....50%....100% - 5 passes
+==PROF== Profiling "kernel_v2_b_uroll8_smem" - 6: 0%....50%....100% - 5 passes
+==PROF== Profiling "kernel_v2_b_uroll8_smem" - 7: 0%....50%....100% - 5 passes
+==PROF== Profiling "kernel_v2_b_uroll8_smem" - 8: 0%....50%....100% - 5 passes
+==PROF== Profiling "kernel_v2_b_uroll8_smem" - 9: 0%....50%....100% - 5 passes
+==PROF== Profiling "kernel_v2_b_uroll8_smem" - 10: 0%....50%....100% - 5 passes
+==PROF== Profiling "kernel_v2_b_uroll8_smem" - 11: 0%....50%....100% - 5 passes
+==PROF== Profiling "kernel_v2_b_uroll8_smem" - 12: 0%....50%....100% - 5 passes
+==PROF== Profiling "kernel_v2_b_uroll8_smem" - 13: 0%....50%....100% - 5 passes
+==PROF== Profiling "kernel_v2_b_uroll8_smem" - 14: 0%....50%....100% - 5 passes
+==PROF== Profiling "kernel_v2_b_uroll8_smem" - 15: 0%....50%....100% - 5 passes
+==PROF== Profiling "kernel_v2_b_uroll8_smem" - 16: 0%....50%....100% - 5 passes
+==PROF== Profiling "kernel_v2_b_uroll8_smem" - 17: 0%....50%....100% - 5 passes
+==PROF== Profiling "kernel_v2_b_uroll8_smem" - 18: 0%....50%....100% - 5 passes
+==PROF== Profiling "kernel_v2_b_uroll8_smem" - 19: 0%....50%....100% - 5 passes
+==PROF== Profiling "kernel_v2_b_uroll8_smem" - 20: 0%....50%....100% - 5 passes
+==PROF== Profiling "kernel_v2_b_uroll8_smem" - 21: 0%....50%....100% - 5 passes
+==PROF== Profiling "kernel_v2_b_uroll8_smem" - 22: 0%....50%....100% - 5 passes
+==PROF== Profiling "kernel_v2_b_uroll8_smem" - 23: 0%....50%....100% - 5 passes
+==PROF== Profiling "kernel_v2_b_uroll8_smem" - 24: 0%....50%....100% - 5 passes
+==PROF== Profiling "kernel_v2_b_uroll8_smem" - 25: 0%....50%....100% - 5 passes
+==PROF== Profiling "kernel_v2_b_uroll8_smem" - 26: 0%....50%....100% - 5 passes
+==PROF== Profiling "kernel_v2_b_uroll8_smem" - 27: 0%....50%....100% - 5 passes
+==PROF== Profiling "kernel_v2_b_uroll8_smem" - 28: 0%....50%....100% - 5 passes
+==PROF== Profiling "kernel_v2_b_uroll8_smem" - 29: 0%....50%....100% - 5 passes
+==PROF== Profiling "kernel_v2_b_uroll8_smem" - 30: 0%....50%....100% - 5 passes
+==PROF== Profiling "kernel_v2_b_uroll8_smem" - 31: 0%....50%....100% - 5 passes
+==PROF== Profiling "kernel_v2_b_uroll8_smem" - 32: 0%....50%....100% - 5 passes
+==PROF== Profiling "kernel_v2_b_uroll8_smem" - 33: 0%....50%....100% - 5 passes
+==PROF== Profiling "kernel_v2_b_uroll8_smem" - 34: 0%....50%....100% - 5 passes
+==PROF== Profiling "kernel_v2_b_uroll8_smem" - 35: 0%....50%....100% - 5 passes
+==PROF== Profiling "kernel_v2_b_uroll8_smem" - 36: 0%....50%....100% - 5 passes
+==PROF== Profiling "kernel_v2_b_uroll8_smem" - 37: 0%....50%....100% - 5 passes
+==PROF== Profiling "kernel_v2_b_uroll8_smem" - 38: 0%....50%....100% - 5 passes
+==PROF== Profiling "kernel_v2_b_uroll8_smem" - 39: 0%....50%....100% - 5 passes
+==PROF== Profiling "kernel_v2_b_uroll8_smem" - 40: 0%....50%....100% - 5 passes
+==PROF== Profiling "kernel_v2_b_uroll8_smem" - 41: 0%....50%....100% - 5 passes
+==PROF== Profiling "kernel_v2_b_uroll8_smem" - 42: 0%....50%....100% - 5 passes
+==PROF== Profiling "kernel_v2_b_uroll8_smem" - 43: 0%....50%....100% - 5 passes
+==PROF== Profiling "kernel_v2_b_uroll8_smem" - 44: 0%....50%....100% - 5 passes
+==PROF== Profiling "kernel_v2_b_uroll8_smem" - 45: 0%....50%....100% - 5 passes
+==PROF== Profiling "kernel_v2_b_uroll8_smem" - 46: 0%....50%....100% - 5 passes
+==PROF== Profiling "kernel_v2_b_uroll8_smem" - 47: 0%....50%....100% - 5 passes
+==PROF== Profiling "kernel_v2_b_uroll8_smem" - 48: 0%....50%....100% - 5 passes
+==PROF== Profiling "kernel_v2_b_uroll8_smem" - 49: 0%....50%....100% - 5 passes
+==PROF== Profiling "kernel_v2_b_uroll8_smem" - 50: 0%....50%....100% - 5 passes
+==PROF== Profiling "kernel_v2_b_uroll8_smem" - 51: 0%....50%....100% - 5 passes
+==PROF== Profiling "kernel_v2_b_uroll8_smem" - 52: 0%....50%....100% - 5 passes
+==PROF== Profiling "kernel_v2_b_uroll8_smem" - 53: 0%....50%....100% - 5 passes
+==PROF== Profiling "kernel_v2_b_uroll8_smem" - 54: 0%....50%....100% - 5 passes
+==PROF== Profiling "kernel_v2_b_uroll8_smem" - 55: 0%....50%....100% - 5 passes
+==PROF== Profiling "kernel_v2_b_uroll8_smem" - 56: 0%....50%....100% - 5 passes
+==PROF== Profiling "kernel_v2_b_uroll8_smem" - 57: 0%....50%....100% - 5 passes
+==PROF== Profiling "kernel_v2_b_uroll8_smem" - 58: 0%....50%....100% - 5 passes
+==PROF== Profiling "kernel_v2_b_uroll8_smem" - 59: 0%....50%....100% - 5 passes
+==PROF== Profiling "kernel_v2_b_uroll8_smem" - 60: 0%....50%....100% - 5 passes
+==PROF== Profiling "kernel_v2_b_uroll8_smem" - 61: 0%....50%..==PROF== Received signal
+==PROF== Trying to shutdown target application
+ - 4 passes
+==ERROR== Failed to profile kernel "kernel_v2_b_uroll8_smem" in process 33480
+==PROF== Trying to shutdown target application
+==ERROR== An error occurred while trying to profile.
+==WARNING== Found outstanding GPU clock reset, trying to revert...Success.
+[33480] main@127.0.0.1
+  kernel_v2_a_uroll8_smem(unsigned char *, int), 2023-Feb-25 17:28:10, Context 1, Stream 7
+    Section: Command line profiler metrics
+    ---------------------------------------------------------------------- --------------- ------------------------------
+    dram__bytes_read.sum.per_second                                           Gbyte/second                          52.44
+    dram__bytes_write.sum.per_second                                          Gbyte/second                          44.48
+    l1tex__data_pipe_lsu_wavefronts_mem_shared.avg.pct_of_peak_sustained_e               %                           0.63
+    lapsed                                                                                                               
+    l1tex__data_pipe_lsu_wavefronts_mem_shared_op_ld.sum                                                                0
+    l1tex__data_pipe_lsu_wavefronts_mem_shared_op_ld.sum.per_second                                                     0
+    l1tex__data_pipe_lsu_wavefronts_mem_shared_op_st.sum                                                                0
+    l1tex__data_pipe_lsu_wavefronts_mem_shared_op_st.sum.per_second                                                     0
+    l1tex__t_bytes_pipe_lsu_mem_global_op_ld.sum.per_second                    byte/second                              0
+    l1tex__t_bytes_pipe_lsu_mem_global_op_st.sum.per_second                   Gbyte/second                         303.84
+    sm__warps_active.avg.pct_of_peak_sustained_active                                    %                          87.64
+    smsp__sass_average_branch_targets_threads_uniform.pct                                %                         100.00
+    smsp__sass_average_data_bytes_per_sector_mem_global_op_ld.pct                        %                              0
+    smsp__sass_average_data_bytes_per_sector_mem_global_op_st.pct                        %                          12.50
+    smsp__sass_average_data_bytes_per_wavefront_mem_shared.pct                           %                              0
+    ---------------------------------------------------------------------- --------------- ------------------------------
+
+  kernel_v2_b_uroll8_smem(int, unsigned char *, unsigned char *, int, int), 2023-Feb-25 17:28:12, Context 1, Stream 7
+    Section: Command line profiler metrics
+    ---------------------------------------------------------------------- --------------- ------------------------------
+    dram__bytes_read.sum.per_second                                           Gbyte/second                         147.49
+    dram__bytes_write.sum.per_second                                          Gbyte/second                          45.32
+    l1tex__data_pipe_lsu_wavefronts_mem_shared.avg.pct_of_peak_sustained_e               %                          12.72
+    lapsed                                                                                                               
+    l1tex__data_pipe_lsu_wavefronts_mem_shared_op_ld.sum                                                                0
+    l1tex__data_pipe_lsu_wavefronts_mem_shared_op_ld.sum.per_second                                                     0
+    l1tex__data_pipe_lsu_wavefronts_mem_shared_op_st.sum                                                       74,267,889
+    l1tex__data_pipe_lsu_wavefronts_mem_shared_op_st.sum.per_second                                      2,828,444,356.33
+    l1tex__t_bytes_pipe_lsu_mem_global_op_ld.sum.per_second                   Gbyte/second                         645.85
+    l1tex__t_bytes_pipe_lsu_mem_global_op_st.sum.per_second                   Gbyte/second                         304.67
+    sm__warps_active.avg.pct_of_peak_sustained_active                                    %                          75.64
+    smsp__sass_average_branch_targets_threads_uniform.pct                                %                         100.00
+    smsp__sass_average_data_bytes_per_sector_mem_global_op_ld.pct                        %                          11.77
+    smsp__sass_average_data_bytes_per_sector_mem_global_op_st.pct                        %                          12.50
+    smsp__sass_average_data_bytes_per_wavefront_mem_shared.pct                           %                          25.00
+    ---------------------------------------------------------------------- --------------- ------------------------------
+
+  kernel_v2_b_uroll8_smem(int, unsigned char *, unsigned char *, int, int), 2023-Feb-25 17:28:14, Context 1, Stream 7
+    Section: Command line profiler metrics
+    ---------------------------------------------------------------------- --------------- ------------------------------
+    dram__bytes_read.sum.per_second                                           Gbyte/second                         148.17
+    dram__bytes_write.sum.per_second                                          Gbyte/second                          45.42
+    l1tex__data_pipe_lsu_wavefronts_mem_shared.avg.pct_of_peak_sustained_e               %                          12.67
+    lapsed                                                                                                               
+    l1tex__data_pipe_lsu_wavefronts_mem_shared_op_ld.sum                                                                0
+    l1tex__data_pipe_lsu_wavefronts_mem_shared_op_ld.sum.per_second                                                     0
+    l1tex__data_pipe_lsu_wavefronts_mem_shared_op_st.sum                                                       74,136,378
+    l1tex__data_pipe_lsu_wavefronts_mem_shared_op_st.sum.per_second                                      2,817,869,112.52
+    l1tex__t_bytes_pipe_lsu_mem_global_op_ld.sum.per_second                   Gbyte/second                         642.38
+    l1tex__t_bytes_pipe_lsu_mem_global_op_st.sum.per_second                   Gbyte/second                         304.07
+    sm__warps_active.avg.pct_of_peak_sustained_active                                    %                          76.34
+    smsp__sass_average_branch_targets_threads_uniform.pct                                %                         100.00
+    smsp__sass_average_data_bytes_per_sector_mem_global_op_ld.pct                        %                          11.77
+    smsp__sass_average_data_bytes_per_sector_mem_global_op_st.pct                        %                          12.50
+    smsp__sass_average_data_bytes_per_wavefront_mem_shared.pct                           %                          25.00
+    ---------------------------------------------------------------------- --------------- ------------------------------
+
+  kernel_v2_b_uroll8_smem(int, unsigned char *, unsigned char *, int, int), 2023-Feb-25 17:28:16, Context 1, Stream 7
+    Section: Command line profiler metrics
+    ---------------------------------------------------------------------- --------------- ------------------------------
+    dram__bytes_read.sum.per_second                                           Gbyte/second                         150.19
+    dram__bytes_write.sum.per_second                                          Gbyte/second                          46.58
+    l1tex__data_pipe_lsu_wavefronts_mem_shared.avg.pct_of_peak_sustained_e               %                          12.97
+    lapsed                                                                                                               
+    l1tex__data_pipe_lsu_wavefronts_mem_shared_op_ld.sum                                                                0
+    l1tex__data_pipe_lsu_wavefronts_mem_shared_op_ld.sum.per_second                                                     0
+    l1tex__data_pipe_lsu_wavefronts_mem_shared_op_st.sum                                                       74,039,277
+    l1tex__data_pipe_lsu_wavefronts_mem_shared_op_st.sum.per_second                                      2,883,347,028.46
+    l1tex__t_bytes_pipe_lsu_mem_global_op_ld.sum.per_second                   Gbyte/second                         620.39
+    l1tex__t_bytes_pipe_lsu_mem_global_op_st.sum.per_second                   Gbyte/second                         311.55
+    sm__warps_active.avg.pct_of_peak_sustained_active                                    %                          77.04
+    smsp__sass_average_branch_targets_threads_uniform.pct                                %                         100.00
+    smsp__sass_average_data_bytes_per_sector_mem_global_op_ld.pct                        %                          12.50
+    smsp__sass_average_data_bytes_per_sector_mem_global_op_st.pct                        %                          12.50
+    smsp__sass_average_data_bytes_per_wavefront_mem_shared.pct                           %                          25.00
+    ---------------------------------------------------------------------- --------------- ------------------------------
+
+  kernel_v2_b_uroll8_smem(int, unsigned char *, unsigned char *, int, int), 2023-Feb-25 17:28:18, Context 1, Stream 7
+    Section: Command line profiler metrics
+    ---------------------------------------------------------------------- --------------- ------------------------------
+    dram__bytes_read.sum.per_second                                           Gbyte/second                         147.89
+    dram__bytes_write.sum.per_second                                          Gbyte/second                          45.44
+    l1tex__data_pipe_lsu_wavefronts_mem_shared.avg.pct_of_peak_sustained_e               %                          12.77
+    lapsed                                                                                                               
+    l1tex__data_pipe_lsu_wavefronts_mem_shared_op_ld.sum                                                                0
+    l1tex__data_pipe_lsu_wavefronts_mem_shared_op_ld.sum.per_second                                                     0
+    l1tex__data_pipe_lsu_wavefronts_mem_shared_op_st.sum                                                       74,282,461
+    l1tex__data_pipe_lsu_wavefronts_mem_shared_op_st.sum.per_second                                      2,837,669,192.52
+    l1tex__t_bytes_pipe_lsu_mem_global_op_ld.sum.per_second                   Gbyte/second                         638.48
+    l1tex__t_bytes_pipe_lsu_mem_global_op_st.sum.per_second                   Gbyte/second                         305.61
+    sm__warps_active.avg.pct_of_peak_sustained_active                                    %                          75.63
+    smsp__sass_average_branch_targets_threads_uniform.pct                                %                         100.00
+    smsp__sass_average_data_bytes_per_sector_mem_global_op_ld.pct                        %                          11.94
+    smsp__sass_average_data_bytes_per_sector_mem_global_op_st.pct                        %                          12.50
+    smsp__sass_average_data_bytes_per_wavefront_mem_shared.pct                           %                          25.00
+    ---------------------------------------------------------------------- --------------- ------------------------------
+
+  kernel_v2_b_uroll8_smem(int, unsigned char *, unsigned char *, int, int), 2023-Feb-25 17:28:20, Context 1, Stream 7
+    Section: Command line profiler metrics
+    ---------------------------------------------------------------------- --------------- ------------------------------
+    dram__bytes_read.sum.per_second                                           Gbyte/second                         146.87
+    dram__bytes_write.sum.per_second                                          Gbyte/second                          45.56
+    l1tex__data_pipe_lsu_wavefronts_mem_shared.avg.pct_of_peak_sustained_e               %                          12.66
+    lapsed                                                                                                               
+    l1tex__data_pipe_lsu_wavefronts_mem_shared_op_ld.sum                                                                0
+    l1tex__data_pipe_lsu_wavefronts_mem_shared_op_ld.sum.per_second                                                     0
+    l1tex__data_pipe_lsu_wavefronts_mem_shared_op_st.sum                                                       73,977,682
+    l1tex__data_pipe_lsu_wavefronts_mem_shared_op_st.sum.per_second                                      2,814,455,952.19
+    l1tex__t_bytes_pipe_lsu_mem_global_op_ld.sum.per_second                   Gbyte/second                         642.05
+    l1tex__t_bytes_pipe_lsu_mem_global_op_st.sum.per_second                   Gbyte/second                         304.36
+    sm__warps_active.avg.pct_of_peak_sustained_active                                    %                          76.44
+    smsp__sass_average_branch_targets_threads_uniform.pct                                %                         100.00
+    smsp__sass_average_data_bytes_per_sector_mem_global_op_ld.pct                        %                          11.77
+    smsp__sass_average_data_bytes_per_sector_mem_global_op_st.pct                        %                          12.50
+    smsp__sass_average_data_bytes_per_wavefront_mem_shared.pct                           %                          25.00
+    ---------------------------------------------------------------------- --------------- ------------------------------
+
+  kernel_v2_b_uroll8_smem(int, unsigned char *, unsigned char *, int, int), 2023-Feb-25 17:28:22, Context 1, Stream 7
+    Section: Command line profiler metrics
+    ---------------------------------------------------------------------- --------------- ------------------------------
+    dram__bytes_read.sum.per_second                                           Gbyte/second                         147.99
+    dram__bytes_write.sum.per_second                                          Gbyte/second                          45.45
+    l1tex__data_pipe_lsu_wavefronts_mem_shared.avg.pct_of_peak_sustained_e               %                          12.65
+    lapsed                                                                                                               
+    l1tex__data_pipe_lsu_wavefronts_mem_shared_op_ld.sum                                                                0
+    l1tex__data_pipe_lsu_wavefronts_mem_shared_op_ld.sum.per_second                                                     0
+    l1tex__data_pipe_lsu_wavefronts_mem_shared_op_st.sum                                                       74,004,927
+    l1tex__data_pipe_lsu_wavefronts_mem_shared_op_st.sum.per_second                                      2,812,349,397.32
+    l1tex__t_bytes_pipe_lsu_mem_global_op_ld.sum.per_second                   Gbyte/second                         641.23
+    l1tex__t_bytes_pipe_lsu_mem_global_op_st.sum.per_second                   Gbyte/second                         304.02
+    sm__warps_active.avg.pct_of_peak_sustained_active                                    %                          76.37
+    smsp__sass_average_branch_targets_threads_uniform.pct                                %                         100.00
+    smsp__sass_average_data_bytes_per_sector_mem_global_op_ld.pct                        %                          11.77
+    smsp__sass_average_data_bytes_per_sector_mem_global_op_st.pct                        %                          12.50
+    smsp__sass_average_data_bytes_per_wavefront_mem_shared.pct                           %                          25.00
+    ---------------------------------------------------------------------- --------------- ------------------------------
+
+  kernel_v2_b_uroll8_smem(int, unsigned char *, unsigned char *, int, int), 2023-Feb-25 17:28:24, Context 1, Stream 7
+    Section: Command line profiler metrics
+    ---------------------------------------------------------------------- --------------- ------------------------------
+    dram__bytes_read.sum.per_second                                           Gbyte/second                         148.27
+    dram__bytes_write.sum.per_second                                          Gbyte/second                          45.52
+    l1tex__data_pipe_lsu_wavefronts_mem_shared.avg.pct_of_peak_sustained_e               %                          12.67
+    lapsed                                                                                                               
+    l1tex__data_pipe_lsu_wavefronts_mem_shared_op_ld.sum                                                                0
+    l1tex__data_pipe_lsu_wavefronts_mem_shared_op_ld.sum.per_second                                                     0
+    l1tex__data_pipe_lsu_wavefronts_mem_shared_op_st.sum                                                       74,006,266
+    l1tex__data_pipe_lsu_wavefronts_mem_shared_op_st.sum.per_second                                      2,816,520,661.46
+    l1tex__t_bytes_pipe_lsu_mem_global_op_ld.sum.per_second                   Gbyte/second                         614.13
+    l1tex__t_bytes_pipe_lsu_mem_global_op_st.sum.per_second                   Gbyte/second                         304.46
+    sm__warps_active.avg.pct_of_peak_sustained_active                                    %                          76.42
+    smsp__sass_average_branch_targets_threads_uniform.pct                                %                         100.00
+    smsp__sass_average_data_bytes_per_sector_mem_global_op_ld.pct                        %                          12.31
+    smsp__sass_average_data_bytes_per_sector_mem_global_op_st.pct                        %                          12.50
+    smsp__sass_average_data_bytes_per_wavefront_mem_shared.pct                           %                          25.00
+    ---------------------------------------------------------------------- --------------- ------------------------------
+
+  kernel_v2_b_uroll8_smem(int, unsigned char *, unsigned char *, int, int), 2023-Feb-25 17:28:26, Context 1, Stream 7
+    Section: Command line profiler metrics
+    ---------------------------------------------------------------------- --------------- ------------------------------
+    dram__bytes_read.sum.per_second                                           Gbyte/second                         148.11
+    dram__bytes_write.sum.per_second                                          Gbyte/second                          45.44
+    l1tex__data_pipe_lsu_wavefronts_mem_shared.avg.pct_of_peak_sustained_e               %                          12.67
+    lapsed                                                                                                               
+    l1tex__data_pipe_lsu_wavefronts_mem_shared_op_ld.sum                                                                0
+    l1tex__data_pipe_lsu_wavefronts_mem_shared_op_ld.sum.per_second                                                     0
+    l1tex__data_pipe_lsu_wavefronts_mem_shared_op_st.sum                                                       74,073,408
+    l1tex__data_pipe_lsu_wavefronts_mem_shared_op_st.sum.per_second                                      2,815,688,001.30
+    l1tex__t_bytes_pipe_lsu_mem_global_op_ld.sum.per_second                   Gbyte/second                         632.51
+    l1tex__t_bytes_pipe_lsu_mem_global_op_st.sum.per_second                   Gbyte/second                         304.10
+    sm__warps_active.avg.pct_of_peak_sustained_active                                    %                          76.42
+    smsp__sass_average_branch_targets_threads_uniform.pct                                %                         100.00
+    smsp__sass_average_data_bytes_per_sector_mem_global_op_ld.pct                        %                          11.94
+    smsp__sass_average_data_bytes_per_sector_mem_global_op_st.pct                        %                          12.50
+    smsp__sass_average_data_bytes_per_wavefront_mem_shared.pct                           %                          25.00
+    ---------------------------------------------------------------------- --------------- ------------------------------
+
+  kernel_v2_b_uroll8_smem(int, unsigned char *, unsigned char *, int, int), 2023-Feb-25 17:28:28, Context 1, Stream 7
+    Section: Command line profiler metrics
+    ---------------------------------------------------------------------- --------------- ------------------------------
+    dram__bytes_read.sum.per_second                                           Gbyte/second                         147.51
+    dram__bytes_write.sum.per_second                                          Gbyte/second                          45.31
+    l1tex__data_pipe_lsu_wavefronts_mem_shared.avg.pct_of_peak_sustained_e               %                          12.72
+    lapsed                                                                                                               
+    l1tex__data_pipe_lsu_wavefronts_mem_shared_op_ld.sum                                                                0
+    l1tex__data_pipe_lsu_wavefronts_mem_shared_op_ld.sum.per_second                                                     0
+    l1tex__data_pipe_lsu_wavefronts_mem_shared_op_st.sum                                                       74,258,828
+    l1tex__data_pipe_lsu_wavefronts_mem_shared_op_st.sum.per_second                                      2,827,844,248.44
+    l1tex__t_bytes_pipe_lsu_mem_global_op_ld.sum.per_second                   Gbyte/second                         645.76
+    l1tex__t_bytes_pipe_lsu_mem_global_op_st.sum.per_second                   Gbyte/second                         304.65
+    sm__warps_active.avg.pct_of_peak_sustained_active                                    %                          75.66
+    smsp__sass_average_branch_targets_threads_uniform.pct                                %                         100.00
+    smsp__sass_average_data_bytes_per_sector_mem_global_op_ld.pct                        %                          11.77
+    smsp__sass_average_data_bytes_per_sector_mem_global_op_st.pct                        %                          12.50
+    smsp__sass_average_data_bytes_per_wavefront_mem_shared.pct                           %                          25.00
+    ---------------------------------------------------------------------- --------------- ------------------------------
+
+  kernel_v2_b_uroll8_smem(int, unsigned char *, unsigned char *, int, int), 2023-Feb-25 17:28:30, Context 1, Stream 7
+    Section: Command line profiler metrics
+    ---------------------------------------------------------------------- --------------- ------------------------------
+    dram__bytes_read.sum.per_second                                           Gbyte/second                         146.55
+    dram__bytes_write.sum.per_second                                          Gbyte/second                          45.11
+    l1tex__data_pipe_lsu_wavefronts_mem_shared.avg.pct_of_peak_sustained_e               %                          12.65
+    lapsed                                                                                                               
+    l1tex__data_pipe_lsu_wavefronts_mem_shared_op_ld.sum                                                                0
+    l1tex__data_pipe_lsu_wavefronts_mem_shared_op_ld.sum.per_second                                                     0
+    l1tex__data_pipe_lsu_wavefronts_mem_shared_op_st.sum                                                       74,261,585
+    l1tex__data_pipe_lsu_wavefronts_mem_shared_op_st.sum.per_second                                      2,811,323,592.57
+    l1tex__t_bytes_pipe_lsu_mem_global_op_ld.sum.per_second                   Gbyte/second                         642.24
+    l1tex__t_bytes_pipe_lsu_mem_global_op_st.sum.per_second                   Gbyte/second                         302.86
+    sm__warps_active.avg.pct_of_peak_sustained_active                                    %                          75.70
+    smsp__sass_average_branch_targets_threads_uniform.pct                                %                         100.00
+    smsp__sass_average_data_bytes_per_sector_mem_global_op_ld.pct                        %                          11.77
+    smsp__sass_average_data_bytes_per_sector_mem_global_op_st.pct                        %                          12.50
+    smsp__sass_average_data_bytes_per_wavefront_mem_shared.pct                           %                          25.00
+    ---------------------------------------------------------------------- --------------- ------------------------------
+
+  kernel_v2_b_uroll8_smem(int, unsigned char *, unsigned char *, int, int), 2023-Feb-25 17:28:32, Context 1, Stream 7
+    Section: Command line profiler metrics
+    ---------------------------------------------------------------------- --------------- ------------------------------
+    dram__bytes_read.sum.per_second                                           Gbyte/second                         146.97
+    dram__bytes_write.sum.per_second                                          Gbyte/second                          45.49
+    l1tex__data_pipe_lsu_wavefronts_mem_shared.avg.pct_of_peak_sustained_e               %                          12.68
+    lapsed                                                                                                               
+    l1tex__data_pipe_lsu_wavefronts_mem_shared_op_ld.sum                                                                0
+    l1tex__data_pipe_lsu_wavefronts_mem_shared_op_ld.sum.per_second                                                     0
+    l1tex__data_pipe_lsu_wavefronts_mem_shared_op_st.sum                                                       74,048,754
+    l1tex__data_pipe_lsu_wavefronts_mem_shared_op_st.sum.per_second                                      2,817,605,793.08
+    l1tex__t_bytes_pipe_lsu_mem_global_op_ld.sum.per_second                   Gbyte/second                         642.95
+    l1tex__t_bytes_pipe_lsu_mem_global_op_st.sum.per_second                   Gbyte/second                         304.41
+    sm__warps_active.avg.pct_of_peak_sustained_active                                    %                          76.43
+    smsp__sass_average_branch_targets_threads_uniform.pct                                %                         100.00
+    smsp__sass_average_data_bytes_per_sector_mem_global_op_ld.pct                        %                          11.77
+    smsp__sass_average_data_bytes_per_sector_mem_global_op_st.pct                        %                          12.50
+    smsp__sass_average_data_bytes_per_wavefront_mem_shared.pct                           %                          25.00
+    ---------------------------------------------------------------------- --------------- ------------------------------
+
+  kernel_v2_b_uroll8_smem(int, unsigned char *, unsigned char *, int, int), 2023-Feb-25 17:28:34, Context 1, Stream 7
+    Section: Command line profiler metrics
+    ---------------------------------------------------------------------- --------------- ------------------------------
+    dram__bytes_read.sum.per_second                                           Gbyte/second                         147.06
+    dram__bytes_write.sum.per_second                                          Gbyte/second                          45.52
+    l1tex__data_pipe_lsu_wavefronts_mem_shared.avg.pct_of_peak_sustained_e               %                          12.70
+    lapsed                                                                                                               
+    l1tex__data_pipe_lsu_wavefronts_mem_shared_op_ld.sum                                                                0
+    l1tex__data_pipe_lsu_wavefronts_mem_shared_op_ld.sum.per_second                                                     0
+    l1tex__data_pipe_lsu_wavefronts_mem_shared_op_st.sum                                                       74,151,937
+    l1tex__data_pipe_lsu_wavefronts_mem_shared_op_st.sum.per_second                                      2,821,971,797.00
+    l1tex__t_bytes_pipe_lsu_mem_global_op_ld.sum.per_second                   Gbyte/second                         619.67
+    l1tex__t_bytes_pipe_lsu_mem_global_op_st.sum.per_second                   Gbyte/second                         304.45
+    sm__warps_active.avg.pct_of_peak_sustained_active                                    %                          76.38
+    smsp__sass_average_branch_targets_threads_uniform.pct                                %                         100.00
+    smsp__sass_average_data_bytes_per_sector_mem_global_op_ld.pct                        %                          12.21
+    smsp__sass_average_data_bytes_per_sector_mem_global_op_st.pct                        %                          12.50
+    smsp__sass_average_data_bytes_per_wavefront_mem_shared.pct                           %                          25.00
+    ---------------------------------------------------------------------- --------------- ------------------------------
+
+  kernel_v2_b_uroll8_smem(int, unsigned char *, unsigned char *, int, int), 2023-Feb-25 17:28:36, Context 1, Stream 7
+    Section: Command line profiler metrics
+    ---------------------------------------------------------------------- --------------- ------------------------------
+    dram__bytes_read.sum.per_second                                           Gbyte/second                         113.11
+    dram__bytes_write.sum.per_second                                          Gbyte/second                          46.44
+    l1tex__data_pipe_lsu_wavefronts_mem_shared.avg.pct_of_peak_sustained_e               %                          12.94
+    lapsed                                                                                                               
+    l1tex__data_pipe_lsu_wavefronts_mem_shared_op_ld.sum                                                                0
+    l1tex__data_pipe_lsu_wavefronts_mem_shared_op_ld.sum.per_second                                                     0
+    l1tex__data_pipe_lsu_wavefronts_mem_shared_op_st.sum                                                       74,475,857
+    l1tex__data_pipe_lsu_wavefronts_mem_shared_op_st.sum.per_second                                      2,877,111,789.27
+    l1tex__t_bytes_pipe_lsu_mem_global_op_ld.sum.per_second                   Gbyte/second                         629.72
+    l1tex__t_bytes_pipe_lsu_mem_global_op_st.sum.per_second                   Gbyte/second                         309.05
+    sm__warps_active.avg.pct_of_peak_sustained_active                                    %                          75.80
+    smsp__sass_average_branch_targets_threads_uniform.pct                                %                         100.00
+    smsp__sass_average_data_bytes_per_sector_mem_global_op_ld.pct                        %                          12.21
+    smsp__sass_average_data_bytes_per_sector_mem_global_op_st.pct                        %                          12.50
+    smsp__sass_average_data_bytes_per_wavefront_mem_shared.pct                           %                          25.00
+    ---------------------------------------------------------------------- --------------- ------------------------------
+
+  kernel_v2_b_uroll8_smem(int, unsigned char *, unsigned char *, int, int), 2023-Feb-25 17:28:38, Context 1, Stream 7
+    Section: Command line profiler metrics
+    ---------------------------------------------------------------------- --------------- ------------------------------
+    dram__bytes_read.sum.per_second                                           Gbyte/second                         147.39
+    dram__bytes_write.sum.per_second                                          Gbyte/second                          45.29
+    l1tex__data_pipe_lsu_wavefronts_mem_shared.avg.pct_of_peak_sustained_e               %                          12.72
+    lapsed                                                                                                               
+    l1tex__data_pipe_lsu_wavefronts_mem_shared_op_ld.sum                                                                0
+    l1tex__data_pipe_lsu_wavefronts_mem_shared_op_ld.sum.per_second                                                     0
+    l1tex__data_pipe_lsu_wavefronts_mem_shared_op_st.sum                                                       74,253,819
+    l1tex__data_pipe_lsu_wavefronts_mem_shared_op_st.sum.per_second                                      2,827,998,117.96
+    l1tex__t_bytes_pipe_lsu_mem_global_op_ld.sum.per_second                   Gbyte/second                         645.47
+    l1tex__t_bytes_pipe_lsu_mem_global_op_st.sum.per_second                   Gbyte/second                         304.68
+    sm__warps_active.avg.pct_of_peak_sustained_active                                    %                          75.67
+    smsp__sass_average_branch_targets_threads_uniform.pct                                %                         100.00
+    smsp__sass_average_data_bytes_per_sector_mem_global_op_ld.pct                        %                          11.77
+    smsp__sass_average_data_bytes_per_sector_mem_global_op_st.pct                        %                          12.50
+    smsp__sass_average_data_bytes_per_wavefront_mem_shared.pct                           %                          25.00
+    ---------------------------------------------------------------------- --------------- ------------------------------
+
+  kernel_v2_b_uroll8_smem(int, unsigned char *, unsigned char *, int, int), 2023-Feb-25 17:28:40, Context 1, Stream 7
+    Section: Command line profiler metrics
+    ---------------------------------------------------------------------- --------------- ------------------------------
+    dram__bytes_read.sum.per_second                                           Gbyte/second                         149.05
+    dram__bytes_write.sum.per_second                                          Gbyte/second                          45.50
+    l1tex__data_pipe_lsu_wavefronts_mem_shared.avg.pct_of_peak_sustained_e               %                          12.72
+    lapsed                                                                                                               
+    l1tex__data_pipe_lsu_wavefronts_mem_shared_op_ld.sum                                                                0
+    l1tex__data_pipe_lsu_wavefronts_mem_shared_op_ld.sum.per_second                                                     0
+    l1tex__data_pipe_lsu_wavefronts_mem_shared_op_st.sum                                                       74,174,798
+    l1tex__data_pipe_lsu_wavefronts_mem_shared_op_st.sum.per_second                                      2,827,438,598.58
+    l1tex__t_bytes_pipe_lsu_mem_global_op_ld.sum.per_second                   Gbyte/second                         645.24
+    l1tex__t_bytes_pipe_lsu_mem_global_op_st.sum.per_second                   Gbyte/second                         304.95
+    sm__warps_active.avg.pct_of_peak_sustained_active                                    %                          75.81
+    smsp__sass_average_branch_targets_threads_uniform.pct                                %                         100.00
+    smsp__sass_average_data_bytes_per_sector_mem_global_op_ld.pct                        %                          11.77
+    smsp__sass_average_data_bytes_per_sector_mem_global_op_st.pct                        %                          12.50
+    smsp__sass_average_data_bytes_per_wavefront_mem_shared.pct                           %                          25.00
+    ---------------------------------------------------------------------- --------------- ------------------------------
+
+  kernel_v2_b_uroll8_smem(int, unsigned char *, unsigned char *, int, int), 2023-Feb-25 17:28:42, Context 1, Stream 7
+    Section: Command line profiler metrics
+    ---------------------------------------------------------------------- --------------- ------------------------------
+    dram__bytes_read.sum.per_second                                           Gbyte/second                         146.90
+    dram__bytes_write.sum.per_second                                          Gbyte/second                          45.52
+    l1tex__data_pipe_lsu_wavefronts_mem_shared.avg.pct_of_peak_sustained_e               %                          12.68
+    lapsed                                                                                                               
+    l1tex__data_pipe_lsu_wavefronts_mem_shared_op_ld.sum                                                                0
+    l1tex__data_pipe_lsu_wavefronts_mem_shared_op_ld.sum.per_second                                                     0
+    l1tex__data_pipe_lsu_wavefronts_mem_shared_op_st.sum                                                       74,025,189
+    l1tex__data_pipe_lsu_wavefronts_mem_shared_op_st.sum.per_second                                      2,817,810,488.62
+    l1tex__t_bytes_pipe_lsu_mem_global_op_ld.sum.per_second                   Gbyte/second                         601.16
+    l1tex__t_bytes_pipe_lsu_mem_global_op_st.sum.per_second                   Gbyte/second                         304.52
+    sm__warps_active.avg.pct_of_peak_sustained_active                                    %                          76.47
+    smsp__sass_average_branch_targets_threads_uniform.pct                                %                         100.00
+    smsp__sass_average_data_bytes_per_sector_mem_global_op_ld.pct                        %                          12.50
+    smsp__sass_average_data_bytes_per_sector_mem_global_op_st.pct                        %                          12.50
+    smsp__sass_average_data_bytes_per_wavefront_mem_shared.pct                           %                          25.00
+    ---------------------------------------------------------------------- --------------- ------------------------------
+
+  kernel_v2_b_uroll8_smem(int, unsigned char *, unsigned char *, int, int), 2023-Feb-25 17:28:44, Context 1, Stream 7
+    Section: Command line profiler metrics
+    ---------------------------------------------------------------------- --------------- ------------------------------
+    dram__bytes_read.sum.per_second                                           Gbyte/second                         147.99
+    dram__bytes_write.sum.per_second                                          Gbyte/second                          45.39
+    l1tex__data_pipe_lsu_wavefronts_mem_shared.avg.pct_of_peak_sustained_e               %                          12.65
+    lapsed                                                                                                               
+    l1tex__data_pipe_lsu_wavefronts_mem_shared_op_ld.sum                                                                0
+    l1tex__data_pipe_lsu_wavefronts_mem_shared_op_ld.sum.per_second                                                     0
+    l1tex__data_pipe_lsu_wavefronts_mem_shared_op_st.sum                                                       73,945,098
+    l1tex__data_pipe_lsu_wavefronts_mem_shared_op_st.sum.per_second                                      2,810,697,841.24
+    l1tex__t_bytes_pipe_lsu_mem_global_op_ld.sum.per_second                   Gbyte/second                         641.11
+    l1tex__t_bytes_pipe_lsu_mem_global_op_st.sum.per_second                   Gbyte/second                         304.08
+    sm__warps_active.avg.pct_of_peak_sustained_active                                    %                          76.42
+    smsp__sass_average_branch_targets_threads_uniform.pct                                %                         100.00
+    smsp__sass_average_data_bytes_per_sector_mem_global_op_ld.pct                        %                          11.77
+    smsp__sass_average_data_bytes_per_sector_mem_global_op_st.pct                        %                          12.50
+    smsp__sass_average_data_bytes_per_wavefront_mem_shared.pct                           %                          25.00
+    ---------------------------------------------------------------------- --------------- ------------------------------
+
+  kernel_v2_b_uroll8_smem(int, unsigned char *, unsigned char *, int, int), 2023-Feb-25 17:28:46, Context 1, Stream 7
+    Section: Command line profiler metrics
+    ---------------------------------------------------------------------- --------------- ------------------------------
+    dram__bytes_read.sum.per_second                                           Gbyte/second                         148.23
+    dram__bytes_write.sum.per_second                                          Gbyte/second                          45.89
+    l1tex__data_pipe_lsu_wavefronts_mem_shared.avg.pct_of_peak_sustained_e               %                          12.81
+    lapsed                                                                                                               
+    l1tex__data_pipe_lsu_wavefronts_mem_shared_op_ld.sum                                                                0
+    l1tex__data_pipe_lsu_wavefronts_mem_shared_op_ld.sum.per_second                                                     0
+    l1tex__data_pipe_lsu_wavefronts_mem_shared_op_st.sum                                                       74,178,456
+    l1tex__data_pipe_lsu_wavefronts_mem_shared_op_st.sum.per_second                                      2,846,095,833.39
+    l1tex__t_bytes_pipe_lsu_mem_global_op_ld.sum.per_second                   Gbyte/second                         643.06
+    l1tex__t_bytes_pipe_lsu_mem_global_op_st.sum.per_second                   Gbyte/second                         306.95
+    sm__warps_active.avg.pct_of_peak_sustained_active                                    %                          76.41
+    smsp__sass_average_branch_targets_threads_uniform.pct                                %                         100.00
+    smsp__sass_average_data_bytes_per_sector_mem_global_op_ld.pct                        %                          11.85
+    smsp__sass_average_data_bytes_per_sector_mem_global_op_st.pct                        %                          12.50
+    smsp__sass_average_data_bytes_per_wavefront_mem_shared.pct                           %                          25.00
+    ---------------------------------------------------------------------- --------------- ------------------------------
+
+  kernel_v2_b_uroll8_smem(int, unsigned char *, unsigned char *, int, int), 2023-Feb-25 17:28:48, Context 1, Stream 7
+    Section: Command line profiler metrics
+    ---------------------------------------------------------------------- --------------- ------------------------------
+    dram__bytes_read.sum.per_second                                           Gbyte/second                         147.54
+    dram__bytes_write.sum.per_second                                          Gbyte/second                          45.14
+    l1tex__data_pipe_lsu_wavefronts_mem_shared.avg.pct_of_peak_sustained_e               %                          12.58
+    lapsed                                                                                                               
+    l1tex__data_pipe_lsu_wavefronts_mem_shared_op_ld.sum                                                                0
+    l1tex__data_pipe_lsu_wavefronts_mem_shared_op_ld.sum.per_second                                                     0
+    l1tex__data_pipe_lsu_wavefronts_mem_shared_op_st.sum                                                       74,042,443
+    l1tex__data_pipe_lsu_wavefronts_mem_shared_op_st.sum.per_second                                      2,795,955,280.39
+    l1tex__t_bytes_pipe_lsu_mem_global_op_ld.sum.per_second                   Gbyte/second                         638.91
+    l1tex__t_bytes_pipe_lsu_mem_global_op_st.sum.per_second                   Gbyte/second                         302.09
+    sm__warps_active.avg.pct_of_peak_sustained_active                                    %                          75.66
+    smsp__sass_average_branch_targets_threads_uniform.pct                                %                         100.00
+    smsp__sass_average_data_bytes_per_sector_mem_global_op_ld.pct                        %                          11.77
+    smsp__sass_average_data_bytes_per_sector_mem_global_op_st.pct                        %                          12.50
+    smsp__sass_average_data_bytes_per_wavefront_mem_shared.pct                           %                          25.00
+    ---------------------------------------------------------------------- --------------- ------------------------------
+
+  kernel_v2_b_uroll8_smem(int, unsigned char *, unsigned char *, int, int), 2023-Feb-25 17:28:50, Context 1, Stream 7
+    Section: Command line profiler metrics
+    ---------------------------------------------------------------------- --------------- ------------------------------
+    dram__bytes_read.sum.per_second                                           Gbyte/second                         148.92
+    dram__bytes_write.sum.per_second                                          Gbyte/second                          45.58
+    l1tex__data_pipe_lsu_wavefronts_mem_shared.avg.pct_of_peak_sustained_e               %                          12.72
+    lapsed                                                                                                               
+    l1tex__data_pipe_lsu_wavefronts_mem_shared_op_ld.sum                                                                0
+    l1tex__data_pipe_lsu_wavefronts_mem_shared_op_ld.sum.per_second                                                     0
+    l1tex__data_pipe_lsu_wavefronts_mem_shared_op_st.sum                                                       74,179,208
+    l1tex__data_pipe_lsu_wavefronts_mem_shared_op_st.sum.per_second                                      2,827,420,462.42
+    l1tex__t_bytes_pipe_lsu_mem_global_op_ld.sum.per_second                   Gbyte/second                         644.83
+    l1tex__t_bytes_pipe_lsu_mem_global_op_st.sum.per_second                   Gbyte/second                         304.93
+    sm__warps_active.avg.pct_of_peak_sustained_active                                    %                          75.81
+    smsp__sass_average_branch_targets_threads_uniform.pct                                %                         100.00
+    smsp__sass_average_data_bytes_per_sector_mem_global_op_ld.pct                        %                          11.77
+    smsp__sass_average_data_bytes_per_sector_mem_global_op_st.pct                        %                          12.50
+    smsp__sass_average_data_bytes_per_wavefront_mem_shared.pct                           %                          25.00
+    ---------------------------------------------------------------------- --------------- ------------------------------
+
+  kernel_v2_b_uroll8_smem(int, unsigned char *, unsigned char *, int, int), 2023-Feb-25 17:28:52, Context 1, Stream 7
+    Section: Command line profiler metrics
+    ---------------------------------------------------------------------- --------------- ------------------------------
+    dram__bytes_read.sum.per_second                                           Gbyte/second                         147.31
+    dram__bytes_write.sum.per_second                                          Gbyte/second                          45.34
+    l1tex__data_pipe_lsu_wavefronts_mem_shared.avg.pct_of_peak_sustained_e               %                          12.71
+    lapsed                                                                                                               
+    l1tex__data_pipe_lsu_wavefronts_mem_shared_op_ld.sum                                                                0
+    l1tex__data_pipe_lsu_wavefronts_mem_shared_op_ld.sum.per_second                                                     0
+    l1tex__data_pipe_lsu_wavefronts_mem_shared_op_st.sum                                                       74,154,124
+    l1tex__data_pipe_lsu_wavefronts_mem_shared_op_st.sum.per_second                                      2,824,480,004.63
+    l1tex__t_bytes_pipe_lsu_mem_global_op_ld.sum.per_second                   Gbyte/second                         644.97
+    l1tex__t_bytes_pipe_lsu_mem_global_op_st.sum.per_second                   Gbyte/second                         304.71
+    sm__warps_active.avg.pct_of_peak_sustained_active                                    %                          75.68
+    smsp__sass_average_branch_targets_threads_uniform.pct                                %                         100.00
+    smsp__sass_average_data_bytes_per_sector_mem_global_op_ld.pct                        %                          11.77
+    smsp__sass_average_data_bytes_per_sector_mem_global_op_st.pct                        %                          12.50
+    smsp__sass_average_data_bytes_per_wavefront_mem_shared.pct                           %                          25.00
+    ---------------------------------------------------------------------- --------------- ------------------------------
+
+  kernel_v2_b_uroll8_smem(int, unsigned char *, unsigned char *, int, int), 2023-Feb-25 17:28:54, Context 1, Stream 7
+    Section: Command line profiler metrics
+    ---------------------------------------------------------------------- --------------- ------------------------------
+    dram__bytes_read.sum.per_second                                           Gbyte/second                         146.92
+    dram__bytes_write.sum.per_second                                          Gbyte/second                          45.47
+    l1tex__data_pipe_lsu_wavefronts_mem_shared.avg.pct_of_peak_sustained_e               %                          12.67
+    lapsed                                                                                                               
+    l1tex__data_pipe_lsu_wavefronts_mem_shared_op_ld.sum                                                                0
+    l1tex__data_pipe_lsu_wavefronts_mem_shared_op_ld.sum.per_second                                                     0
+    l1tex__data_pipe_lsu_wavefronts_mem_shared_op_st.sum                                                       74,025,192
+    l1tex__data_pipe_lsu_wavefronts_mem_shared_op_st.sum.per_second                                      2,816,417,749.63
+    l1tex__t_bytes_pipe_lsu_mem_global_op_ld.sum.per_second                   Gbyte/second                         642.31
+    l1tex__t_bytes_pipe_lsu_mem_global_op_st.sum.per_second                   Gbyte/second                         304.37
+    sm__warps_active.avg.pct_of_peak_sustained_active                                    %                          76.45
+    smsp__sass_average_branch_targets_threads_uniform.pct                                %                         100.00
+    smsp__sass_average_data_bytes_per_sector_mem_global_op_ld.pct                        %                          11.77
+    smsp__sass_average_data_bytes_per_sector_mem_global_op_st.pct                        %                          12.50
+    smsp__sass_average_data_bytes_per_wavefront_mem_shared.pct                           %                          25.00
+    ---------------------------------------------------------------------- --------------- ------------------------------
+
+  kernel_v2_b_uroll8_smem(int, unsigned char *, unsigned char *, int, int), 2023-Feb-25 17:28:56, Context 1, Stream 7
+    Section: Command line profiler metrics
+    ---------------------------------------------------------------------- --------------- ------------------------------
+    dram__bytes_read.sum.per_second                                           Gbyte/second                         147.26
+    dram__bytes_write.sum.per_second                                          Gbyte/second                          45.26
+    l1tex__data_pipe_lsu_wavefronts_mem_shared.avg.pct_of_peak_sustained_e               %                          12.69
+    lapsed                                                                                                               
+    l1tex__data_pipe_lsu_wavefronts_mem_shared_op_ld.sum                                                                0
+    l1tex__data_pipe_lsu_wavefronts_mem_shared_op_ld.sum.per_second                                                     0
+    l1tex__data_pipe_lsu_wavefronts_mem_shared_op_st.sum                                                       74,050,086
+    l1tex__data_pipe_lsu_wavefronts_mem_shared_op_st.sum.per_second                                      2,820,335,075.98
+    l1tex__t_bytes_pipe_lsu_mem_global_op_ld.sum.per_second                   Gbyte/second                         644.23
+    l1tex__t_bytes_pipe_lsu_mem_global_op_st.sum.per_second                   Gbyte/second                         304.69
+    sm__warps_active.avg.pct_of_peak_sustained_active                                    %                          75.69
+    smsp__sass_average_branch_targets_threads_uniform.pct                                %                         100.00
+    smsp__sass_average_data_bytes_per_sector_mem_global_op_ld.pct                        %                          11.77
+    smsp__sass_average_data_bytes_per_sector_mem_global_op_st.pct                        %                          12.50
+    smsp__sass_average_data_bytes_per_wavefront_mem_shared.pct                           %                          25.00
+    ---------------------------------------------------------------------- --------------- ------------------------------
+
+  kernel_v2_b_uroll8_smem(int, unsigned char *, unsigned char *, int, int), 2023-Feb-25 17:28:58, Context 1, Stream 7
+    Section: Command line profiler metrics
+    ---------------------------------------------------------------------- --------------- ------------------------------
+    dram__bytes_read.sum.per_second                                           Gbyte/second                         150.04
+    dram__bytes_write.sum.per_second                                          Gbyte/second                          45.82
+    l1tex__data_pipe_lsu_wavefronts_mem_shared.avg.pct_of_peak_sustained_e               %                          12.77
+    lapsed                                                                                                               
+    l1tex__data_pipe_lsu_wavefronts_mem_shared_op_ld.sum                                                                0
+    l1tex__data_pipe_lsu_wavefronts_mem_shared_op_ld.sum.per_second                                                     0
+    l1tex__data_pipe_lsu_wavefronts_mem_shared_op_st.sum                                                       74,050,297
+    l1tex__data_pipe_lsu_wavefronts_mem_shared_op_st.sum.per_second                                      2,839,027,916.14
+    l1tex__t_bytes_pipe_lsu_mem_global_op_ld.sum.per_second                   Gbyte/second                         611.08
+    l1tex__t_bytes_pipe_lsu_mem_global_op_st.sum.per_second                   Gbyte/second                         306.71
+    sm__warps_active.avg.pct_of_peak_sustained_active                                    %                          78.07
+    smsp__sass_average_branch_targets_threads_uniform.pct                                %                         100.00
+    smsp__sass_average_data_bytes_per_sector_mem_global_op_ld.pct                        %                          12.40
+    smsp__sass_average_data_bytes_per_sector_mem_global_op_st.pct                        %                          12.50
+    smsp__sass_average_data_bytes_per_wavefront_mem_shared.pct                           %                          25.00
+    ---------------------------------------------------------------------- --------------- ------------------------------
+
+  kernel_v2_b_uroll8_smem(int, unsigned char *, unsigned char *, int, int), 2023-Feb-25 17:29:00, Context 1, Stream 7
+    Section: Command line profiler metrics
+    ---------------------------------------------------------------------- --------------- ------------------------------
+    dram__bytes_read.sum.per_second                                           Gbyte/second                         147.11
+    dram__bytes_write.sum.per_second                                          Gbyte/second                          45.32
+    l1tex__data_pipe_lsu_wavefronts_mem_shared.avg.pct_of_peak_sustained_e               %                          12.68
+    lapsed                                                                                                               
+    l1tex__data_pipe_lsu_wavefronts_mem_shared_op_ld.sum                                                                0
+    l1tex__data_pipe_lsu_wavefronts_mem_shared_op_ld.sum.per_second                                                     0
+    l1tex__data_pipe_lsu_wavefronts_mem_shared_op_st.sum                                                       73,985,949
+    l1tex__data_pipe_lsu_wavefronts_mem_shared_op_st.sum.per_second                                      2,817,861,390.04
+    l1tex__t_bytes_pipe_lsu_mem_global_op_ld.sum.per_second                   Gbyte/second                         643.40
+    l1tex__t_bytes_pipe_lsu_mem_global_op_st.sum.per_second                   Gbyte/second                         304.69
+    sm__warps_active.avg.pct_of_peak_sustained_active                                    %                          75.73
+    smsp__sass_average_branch_targets_threads_uniform.pct                                %                         100.00
+    smsp__sass_average_data_bytes_per_sector_mem_global_op_ld.pct                        %                          11.77
+    smsp__sass_average_data_bytes_per_sector_mem_global_op_st.pct                        %                          12.50
+    smsp__sass_average_data_bytes_per_wavefront_mem_shared.pct                           %                          25.00
+    ---------------------------------------------------------------------- --------------- ------------------------------
+
+  kernel_v2_b_uroll8_smem(int, unsigned char *, unsigned char *, int, int), 2023-Feb-25 17:29:02, Context 1, Stream 7
+    Section: Command line profiler metrics
+    ---------------------------------------------------------------------- --------------- ------------------------------
+    dram__bytes_read.sum.per_second                                           Gbyte/second                         148.83
+    dram__bytes_write.sum.per_second                                          Gbyte/second                          45.57
+    l1tex__data_pipe_lsu_wavefronts_mem_shared.avg.pct_of_peak_sustained_e               %                          12.71
+    lapsed                                                                                                               
+    l1tex__data_pipe_lsu_wavefronts_mem_shared_op_ld.sum                                                                0
+    l1tex__data_pipe_lsu_wavefronts_mem_shared_op_ld.sum.per_second                                                     0
+    l1tex__data_pipe_lsu_wavefronts_mem_shared_op_st.sum                                                       74,059,612
+    l1tex__data_pipe_lsu_wavefronts_mem_shared_op_st.sum.per_second                                      2,824,064,080.58
+    l1tex__t_bytes_pipe_lsu_mem_global_op_ld.sum.per_second                   Gbyte/second                         625.16
+    l1tex__t_bytes_pipe_lsu_mem_global_op_st.sum.per_second                   Gbyte/second                         305.06
+    sm__warps_active.avg.pct_of_peak_sustained_active                                    %                          75.85
+    smsp__sass_average_branch_targets_threads_uniform.pct                                %                         100.00
+    smsp__sass_average_data_bytes_per_sector_mem_global_op_ld.pct                        %                          12.12
+    smsp__sass_average_data_bytes_per_sector_mem_global_op_st.pct                        %                          12.50
+    smsp__sass_average_data_bytes_per_wavefront_mem_shared.pct                           %                          25.00
+    ---------------------------------------------------------------------- --------------- ------------------------------
+
+  kernel_v2_b_uroll8_smem(int, unsigned char *, unsigned char *, int, int), 2023-Feb-25 17:29:04, Context 1, Stream 7
+    Section: Command line profiler metrics
+    ---------------------------------------------------------------------- --------------- ------------------------------
+    dram__bytes_read.sum.per_second                                           Gbyte/second                         147.29
+    dram__bytes_write.sum.per_second                                          Gbyte/second                          45.86
+    l1tex__data_pipe_lsu_wavefronts_mem_shared.avg.pct_of_peak_sustained_e               %                          12.83
+    lapsed                                                                                                               
+    l1tex__data_pipe_lsu_wavefronts_mem_shared_op_ld.sum                                                                0
+    l1tex__data_pipe_lsu_wavefronts_mem_shared_op_ld.sum.per_second                                                     0
+    l1tex__data_pipe_lsu_wavefronts_mem_shared_op_st.sum                                                       74,298,735
+    l1tex__data_pipe_lsu_wavefronts_mem_shared_op_st.sum.per_second                                      2,851,459,933.96
+    l1tex__t_bytes_pipe_lsu_mem_global_op_ld.sum.per_second                   Gbyte/second                         649.52
+    l1tex__t_bytes_pipe_lsu_mem_global_op_st.sum.per_second                   Gbyte/second                         307.03
+    sm__warps_active.avg.pct_of_peak_sustained_active                                    %                          76.34
+    smsp__sass_average_branch_targets_threads_uniform.pct                                %                         100.00
+    smsp__sass_average_data_bytes_per_sector_mem_global_op_ld.pct                        %                          11.77
+    smsp__sass_average_data_bytes_per_sector_mem_global_op_st.pct                        %                          12.50
+    smsp__sass_average_data_bytes_per_wavefront_mem_shared.pct                           %                          25.00
+    ---------------------------------------------------------------------- --------------- ------------------------------
+
+  kernel_v2_b_uroll8_smem(int, unsigned char *, unsigned char *, int, int), 2023-Feb-25 17:29:06, Context 1, Stream 7
+    Section: Command line profiler metrics
+    ---------------------------------------------------------------------- --------------- ------------------------------
+    dram__bytes_read.sum.per_second                                           Gbyte/second                         146.93
+    dram__bytes_write.sum.per_second                                          Gbyte/second                          45.48
+    l1tex__data_pipe_lsu_wavefronts_mem_shared.avg.pct_of_peak_sustained_e               %                          12.68
+    lapsed                                                                                                               
+    l1tex__data_pipe_lsu_wavefronts_mem_shared_op_ld.sum                                                                0
+    l1tex__data_pipe_lsu_wavefronts_mem_shared_op_ld.sum.per_second                                                     0
+    l1tex__data_pipe_lsu_wavefronts_mem_shared_op_st.sum                                                       74,070,313
+    l1tex__data_pipe_lsu_wavefronts_mem_shared_op_st.sum.per_second                                      2,818,168,767.99
+    l1tex__t_bytes_pipe_lsu_mem_global_op_ld.sum.per_second                   Gbyte/second                         642.72
+    l1tex__t_bytes_pipe_lsu_mem_global_op_st.sum.per_second                   Gbyte/second                         304.38
+    sm__warps_active.avg.pct_of_peak_sustained_active                                    %                          76.41
+    smsp__sass_average_branch_targets_threads_uniform.pct                                %                         100.00
+    smsp__sass_average_data_bytes_per_sector_mem_global_op_ld.pct                        %                          11.77
+    smsp__sass_average_data_bytes_per_sector_mem_global_op_st.pct                        %                          12.50
+    smsp__sass_average_data_bytes_per_wavefront_mem_shared.pct                           %                          25.00
+    ---------------------------------------------------------------------- --------------- ------------------------------
+
+  kernel_v2_b_uroll8_smem(int, unsigned char *, unsigned char *, int, int), 2023-Feb-25 17:29:08, Context 1, Stream 7
+    Section: Command line profiler metrics
+    ---------------------------------------------------------------------- --------------- ------------------------------
+    dram__bytes_read.sum.per_second                                           Gbyte/second                         146.55
+    dram__bytes_write.sum.per_second                                          Gbyte/second                          44.98
+    l1tex__data_pipe_lsu_wavefronts_mem_shared.avg.pct_of_peak_sustained_e               %                          12.65
+    lapsed                                                                                                               
+    l1tex__data_pipe_lsu_wavefronts_mem_shared_op_ld.sum                                                                0
+    l1tex__data_pipe_lsu_wavefronts_mem_shared_op_ld.sum.per_second                                                     0
+    l1tex__data_pipe_lsu_wavefronts_mem_shared_op_st.sum                                                       73,894,312
+    l1tex__data_pipe_lsu_wavefronts_mem_shared_op_st.sum.per_second                                      2,811,664,121.90
+    l1tex__t_bytes_pipe_lsu_mem_global_op_ld.sum.per_second                   Gbyte/second                         630.32
+    l1tex__t_bytes_pipe_lsu_mem_global_op_st.sum.per_second                   Gbyte/second                         304.40
+    sm__warps_active.avg.pct_of_peak_sustained_active                                    %                          77.48
+    smsp__sass_average_branch_targets_threads_uniform.pct                                %                         100.00
+    smsp__sass_average_data_bytes_per_sector_mem_global_op_ld.pct                        %                          12.03
+    smsp__sass_average_data_bytes_per_sector_mem_global_op_st.pct                        %                          12.50
+    smsp__sass_average_data_bytes_per_wavefront_mem_shared.pct                           %                          25.00
+    ---------------------------------------------------------------------- --------------- ------------------------------
+
+  kernel_v2_b_uroll8_smem(int, unsigned char *, unsigned char *, int, int), 2023-Feb-25 17:29:10, Context 1, Stream 7
+    Section: Command line profiler metrics
+    ---------------------------------------------------------------------- --------------- ------------------------------
+    dram__bytes_read.sum.per_second                                           Gbyte/second                         146.44
+    dram__bytes_write.sum.per_second                                          Gbyte/second                          45.07
+    l1tex__data_pipe_lsu_wavefronts_mem_shared.avg.pct_of_peak_sustained_e               %                          12.63
+    lapsed                                                                                                               
+    l1tex__data_pipe_lsu_wavefronts_mem_shared_op_ld.sum                                                                0
+    l1tex__data_pipe_lsu_wavefronts_mem_shared_op_ld.sum.per_second                                                     0
+    l1tex__data_pipe_lsu_wavefronts_mem_shared_op_st.sum                                                       74,201,967
+    l1tex__data_pipe_lsu_wavefronts_mem_shared_op_st.sum.per_second                                      2,807,406,961.52
+    l1tex__t_bytes_pipe_lsu_mem_global_op_ld.sum.per_second                   Gbyte/second                         641.36
+    l1tex__t_bytes_pipe_lsu_mem_global_op_st.sum.per_second                   Gbyte/second                         302.68
+    sm__warps_active.avg.pct_of_peak_sustained_active                                    %                          75.71
+    smsp__sass_average_branch_targets_threads_uniform.pct                                %                         100.00
+    smsp__sass_average_data_bytes_per_sector_mem_global_op_ld.pct                        %                          11.77
+    smsp__sass_average_data_bytes_per_sector_mem_global_op_st.pct                        %                          12.50
+    smsp__sass_average_data_bytes_per_wavefront_mem_shared.pct                           %                          25.00
+    ---------------------------------------------------------------------- --------------- ------------------------------
+
+  kernel_v2_b_uroll8_smem(int, unsigned char *, unsigned char *, int, int), 2023-Feb-25 17:29:12, Context 1, Stream 7
+    Section: Command line profiler metrics
+    ---------------------------------------------------------------------- --------------- ------------------------------
+    dram__bytes_read.sum.per_second                                           Gbyte/second                         146.55
+    dram__bytes_write.sum.per_second                                          Gbyte/second                          45.43
+    l1tex__data_pipe_lsu_wavefronts_mem_shared.avg.pct_of_peak_sustained_e               %                          12.64
+    lapsed                                                                                                               
+    l1tex__data_pipe_lsu_wavefronts_mem_shared_op_ld.sum                                                                0
+    l1tex__data_pipe_lsu_wavefronts_mem_shared_op_ld.sum.per_second                                                     0
+    l1tex__data_pipe_lsu_wavefronts_mem_shared_op_st.sum                                                       74,099,775
+    l1tex__data_pipe_lsu_wavefronts_mem_shared_op_st.sum.per_second                                      2,809,411,344.26
+    l1tex__t_bytes_pipe_lsu_mem_global_op_ld.sum.per_second                   Gbyte/second                         632.04
+    l1tex__t_bytes_pipe_lsu_mem_global_op_st.sum.per_second                   Gbyte/second                         303.31
+    sm__warps_active.avg.pct_of_peak_sustained_active                                    %                          76.47
+    smsp__sass_average_branch_targets_threads_uniform.pct                                %                         100.00
+    smsp__sass_average_data_bytes_per_sector_mem_global_op_ld.pct                        %                          11.94
+    smsp__sass_average_data_bytes_per_sector_mem_global_op_st.pct                        %                          12.50
+    smsp__sass_average_data_bytes_per_wavefront_mem_shared.pct                           %                          25.00
+    ---------------------------------------------------------------------- --------------- ------------------------------
+
+  kernel_v2_b_uroll8_smem(int, unsigned char *, unsigned char *, int, int), 2023-Feb-25 17:29:14, Context 1, Stream 7
+    Section: Command line profiler metrics
+    ---------------------------------------------------------------------- --------------- ------------------------------
+    dram__bytes_read.sum.per_second                                           Gbyte/second                          99.97
+    dram__bytes_write.sum.per_second                                          Gbyte/second                          46.04
+    l1tex__data_pipe_lsu_wavefronts_mem_shared.avg.pct_of_peak_sustained_e               %                          13.03
+    lapsed                                                                                                               
+    l1tex__data_pipe_lsu_wavefronts_mem_shared_op_ld.sum                                                                0
+    l1tex__data_pipe_lsu_wavefronts_mem_shared_op_ld.sum.per_second                                                     0
+    l1tex__data_pipe_lsu_wavefronts_mem_shared_op_st.sum                                                       74,660,733
+    l1tex__data_pipe_lsu_wavefronts_mem_shared_op_st.sum.per_second                                      2,897,193,893.86
+    l1tex__t_bytes_pipe_lsu_mem_global_op_ld.sum.per_second                   Gbyte/second                         637.57
+    l1tex__t_bytes_pipe_lsu_mem_global_op_st.sum.per_second                   Gbyte/second                         310.44
+    sm__warps_active.avg.pct_of_peak_sustained_active                                    %                          75.27
+    smsp__sass_average_branch_targets_threads_uniform.pct                                %                         100.00
+    smsp__sass_average_data_bytes_per_sector_mem_global_op_ld.pct                        %                          12.12
+    smsp__sass_average_data_bytes_per_sector_mem_global_op_st.pct                        %                          12.50
+    smsp__sass_average_data_bytes_per_wavefront_mem_shared.pct                           %                          25.00
+    ---------------------------------------------------------------------- --------------- ------------------------------
+
+  kernel_v2_b_uroll8_smem(int, unsigned char *, unsigned char *, int, int), 2023-Feb-25 17:29:16, Context 1, Stream 7
+    Section: Command line profiler metrics
+    ---------------------------------------------------------------------- --------------- ------------------------------
+    dram__bytes_read.sum.per_second                                           Gbyte/second                         148.91
+    dram__bytes_write.sum.per_second                                          Gbyte/second                          45.96
+    l1tex__data_pipe_lsu_wavefronts_mem_shared.avg.pct_of_peak_sustained_e               %                          12.88
+    lapsed                                                                                                               
+    l1tex__data_pipe_lsu_wavefronts_mem_shared_op_ld.sum                                                                0
+    l1tex__data_pipe_lsu_wavefronts_mem_shared_op_ld.sum.per_second                                                     0
+    l1tex__data_pipe_lsu_wavefronts_mem_shared_op_st.sum                                                       73,974,372
+    l1tex__data_pipe_lsu_wavefronts_mem_shared_op_st.sum.per_second                                      2,862,437,902.27
+    l1tex__t_bytes_pipe_lsu_mem_global_op_ld.sum.per_second                   Gbyte/second                         625.21
+    l1tex__t_bytes_pipe_lsu_mem_global_op_st.sum.per_second                   Gbyte/second                         309.56
+    sm__warps_active.avg.pct_of_peak_sustained_active                                    %                          76.37
+    smsp__sass_average_branch_targets_threads_uniform.pct                                %                         100.00
+    smsp__sass_average_data_bytes_per_sector_mem_global_op_ld.pct                        %                          12.31
+    smsp__sass_average_data_bytes_per_sector_mem_global_op_st.pct                        %                          12.50
+    smsp__sass_average_data_bytes_per_wavefront_mem_shared.pct                           %                          25.00
+    ---------------------------------------------------------------------- --------------- ------------------------------
+
+  kernel_v2_b_uroll8_smem(int, unsigned char *, unsigned char *, int, int), 2023-Feb-25 17:29:19, Context 1, Stream 7
+    Section: Command line profiler metrics
+    ---------------------------------------------------------------------- --------------- ------------------------------
+    dram__bytes_read.sum.per_second                                           Gbyte/second                         147.70
+    dram__bytes_write.sum.per_second                                          Gbyte/second                          45.18
+    l1tex__data_pipe_lsu_wavefronts_mem_shared.avg.pct_of_peak_sustained_e               %                          12.62
+    lapsed                                                                                                               
+    l1tex__data_pipe_lsu_wavefronts_mem_shared_op_ld.sum                                                                0
+    l1tex__data_pipe_lsu_wavefronts_mem_shared_op_ld.sum.per_second                                                     0
+    l1tex__data_pipe_lsu_wavefronts_mem_shared_op_st.sum                                                       74,281,703
+    l1tex__data_pipe_lsu_wavefronts_mem_shared_op_st.sum.per_second                                      2,804,881,643.35
+    l1tex__t_bytes_pipe_lsu_mem_global_op_ld.sum.per_second                   Gbyte/second                         640.51
+    l1tex__t_bytes_pipe_lsu_mem_global_op_st.sum.per_second                   Gbyte/second                         302.08
+    sm__warps_active.avg.pct_of_peak_sustained_active                                    %                          75.55
+    smsp__sass_average_branch_targets_threads_uniform.pct                                %                         100.00
+    smsp__sass_average_data_bytes_per_sector_mem_global_op_ld.pct                        %                          11.77
+    smsp__sass_average_data_bytes_per_sector_mem_global_op_st.pct                        %                          12.50
+    smsp__sass_average_data_bytes_per_wavefront_mem_shared.pct                           %                          25.00
+    ---------------------------------------------------------------------- --------------- ------------------------------
+
+  kernel_v2_b_uroll8_smem(int, unsigned char *, unsigned char *, int, int), 2023-Feb-25 17:29:21, Context 1, Stream 7
+    Section: Command line profiler metrics
+    ---------------------------------------------------------------------- --------------- ------------------------------
+    dram__bytes_read.sum.per_second                                           Gbyte/second                         149.07
+    dram__bytes_write.sum.per_second                                          Gbyte/second                          45.56
+    l1tex__data_pipe_lsu_wavefronts_mem_shared.avg.pct_of_peak_sustained_e               %                          12.73
+    lapsed                                                                                                               
+    l1tex__data_pipe_lsu_wavefronts_mem_shared_op_ld.sum                                                                0
+    l1tex__data_pipe_lsu_wavefronts_mem_shared_op_ld.sum.per_second                                                     0
+    l1tex__data_pipe_lsu_wavefronts_mem_shared_op_st.sum                                                       74,260,990
+    l1tex__data_pipe_lsu_wavefronts_mem_shared_op_st.sum.per_second                                      2,830,541,123.94
+    l1tex__t_bytes_pipe_lsu_mem_global_op_ld.sum.per_second                   Gbyte/second                         622.38
+    l1tex__t_bytes_pipe_lsu_mem_global_op_st.sum.per_second                   Gbyte/second                         304.93
+    sm__warps_active.avg.pct_of_peak_sustained_active                                    %                          75.75
+    smsp__sass_average_branch_targets_threads_uniform.pct                                %                         100.00
+    smsp__sass_average_data_bytes_per_sector_mem_global_op_ld.pct                        %                          12.21
+    smsp__sass_average_data_bytes_per_sector_mem_global_op_st.pct                        %                          12.50
+    smsp__sass_average_data_bytes_per_wavefront_mem_shared.pct                           %                          25.00
+    ---------------------------------------------------------------------- --------------- ------------------------------
+
+  kernel_v2_b_uroll8_smem(int, unsigned char *, unsigned char *, int, int), 2023-Feb-25 17:29:23, Context 1, Stream 7
+    Section: Command line profiler metrics
+    ---------------------------------------------------------------------- --------------- ------------------------------
+    dram__bytes_read.sum.per_second                                           Gbyte/second                         147.61
+    dram__bytes_write.sum.per_second                                          Gbyte/second                          45.45
+    l1tex__data_pipe_lsu_wavefronts_mem_shared.avg.pct_of_peak_sustained_e               %                          12.74
+    lapsed                                                                                                               
+    l1tex__data_pipe_lsu_wavefronts_mem_shared_op_ld.sum                                                                0
+    l1tex__data_pipe_lsu_wavefronts_mem_shared_op_ld.sum.per_second                                                     0
+    l1tex__data_pipe_lsu_wavefronts_mem_shared_op_st.sum                                                       74,093,451
+    l1tex__data_pipe_lsu_wavefronts_mem_shared_op_st.sum.per_second                                      2,830,396,909.44
+    l1tex__t_bytes_pipe_lsu_mem_global_op_ld.sum.per_second                   Gbyte/second                         636.71
+    l1tex__t_bytes_pipe_lsu_mem_global_op_st.sum.per_second                   Gbyte/second                         305.60
+    sm__warps_active.avg.pct_of_peak_sustained_active                                    %                          75.71
+    smsp__sass_average_branch_targets_threads_uniform.pct                                %                         100.00
+    smsp__sass_average_data_bytes_per_sector_mem_global_op_ld.pct                        %                          11.94
+    smsp__sass_average_data_bytes_per_sector_mem_global_op_st.pct                        %                          12.50
+    smsp__sass_average_data_bytes_per_wavefront_mem_shared.pct                           %                          25.00
+    ---------------------------------------------------------------------- --------------- ------------------------------
+
+  kernel_v2_b_uroll8_smem(int, unsigned char *, unsigned char *, int, int), 2023-Feb-25 17:29:25, Context 1, Stream 7
+    Section: Command line profiler metrics
+    ---------------------------------------------------------------------- --------------- ------------------------------
+    dram__bytes_read.sum.per_second                                           Gbyte/second                          98.76
+    dram__bytes_write.sum.per_second                                          Gbyte/second                          46.00
+    l1tex__data_pipe_lsu_wavefronts_mem_shared.avg.pct_of_peak_sustained_e               %                          12.86
+    lapsed                                                                                                               
+    l1tex__data_pipe_lsu_wavefronts_mem_shared_op_ld.sum                                                                0
+    l1tex__data_pipe_lsu_wavefronts_mem_shared_op_ld.sum.per_second                                                     0
+    l1tex__data_pipe_lsu_wavefronts_mem_shared_op_st.sum                                                       74,503,574
+    l1tex__data_pipe_lsu_wavefronts_mem_shared_op_st.sum.per_second                                      2,859,521,481.08
+    l1tex__t_bytes_pipe_lsu_mem_global_op_ld.sum.per_second                   Gbyte/second                         640.38
+    l1tex__t_bytes_pipe_lsu_mem_global_op_st.sum.per_second                   Gbyte/second                         307.05
+    sm__warps_active.avg.pct_of_peak_sustained_active                                    %                          75.29
+    smsp__sass_average_branch_targets_threads_uniform.pct                                %                         100.00
+    smsp__sass_average_data_bytes_per_sector_mem_global_op_ld.pct                        %                          11.94
+    smsp__sass_average_data_bytes_per_sector_mem_global_op_st.pct                        %                          12.50
+    smsp__sass_average_data_bytes_per_wavefront_mem_shared.pct                           %                          25.00
+    ---------------------------------------------------------------------- --------------- ------------------------------
+
+  kernel_v2_b_uroll8_smem(int, unsigned char *, unsigned char *, int, int), 2023-Feb-25 17:29:27, Context 1, Stream 7
+    Section: Command line profiler metrics
+    ---------------------------------------------------------------------- --------------- ------------------------------
+    dram__bytes_read.sum.per_second                                           Gbyte/second                          99.11
+    dram__bytes_write.sum.per_second                                          Gbyte/second                          45.33
+    l1tex__data_pipe_lsu_wavefronts_mem_shared.avg.pct_of_peak_sustained_e               %                          12.84
+    lapsed                                                                                                               
+    l1tex__data_pipe_lsu_wavefronts_mem_shared_op_ld.sum                                                                0
+    l1tex__data_pipe_lsu_wavefronts_mem_shared_op_ld.sum.per_second                                                     0
+    l1tex__data_pipe_lsu_wavefronts_mem_shared_op_st.sum                                                       74,583,703
+    l1tex__data_pipe_lsu_wavefronts_mem_shared_op_st.sum.per_second                                      2,854,631,200.57
+    l1tex__t_bytes_pipe_lsu_mem_global_op_ld.sum.per_second                   Gbyte/second                         635.72
+    l1tex__t_bytes_pipe_lsu_mem_global_op_st.sum.per_second                   Gbyte/second                         306.19
+    sm__warps_active.avg.pct_of_peak_sustained_active                                    %                          74.53
+    smsp__sass_average_branch_targets_threads_uniform.pct                                %                         100.00
+    smsp__sass_average_data_bytes_per_sector_mem_global_op_ld.pct                        %                          12.03
+    smsp__sass_average_data_bytes_per_sector_mem_global_op_st.pct                        %                          12.50
+    smsp__sass_average_data_bytes_per_wavefront_mem_shared.pct                           %                          25.00
+    ---------------------------------------------------------------------- --------------- ------------------------------
+
+  kernel_v2_b_uroll8_smem(int, unsigned char *, unsigned char *, int, int), 2023-Feb-25 17:29:29, Context 1, Stream 7
+    Section: Command line profiler metrics
+    ---------------------------------------------------------------------- --------------- ------------------------------
+    dram__bytes_read.sum.per_second                                           Gbyte/second                         146.65
+    dram__bytes_write.sum.per_second                                          Gbyte/second                          45.13
+    l1tex__data_pipe_lsu_wavefronts_mem_shared.avg.pct_of_peak_sustained_e               %                          12.63
+    lapsed                                                                                                               
+    l1tex__data_pipe_lsu_wavefronts_mem_shared_op_ld.sum                                                                0
+    l1tex__data_pipe_lsu_wavefronts_mem_shared_op_ld.sum.per_second                                                     0
+    l1tex__data_pipe_lsu_wavefronts_mem_shared_op_st.sum                                                       74,130,905
+    l1tex__data_pipe_lsu_wavefronts_mem_shared_op_st.sum.per_second                                      2,808,261,141.99
+    l1tex__t_bytes_pipe_lsu_mem_global_op_ld.sum.per_second                   Gbyte/second                         622.80
+    l1tex__t_bytes_pipe_lsu_mem_global_op_st.sum.per_second                   Gbyte/second                         303.06
+    sm__warps_active.avg.pct_of_peak_sustained_active                                    %                          75.80
+    smsp__sass_average_branch_targets_threads_uniform.pct                                %                         100.00
+    smsp__sass_average_data_bytes_per_sector_mem_global_op_ld.pct                        %                          12.12
+    smsp__sass_average_data_bytes_per_sector_mem_global_op_st.pct                        %                          12.50
+    smsp__sass_average_data_bytes_per_wavefront_mem_shared.pct                           %                          25.00
+    ---------------------------------------------------------------------- --------------- ------------------------------
+
+  kernel_v2_b_uroll8_smem(int, unsigned char *, unsigned char *, int, int), 2023-Feb-25 17:29:31, Context 1, Stream 7
+    Section: Command line profiler metrics
+    ---------------------------------------------------------------------- --------------- ------------------------------
+    dram__bytes_read.sum.per_second                                           Gbyte/second                         148.40
+    dram__bytes_write.sum.per_second                                          Gbyte/second                          45.88
+    l1tex__data_pipe_lsu_wavefronts_mem_shared.avg.pct_of_peak_sustained_e               %                          12.82
+    lapsed                                                                                                               
+    l1tex__data_pipe_lsu_wavefronts_mem_shared_op_ld.sum                                                                0
+    l1tex__data_pipe_lsu_wavefronts_mem_shared_op_ld.sum.per_second                                                     0
+    l1tex__data_pipe_lsu_wavefronts_mem_shared_op_st.sum                                                       74,277,937
+    l1tex__data_pipe_lsu_wavefronts_mem_shared_op_st.sum.per_second                                      2,850,399,197.45
+    l1tex__t_bytes_pipe_lsu_mem_global_op_ld.sum.per_second                   Gbyte/second                         648.88
+    l1tex__t_bytes_pipe_lsu_mem_global_op_st.sum.per_second                   Gbyte/second                         307.00
+    sm__warps_active.avg.pct_of_peak_sustained_active                                    %                          76.36
+    smsp__sass_average_branch_targets_threads_uniform.pct                                %                         100.00
+    smsp__sass_average_data_bytes_per_sector_mem_global_op_ld.pct                        %                          11.77
+    smsp__sass_average_data_bytes_per_sector_mem_global_op_st.pct                        %                          12.50
+    smsp__sass_average_data_bytes_per_wavefront_mem_shared.pct                           %                          25.00
+    ---------------------------------------------------------------------- --------------- ------------------------------
+
+  kernel_v2_b_uroll8_smem(int, unsigned char *, unsigned char *, int, int), 2023-Feb-25 17:29:33, Context 1, Stream 7
+    Section: Command line profiler metrics
+    ---------------------------------------------------------------------- --------------- ------------------------------
+    dram__bytes_read.sum.per_second                                           Gbyte/second                         147.77
+    dram__bytes_write.sum.per_second                                          Gbyte/second                          45.14
+    l1tex__data_pipe_lsu_wavefronts_mem_shared.avg.pct_of_peak_sustained_e               %                          12.61
+    lapsed                                                                                                               
+    l1tex__data_pipe_lsu_wavefronts_mem_shared_op_ld.sum                                                                0
+    l1tex__data_pipe_lsu_wavefronts_mem_shared_op_ld.sum.per_second                                                     0
+    l1tex__data_pipe_lsu_wavefronts_mem_shared_op_st.sum                                                       74,211,928
+    l1tex__data_pipe_lsu_wavefronts_mem_shared_op_st.sum.per_second                                      2,802,873,488.20
+    l1tex__t_bytes_pipe_lsu_mem_global_op_ld.sum.per_second                   Gbyte/second                         640.56
+    l1tex__t_bytes_pipe_lsu_mem_global_op_st.sum.per_second                   Gbyte/second                         302.15
+    sm__warps_active.avg.pct_of_peak_sustained_active                                    %                          75.61
+    smsp__sass_average_branch_targets_threads_uniform.pct                                %                         100.00
+    smsp__sass_average_data_bytes_per_sector_mem_global_op_ld.pct                        %                          11.77
+    smsp__sass_average_data_bytes_per_sector_mem_global_op_st.pct                        %                          12.50
+    smsp__sass_average_data_bytes_per_wavefront_mem_shared.pct                           %                          25.00
+    ---------------------------------------------------------------------- --------------- ------------------------------
+
+  kernel_v2_b_uroll8_smem(int, unsigned char *, unsigned char *, int, int), 2023-Feb-25 17:29:35, Context 1, Stream 7
+    Section: Command line profiler metrics
+    ---------------------------------------------------------------------- --------------- ------------------------------
+    dram__bytes_read.sum.per_second                                           Gbyte/second                         100.36
+    dram__bytes_write.sum.per_second                                          Gbyte/second                          45.81
+    l1tex__data_pipe_lsu_wavefronts_mem_shared.avg.pct_of_peak_sustained_e               %                          13.03
+    lapsed                                                                                                               
+    l1tex__data_pipe_lsu_wavefronts_mem_shared_op_ld.sum                                                                0
+    l1tex__data_pipe_lsu_wavefronts_mem_shared_op_ld.sum.per_second                                                     0
+    l1tex__data_pipe_lsu_wavefronts_mem_shared_op_st.sum                                                       74,633,193
+    l1tex__data_pipe_lsu_wavefronts_mem_shared_op_st.sum.per_second                                      2,897,499,638.17
+    l1tex__t_bytes_pipe_lsu_mem_global_op_ld.sum.per_second                   Gbyte/second                         657.65
+    l1tex__t_bytes_pipe_lsu_mem_global_op_st.sum.per_second                   Gbyte/second                         310.59
+    sm__warps_active.avg.pct_of_peak_sustained_active                                    %                          75.07
+    smsp__sass_average_branch_targets_threads_uniform.pct                                %                         100.00
+    smsp__sass_average_data_bytes_per_sector_mem_global_op_ld.pct                        %                          11.76
+    smsp__sass_average_data_bytes_per_sector_mem_global_op_st.pct                        %                          12.50
+    smsp__sass_average_data_bytes_per_wavefront_mem_shared.pct                           %                          25.00
+    ---------------------------------------------------------------------- --------------- ------------------------------
+
+  kernel_v2_b_uroll8_smem(int, unsigned char *, unsigned char *, int, int), 2023-Feb-25 17:29:37, Context 1, Stream 7
+    Section: Command line profiler metrics
+    ---------------------------------------------------------------------- --------------- ------------------------------
+    dram__bytes_read.sum.per_second                                           Gbyte/second                         147.18
+    dram__bytes_write.sum.per_second                                          Gbyte/second                          45.29
+    l1tex__data_pipe_lsu_wavefronts_mem_shared.avg.pct_of_peak_sustained_e               %                          12.69
+    lapsed                                                                                                               
+    l1tex__data_pipe_lsu_wavefronts_mem_shared_op_ld.sum                                                                0
+    l1tex__data_pipe_lsu_wavefronts_mem_shared_op_ld.sum.per_second                                                     0
+    l1tex__data_pipe_lsu_wavefronts_mem_shared_op_st.sum                                                       74,043,244
+    l1tex__data_pipe_lsu_wavefronts_mem_shared_op_st.sum.per_second                                      2,820,153,540.04
+    l1tex__t_bytes_pipe_lsu_mem_global_op_ld.sum.per_second                   Gbyte/second                         643.99
+    l1tex__t_bytes_pipe_lsu_mem_global_op_st.sum.per_second                   Gbyte/second                         304.70
+    sm__warps_active.avg.pct_of_peak_sustained_active                                    %                          75.72
+    smsp__sass_average_branch_targets_threads_uniform.pct                                %                         100.00
+    smsp__sass_average_data_bytes_per_sector_mem_global_op_ld.pct                        %                          11.77
+    smsp__sass_average_data_bytes_per_sector_mem_global_op_st.pct                        %                          12.50
+    smsp__sass_average_data_bytes_per_wavefront_mem_shared.pct                           %                          25.00
+    ---------------------------------------------------------------------- --------------- ------------------------------
+
+  kernel_v2_b_uroll8_smem(int, unsigned char *, unsigned char *, int, int), 2023-Feb-25 17:29:39, Context 1, Stream 7
+    Section: Command line profiler metrics
+    ---------------------------------------------------------------------- --------------- ------------------------------
+    dram__bytes_read.sum.per_second                                           Gbyte/second                         147.40
+    dram__bytes_write.sum.per_second                                          Gbyte/second                          45.32
+    l1tex__data_pipe_lsu_wavefronts_mem_shared.avg.pct_of_peak_sustained_e               %                          12.72
+    lapsed                                                                                                               
+    l1tex__data_pipe_lsu_wavefronts_mem_shared_op_ld.sum                                                                0
+    l1tex__data_pipe_lsu_wavefronts_mem_shared_op_ld.sum.per_second                                                     0
+    l1tex__data_pipe_lsu_wavefronts_mem_shared_op_st.sum                                                       74,242,555
+    l1tex__data_pipe_lsu_wavefronts_mem_shared_op_st.sum.per_second                                      2,827,169,435.15
+    l1tex__t_bytes_pipe_lsu_mem_global_op_ld.sum.per_second                   Gbyte/second                         645.29
+    l1tex__t_bytes_pipe_lsu_mem_global_op_st.sum.per_second                   Gbyte/second                         304.64
+    sm__warps_active.avg.pct_of_peak_sustained_active                                    %                          75.69
+    smsp__sass_average_branch_targets_threads_uniform.pct                                %                         100.00
+    smsp__sass_average_data_bytes_per_sector_mem_global_op_ld.pct                        %                          11.77
+    smsp__sass_average_data_bytes_per_sector_mem_global_op_st.pct                        %                          12.50
+    smsp__sass_average_data_bytes_per_wavefront_mem_shared.pct                           %                          25.00
+    ---------------------------------------------------------------------- --------------- ------------------------------
+
+  kernel_v2_b_uroll8_smem(int, unsigned char *, unsigned char *, int, int), 2023-Feb-25 17:29:41, Context 1, Stream 7
+    Section: Command line profiler metrics
+    ---------------------------------------------------------------------- --------------- ------------------------------
+    dram__bytes_read.sum.per_second                                           Gbyte/second                         148.80
+    dram__bytes_write.sum.per_second                                          Gbyte/second                          45.75
+    l1tex__data_pipe_lsu_wavefronts_mem_shared.avg.pct_of_peak_sustained_e               %                          12.72
+    lapsed                                                                                                               
+    l1tex__data_pipe_lsu_wavefronts_mem_shared_op_ld.sum                                                                0
+    l1tex__data_pipe_lsu_wavefronts_mem_shared_op_ld.sum.per_second                                                     0
+    l1tex__data_pipe_lsu_wavefronts_mem_shared_op_st.sum                                                       74,087,502
+    l1tex__data_pipe_lsu_wavefronts_mem_shared_op_st.sum.per_second                                      2,828,461,628.44
+    l1tex__t_bytes_pipe_lsu_mem_global_op_ld.sum.per_second                   Gbyte/second                         630.40
+    l1tex__t_bytes_pipe_lsu_mem_global_op_st.sum.per_second                   Gbyte/second                         305.42
+    sm__warps_active.avg.pct_of_peak_sustained_active                                    %                          76.79
+    smsp__sass_average_branch_targets_threads_uniform.pct                                %                         100.00
+    smsp__sass_average_data_bytes_per_sector_mem_global_op_ld.pct                        %                          12.03
+    smsp__sass_average_data_bytes_per_sector_mem_global_op_st.pct                        %                          12.50
+    smsp__sass_average_data_bytes_per_wavefront_mem_shared.pct                           %                          25.00
+    ---------------------------------------------------------------------- --------------- ------------------------------
+
+  kernel_v2_b_uroll8_smem(int, unsigned char *, unsigned char *, int, int), 2023-Feb-25 17:29:43, Context 1, Stream 7
+    Section: Command line profiler metrics
+    ---------------------------------------------------------------------- --------------- ------------------------------
+    dram__bytes_read.sum.per_second                                           Gbyte/second                         148.75
+    dram__bytes_write.sum.per_second                                          Gbyte/second                          45.19
+    l1tex__data_pipe_lsu_wavefronts_mem_shared.avg.pct_of_peak_sustained_e               %                          12.56
+    lapsed                                                                                                               
+    l1tex__data_pipe_lsu_wavefronts_mem_shared_op_ld.sum                                                                0
+    l1tex__data_pipe_lsu_wavefronts_mem_shared_op_ld.sum.per_second                                                     0
+    l1tex__data_pipe_lsu_wavefronts_mem_shared_op_st.sum                                                       73,934,954
+    l1tex__data_pipe_lsu_wavefronts_mem_shared_op_st.sum.per_second                                      2,792,203,367.25
+    l1tex__t_bytes_pipe_lsu_mem_global_op_ld.sum.per_second                   Gbyte/second                         612.36
+    l1tex__t_bytes_pipe_lsu_mem_global_op_st.sum.per_second                   Gbyte/second                         302.13
+    sm__warps_active.avg.pct_of_peak_sustained_active                                    %                          77.84
+    smsp__sass_average_branch_targets_threads_uniform.pct                                %                         100.00
+    smsp__sass_average_data_bytes_per_sector_mem_global_op_ld.pct                        %                          12.21
+    smsp__sass_average_data_bytes_per_sector_mem_global_op_st.pct                        %                          12.50
+    smsp__sass_average_data_bytes_per_wavefront_mem_shared.pct                           %                          25.00
+    ---------------------------------------------------------------------- --------------- ------------------------------
+
+  kernel_v2_b_uroll8_smem(int, unsigned char *, unsigned char *, int, int), 2023-Feb-25 17:29:45, Context 1, Stream 7
+    Section: Command line profiler metrics
+    ---------------------------------------------------------------------- --------------- ------------------------------
+    dram__bytes_read.sum.per_second                                           Gbyte/second                         148.38
+    dram__bytes_write.sum.per_second                                          Gbyte/second                          45.86
+    l1tex__data_pipe_lsu_wavefronts_mem_shared.avg.pct_of_peak_sustained_e               %                          12.82
+    lapsed                                                                                                               
+    l1tex__data_pipe_lsu_wavefronts_mem_shared_op_ld.sum                                                                0
+    l1tex__data_pipe_lsu_wavefronts_mem_shared_op_ld.sum.per_second                                                     0
+    l1tex__data_pipe_lsu_wavefronts_mem_shared_op_st.sum                                                       74,270,222
+    l1tex__data_pipe_lsu_wavefronts_mem_shared_op_st.sum.per_second                                      2,849,126,996.65
+    l1tex__t_bytes_pipe_lsu_mem_global_op_ld.sum.per_second                   Gbyte/second                         649.04
+    l1tex__t_bytes_pipe_lsu_mem_global_op_st.sum.per_second                   Gbyte/second                         306.89
+    sm__warps_active.avg.pct_of_peak_sustained_active                                    %                          76.39
+    smsp__sass_average_branch_targets_threads_uniform.pct                                %                         100.00
+    smsp__sass_average_data_bytes_per_sector_mem_global_op_ld.pct                        %                          11.77
+    smsp__sass_average_data_bytes_per_sector_mem_global_op_st.pct                        %                          12.50
+    smsp__sass_average_data_bytes_per_wavefront_mem_shared.pct                           %                          25.00
+    ---------------------------------------------------------------------- --------------- ------------------------------
+
+  kernel_v2_b_uroll8_smem(int, unsigned char *, unsigned char *, int, int), 2023-Feb-25 17:29:47, Context 1, Stream 7
+    Section: Command line profiler metrics
+    ---------------------------------------------------------------------- --------------- ------------------------------
+    dram__bytes_read.sum.per_second                                           Gbyte/second                         147.65
+    dram__bytes_write.sum.per_second                                          Gbyte/second                          45.14
+    l1tex__data_pipe_lsu_wavefronts_mem_shared.avg.pct_of_peak_sustained_e               %                          12.61
+    lapsed                                                                                                               
+    l1tex__data_pipe_lsu_wavefronts_mem_shared_op_ld.sum                                                                0
+    l1tex__data_pipe_lsu_wavefronts_mem_shared_op_ld.sum.per_second                                                     0
+    l1tex__data_pipe_lsu_wavefronts_mem_shared_op_st.sum                                                       74,225,525
+    l1tex__data_pipe_lsu_wavefronts_mem_shared_op_st.sum.per_second                                      2,802,557,175.16
+    l1tex__t_bytes_pipe_lsu_mem_global_op_ld.sum.per_second                   Gbyte/second                         640.01
+    l1tex__t_bytes_pipe_lsu_mem_global_op_st.sum.per_second                   Gbyte/second                         302.06
+    sm__warps_active.avg.pct_of_peak_sustained_active                                    %                          75.60
+    smsp__sass_average_branch_targets_threads_uniform.pct                                %                         100.00
+    smsp__sass_average_data_bytes_per_sector_mem_global_op_ld.pct                        %                          11.77
+    smsp__sass_average_data_bytes_per_sector_mem_global_op_st.pct                        %                          12.50
+    smsp__sass_average_data_bytes_per_wavefront_mem_shared.pct                           %                          25.00
+    ---------------------------------------------------------------------- --------------- ------------------------------
+
+  kernel_v2_b_uroll8_smem(int, unsigned char *, unsigned char *, int, int), 2023-Feb-25 17:29:49, Context 1, Stream 7
+    Section: Command line profiler metrics
+    ---------------------------------------------------------------------- --------------- ------------------------------
+    dram__bytes_read.sum.per_second                                           Gbyte/second                         116.66
+    dram__bytes_write.sum.per_second                                          Gbyte/second                          45.88
+    l1tex__data_pipe_lsu_wavefronts_mem_shared.avg.pct_of_peak_sustained_e               %                          12.75
+    lapsed                                                                                                               
+    l1tex__data_pipe_lsu_wavefronts_mem_shared_op_ld.sum                                                                0
+    l1tex__data_pipe_lsu_wavefronts_mem_shared_op_ld.sum.per_second                                                     0
+    l1tex__data_pipe_lsu_wavefronts_mem_shared_op_st.sum                                                       74,338,389
+    l1tex__data_pipe_lsu_wavefronts_mem_shared_op_st.sum.per_second                                      2,834,500,801.33
+    l1tex__t_bytes_pipe_lsu_mem_global_op_ld.sum.per_second                   Gbyte/second                         625.83
+    l1tex__t_bytes_pipe_lsu_mem_global_op_st.sum.per_second                   Gbyte/second                         305.04
+    sm__warps_active.avg.pct_of_peak_sustained_active                                    %                          75.59
+    smsp__sass_average_branch_targets_threads_uniform.pct                                %                         100.00
+    smsp__sass_average_data_bytes_per_sector_mem_global_op_ld.pct                        %                          12.12
+    smsp__sass_average_data_bytes_per_sector_mem_global_op_st.pct                        %                          12.50
+    smsp__sass_average_data_bytes_per_wavefront_mem_shared.pct                           %                          25.00
+    ---------------------------------------------------------------------- --------------- ------------------------------
+
+  kernel_v2_b_uroll8_smem(int, unsigned char *, unsigned char *, int, int), 2023-Feb-25 17:29:51, Context 1, Stream 7
+    Section: Command line profiler metrics
+    ---------------------------------------------------------------------- --------------- ------------------------------
+    dram__bytes_read.sum.per_second                                           Gbyte/second                         148.09
+    dram__bytes_write.sum.per_second                                          Gbyte/second                          45.88
+    l1tex__data_pipe_lsu_wavefronts_mem_shared.avg.pct_of_peak_sustained_e               %                          12.78
+    lapsed                                                                                                               
+    l1tex__data_pipe_lsu_wavefronts_mem_shared_op_ld.sum                                                                0
+    l1tex__data_pipe_lsu_wavefronts_mem_shared_op_ld.sum.per_second                                                     0
+    l1tex__data_pipe_lsu_wavefronts_mem_shared_op_st.sum                                                       74,056,191
+    l1tex__data_pipe_lsu_wavefronts_mem_shared_op_st.sum.per_second                                      2,841,875,785.14
+    l1tex__t_bytes_pipe_lsu_mem_global_op_ld.sum.per_second                   Gbyte/second                         632.52
+    l1tex__t_bytes_pipe_lsu_mem_global_op_st.sum.per_second                   Gbyte/second                         307.00
+    sm__warps_active.avg.pct_of_peak_sustained_active                                    %                          76.47
+    smsp__sass_average_branch_targets_threads_uniform.pct                                %                         100.00
+    smsp__sass_average_data_bytes_per_sector_mem_global_op_ld.pct                        %                          12.03
+    smsp__sass_average_data_bytes_per_sector_mem_global_op_st.pct                        %                          12.50
+    smsp__sass_average_data_bytes_per_wavefront_mem_shared.pct                           %                          25.00
+    ---------------------------------------------------------------------- --------------- ------------------------------
+
+  kernel_v2_b_uroll8_smem(int, unsigned char *, unsigned char *, int, int), 2023-Feb-25 17:29:53, Context 1, Stream 7
+    Section: Command line profiler metrics
+    ---------------------------------------------------------------------- --------------- ------------------------------
+    dram__bytes_read.sum.per_second                                           Gbyte/second                          99.01
+    dram__bytes_write.sum.per_second                                          Gbyte/second                          46.02
+    l1tex__data_pipe_lsu_wavefronts_mem_shared.avg.pct_of_peak_sustained_e               %                          12.89
+    lapsed                                                                                                               
+    l1tex__data_pipe_lsu_wavefronts_mem_shared_op_ld.sum                                                                0
+    l1tex__data_pipe_lsu_wavefronts_mem_shared_op_ld.sum.per_second                                                     0
+    l1tex__data_pipe_lsu_wavefronts_mem_shared_op_st.sum                                                       74,485,144
+    l1tex__data_pipe_lsu_wavefronts_mem_shared_op_st.sum.per_second                                      2,865,606,783.42
+    l1tex__t_bytes_pipe_lsu_mem_global_op_ld.sum.per_second                   Gbyte/second                         635.63
+    l1tex__t_bytes_pipe_lsu_mem_global_op_st.sum.per_second                   Gbyte/second                         307.78
+    sm__warps_active.avg.pct_of_peak_sustained_active                                    %                          75.41
+    smsp__sass_average_branch_targets_threads_uniform.pct                                %                         100.00
+    smsp__sass_average_data_bytes_per_sector_mem_global_op_ld.pct                        %                          12.03
+    smsp__sass_average_data_bytes_per_sector_mem_global_op_st.pct                        %                          12.50
+    smsp__sass_average_data_bytes_per_wavefront_mem_shared.pct                           %                          25.00
+    ---------------------------------------------------------------------- --------------- ------------------------------
+
+  kernel_v2_b_uroll8_smem(int, unsigned char *, unsigned char *, int, int), 2023-Feb-25 17:29:55, Context 1, Stream 7
+    Section: Command line profiler metrics
+    ---------------------------------------------------------------------- --------------- ------------------------------
+    dram__bytes_read.sum.per_second                                           Gbyte/second                         147.54
+    dram__bytes_write.sum.per_second                                          Gbyte/second                          45.18
+    l1tex__data_pipe_lsu_wavefronts_mem_shared.avg.pct_of_peak_sustained_e               %                          12.59
+    lapsed                                                                                                               
+    l1tex__data_pipe_lsu_wavefronts_mem_shared_op_ld.sum                                                                0
+    l1tex__data_pipe_lsu_wavefronts_mem_shared_op_ld.sum.per_second                                                     0
+    l1tex__data_pipe_lsu_wavefronts_mem_shared_op_st.sum                                                       74,096,897
+    l1tex__data_pipe_lsu_wavefronts_mem_shared_op_st.sum.per_second                                      2,798,474,824.00
+    l1tex__t_bytes_pipe_lsu_mem_global_op_ld.sum.per_second                   Gbyte/second                         639.17
+    l1tex__t_bytes_pipe_lsu_mem_global_op_st.sum.per_second                   Gbyte/second                         302.14
+    sm__warps_active.avg.pct_of_peak_sustained_active                                    %                          75.68
+    smsp__sass_average_branch_targets_threads_uniform.pct                                %                         100.00
+    smsp__sass_average_data_bytes_per_sector_mem_global_op_ld.pct                        %                          11.77
+    smsp__sass_average_data_bytes_per_sector_mem_global_op_st.pct                        %                          12.50
+    smsp__sass_average_data_bytes_per_wavefront_mem_shared.pct                           %                          25.00
+    ---------------------------------------------------------------------- --------------- ------------------------------
+
+  kernel_v2_b_uroll8_smem(int, unsigned char *, unsigned char *, int, int), 2023-Feb-25 17:29:57, Context 1, Stream 7
+    Section: Command line profiler metrics
+    ---------------------------------------------------------------------- --------------- ------------------------------
+    dram__bytes_read.sum.per_second                                           Gbyte/second                         148.20
+    dram__bytes_write.sum.per_second                                          Gbyte/second                          45.88
+    l1tex__data_pipe_lsu_wavefronts_mem_shared.avg.pct_of_peak_sustained_e               %                          12.79
+    lapsed                                                                                                               
+    l1tex__data_pipe_lsu_wavefronts_mem_shared_op_ld.sum                                                                0
+    l1tex__data_pipe_lsu_wavefronts_mem_shared_op_ld.sum.per_second                                                     0
+    l1tex__data_pipe_lsu_wavefronts_mem_shared_op_st.sum                                                       74,086,786
+    l1tex__data_pipe_lsu_wavefronts_mem_shared_op_st.sum.per_second                                      2,843,025,417.27
+    l1tex__t_bytes_pipe_lsu_mem_global_op_ld.sum.per_second                   Gbyte/second                         647.62
+    l1tex__t_bytes_pipe_lsu_mem_global_op_st.sum.per_second                   Gbyte/second                         306.99
+    sm__warps_active.avg.pct_of_peak_sustained_active                                    %                          76.46
+    smsp__sass_average_branch_targets_threads_uniform.pct                                %                         100.00
+    smsp__sass_average_data_bytes_per_sector_mem_global_op_ld.pct                        %                          11.77
+    smsp__sass_average_data_bytes_per_sector_mem_global_op_st.pct                        %                          12.50
+    smsp__sass_average_data_bytes_per_wavefront_mem_shared.pct                           %                          25.00
+    ---------------------------------------------------------------------- --------------- ------------------------------
+
+  kernel_v2_b_uroll8_smem(int, unsigned char *, unsigned char *, int, int), 2023-Feb-25 17:29:59, Context 1, Stream 7
+    Section: Command line profiler metrics
+    ---------------------------------------------------------------------- --------------- ------------------------------
+    dram__bytes_read.sum.per_second                                           Gbyte/second                         148.07
+    dram__bytes_write.sum.per_second                                          Gbyte/second                          45.45
+    l1tex__data_pipe_lsu_wavefronts_mem_shared.avg.pct_of_peak_sustained_e               %                          12.66
+    lapsed                                                                                                               
+    l1tex__data_pipe_lsu_wavefronts_mem_shared_op_ld.sum                                                                0
+    l1tex__data_pipe_lsu_wavefronts_mem_shared_op_ld.sum.per_second                                                     0
+    l1tex__data_pipe_lsu_wavefronts_mem_shared_op_st.sum                                                       73,999,577
+    l1tex__data_pipe_lsu_wavefronts_mem_shared_op_st.sum.per_second                                      2,813,774,837.41
+    l1tex__t_bytes_pipe_lsu_mem_global_op_ld.sum.per_second                   Gbyte/second                         627.31
+    l1tex__t_bytes_pipe_lsu_mem_global_op_st.sum.per_second                   Gbyte/second                         304.19
+    sm__warps_active.avg.pct_of_peak_sustained_active                                    %                          76.39
+    smsp__sass_average_branch_targets_threads_uniform.pct                                %                         100.00
+    smsp__sass_average_data_bytes_per_sector_mem_global_op_ld.pct                        %                          12.03
+    smsp__sass_average_data_bytes_per_sector_mem_global_op_st.pct                        %                          12.50
+    smsp__sass_average_data_bytes_per_wavefront_mem_shared.pct                           %                          25.00
+    ---------------------------------------------------------------------- --------------- ------------------------------
+
+  kernel_v2_b_uroll8_smem(int, unsigned char *, unsigned char *, int, int), 2023-Feb-25 17:30:01, Context 1, Stream 7
+    Section: Command line profiler metrics
+    ---------------------------------------------------------------------- --------------- ------------------------------
+    dram__bytes_read.sum.per_second                                           Gbyte/second                         100.17
+    dram__bytes_write.sum.per_second                                          Gbyte/second                          46.41
+    l1tex__data_pipe_lsu_wavefronts_mem_shared.avg.pct_of_peak_sustained_e               %                          13.00
+    lapsed                                                                                                               
+    l1tex__data_pipe_lsu_wavefronts_mem_shared_op_ld.sum                                                                0
+    l1tex__data_pipe_lsu_wavefronts_mem_shared_op_ld.sum.per_second                                                     0
+    l1tex__data_pipe_lsu_wavefronts_mem_shared_op_st.sum                                                       74,565,304
+    l1tex__data_pipe_lsu_wavefronts_mem_shared_op_st.sum.per_second                                      2,892,039,947.03
+    l1tex__t_bytes_pipe_lsu_mem_global_op_ld.sum.per_second                   Gbyte/second                         656.33
+    l1tex__t_bytes_pipe_lsu_mem_global_op_st.sum.per_second                   Gbyte/second                         310.28
+    sm__warps_active.avg.pct_of_peak_sustained_active                                    %                          75.41
+    smsp__sass_average_branch_targets_threads_uniform.pct                                %                         100.00
+    smsp__sass_average_data_bytes_per_sector_mem_global_op_ld.pct                        %                          11.77
+    smsp__sass_average_data_bytes_per_sector_mem_global_op_st.pct                        %                          12.50
+    smsp__sass_average_data_bytes_per_wavefront_mem_shared.pct                           %                          25.00
+    ---------------------------------------------------------------------- --------------- ------------------------------
+
+  kernel_v2_b_uroll8_smem(int, unsigned char *, unsigned char *, int, int), 2023-Feb-25 17:30:03, Context 1, Stream 7
+    Section: Command line profiler metrics
+    ---------------------------------------------------------------------- --------------- ------------------------------
+    dram__bytes_read.sum.per_second                                           Gbyte/second                         146.93
+    dram__bytes_write.sum.per_second                                          Gbyte/second                          45.47
+    l1tex__data_pipe_lsu_wavefronts_mem_shared.avg.pct_of_peak_sustained_e               %                          12.68
+    lapsed                                                                                                               
+    l1tex__data_pipe_lsu_wavefronts_mem_shared_op_ld.sum                                                                0
+    l1tex__data_pipe_lsu_wavefronts_mem_shared_op_ld.sum.per_second                                                     0
+    l1tex__data_pipe_lsu_wavefronts_mem_shared_op_st.sum                                                       74,047,972
+    l1tex__data_pipe_lsu_wavefronts_mem_shared_op_st.sum.per_second                                      2,817,593,191.26
+    l1tex__t_bytes_pipe_lsu_mem_global_op_ld.sum.per_second                   Gbyte/second                         632.92
+    l1tex__t_bytes_pipe_lsu_mem_global_op_st.sum.per_second                   Gbyte/second                         304.41
+    sm__warps_active.avg.pct_of_peak_sustained_active                                    %                          76.43
+    smsp__sass_average_branch_targets_threads_uniform.pct                                %                         100.00
+    smsp__sass_average_data_bytes_per_sector_mem_global_op_ld.pct                        %                          11.94
+    smsp__sass_average_data_bytes_per_sector_mem_global_op_st.pct                        %                          12.50
+    smsp__sass_average_data_bytes_per_wavefront_mem_shared.pct                           %                          25.00
+    ---------------------------------------------------------------------- --------------- ------------------------------
+
+  kernel_v2_b_uroll8_smem(int, unsigned char *, unsigned char *, int, int), 2023-Feb-25 17:30:05, Context 1, Stream 7
+    Section: Command line profiler metrics
+    ---------------------------------------------------------------------- --------------- ------------------------------
+    dram__bytes_read.sum.per_second                                           Gbyte/second                         149.51
+    dram__bytes_write.sum.per_second                                          Gbyte/second                          45.87
+    l1tex__data_pipe_lsu_wavefronts_mem_shared.avg.pct_of_peak_sustained_e               %                          12.79
+    lapsed                                                                                                               
+    l1tex__data_pipe_lsu_wavefronts_mem_shared_op_ld.sum                                                                0
+    l1tex__data_pipe_lsu_wavefronts_mem_shared_op_ld.sum.per_second                                                     0
+    l1tex__data_pipe_lsu_wavefronts_mem_shared_op_st.sum                                                       74,045,461
+    l1tex__data_pipe_lsu_wavefronts_mem_shared_op_st.sum.per_second                                      2,843,471,779.66
+    l1tex__t_bytes_pipe_lsu_mem_global_op_ld.sum.per_second                   Gbyte/second                         613.79
+    l1tex__t_bytes_pipe_lsu_mem_global_op_st.sum.per_second                   Gbyte/second                         307.21
+    sm__warps_active.avg.pct_of_peak_sustained_active                                    %                          76.53
+    smsp__sass_average_branch_targets_threads_uniform.pct                                %                         100.00
+    smsp__sass_average_data_bytes_per_sector_mem_global_op_ld.pct                        %                          12.40
+    smsp__sass_average_data_bytes_per_sector_mem_global_op_st.pct                        %                          12.50
+    smsp__sass_average_data_bytes_per_wavefront_mem_shared.pct                           %                          25.00
+    ---------------------------------------------------------------------- --------------- ------------------------------
+
+  kernel_v2_b_uroll8_smem(int, unsigned char *, unsigned char *, int, int), 2023-Feb-25 17:30:07, Context 1, Stream 7
+    Section: Command line profiler metrics
+    ---------------------------------------------------------------------- --------------- ------------------------------
+    dram__bytes_read.sum.per_second                                           Gbyte/second                         147.30
+    dram__bytes_write.sum.per_second                                          Gbyte/second                          45.26
+    l1tex__data_pipe_lsu_wavefronts_mem_shared.avg.pct_of_peak_sustained_e               %                          12.59
+    lapsed                                                                                                               
+    l1tex__data_pipe_lsu_wavefronts_mem_shared_op_ld.sum                                                                0
+    l1tex__data_pipe_lsu_wavefronts_mem_shared_op_ld.sum.per_second                                                     0
+    l1tex__data_pipe_lsu_wavefronts_mem_shared_op_st.sum                                                       74,054,510
+    l1tex__data_pipe_lsu_wavefronts_mem_shared_op_st.sum.per_second                                      2,797,421,663.36
+    l1tex__t_bytes_pipe_lsu_mem_global_op_ld.sum.per_second                   Gbyte/second                         609.01
+    l1tex__t_bytes_pipe_lsu_mem_global_op_st.sum.per_second                   Gbyte/second                         302.20
+    sm__warps_active.avg.pct_of_peak_sustained_active                                    %                          76.94
+    smsp__sass_average_branch_targets_threads_uniform.pct                                %                         100.00
+    smsp__sass_average_data_bytes_per_sector_mem_global_op_ld.pct                        %                          12.31
+    smsp__sass_average_data_bytes_per_sector_mem_global_op_st.pct                        %                          12.50
+    smsp__sass_average_data_bytes_per_wavefront_mem_shared.pct                           %                          25.00
+    ---------------------------------------------------------------------- --------------- ------------------------------
+
+  kernel_v2_b_uroll8_smem(int, unsigned char *, unsigned char *, int, int), 2023-Feb-25 17:30:09, Context 1, Stream 7
+    Section: Command line profiler metrics
+    ---------------------------------------------------------------------- --------------- ------------------------------
+    dram__bytes_read.sum.per_second                                           Gbyte/second                         147.49
+    dram__bytes_write.sum.per_second                                          Gbyte/second                          45.31
+    l1tex__data_pipe_lsu_wavefronts_mem_shared.avg.pct_of_peak_sustained_e               %                          12.72
+    lapsed                                                                                                               
+    l1tex__data_pipe_lsu_wavefronts_mem_shared_op_ld.sum                                                                0
+    l1tex__data_pipe_lsu_wavefronts_mem_shared_op_ld.sum.per_second                                                     0
+    l1tex__data_pipe_lsu_wavefronts_mem_shared_op_st.sum                                                       74,241,818
+    l1tex__data_pipe_lsu_wavefronts_mem_shared_op_st.sum.per_second                                      2,827,944,296.35
+    l1tex__t_bytes_pipe_lsu_mem_global_op_ld.sum.per_second                   Gbyte/second                         645.84
+    l1tex__t_bytes_pipe_lsu_mem_global_op_st.sum.per_second                   Gbyte/second                         304.73
+    sm__warps_active.avg.pct_of_peak_sustained_active                                    %                          75.62
+    smsp__sass_average_branch_targets_threads_uniform.pct                                %                         100.00
+    smsp__sass_average_data_bytes_per_sector_mem_global_op_ld.pct                        %                          11.77
+    smsp__sass_average_data_bytes_per_sector_mem_global_op_st.pct                        %                          12.50
+    smsp__sass_average_data_bytes_per_wavefront_mem_shared.pct                           %                          25.00
+    ---------------------------------------------------------------------- --------------- ------------------------------
+
+  kernel_v2_b_uroll8_smem(int, unsigned char *, unsigned char *, int, int), 2023-Feb-25 17:30:11, Context 1, Stream 7
+    Section: Command line profiler metrics
+    ---------------------------------------------------------------------- --------------- ------------------------------
+    dram__bytes_read.sum.per_second                                           Gbyte/second                         148.92
+    dram__bytes_write.sum.per_second                                          Gbyte/second                          45.51
+    l1tex__data_pipe_lsu_wavefronts_mem_shared.avg.pct_of_peak_sustained_e               %                          12.72
+    lapsed                                                                                                               
+    l1tex__data_pipe_lsu_wavefronts_mem_shared_op_ld.sum                                                                0
+    l1tex__data_pipe_lsu_wavefronts_mem_shared_op_ld.sum.per_second                                                     0
+    l1tex__data_pipe_lsu_wavefronts_mem_shared_op_st.sum                                                       74,164,401
+    l1tex__data_pipe_lsu_wavefronts_mem_shared_op_st.sum.per_second                                      2,826,866,421.56
+    l1tex__t_bytes_pipe_lsu_mem_global_op_ld.sum.per_second                   Gbyte/second                         644.75
+    l1tex__t_bytes_pipe_lsu_mem_global_op_st.sum.per_second                   Gbyte/second                         304.93
+    sm__warps_active.avg.pct_of_peak_sustained_active                                    %                          75.85
+    smsp__sass_average_branch_targets_threads_uniform.pct                                %                         100.00
+    smsp__sass_average_data_bytes_per_sector_mem_global_op_ld.pct                        %                          11.77
+    smsp__sass_average_data_bytes_per_sector_mem_global_op_st.pct                        %                          12.50
+    smsp__sass_average_data_bytes_per_wavefront_mem_shared.pct                           %                          25.00
+    ---------------------------------------------------------------------- --------------- ------------------------------
+

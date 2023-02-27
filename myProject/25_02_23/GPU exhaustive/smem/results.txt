@@ -1,0 +1,84 @@
+./main 1 1 36 100000 1 16777216
+N = 36, n = 36
+000000000001000000000000000000000000
+block.x = 128, grid.x = 131072
+recursive exhaustive GPU optimization smem, res: 3606600, event time: 38.529751
+000000000001000000000000000000000000
+block.x = 128, grid.x = 131072
+recursive exhaustive GPU optimization smem, res: 3606600, event time: 38.472775
+000000000001000000000000000000000000
+block.x = 128, grid.x = 131072
+recursive exhaustive GPU optimization smem, res: 3606600, event time: 38.366867
+000000000001000000000000000000000000
+block.x = 128, grid.x = 131072
+recursive exhaustive GPU optimization smem, res: 3606600, event time: 38.541241
+000000000001000000000000000000000000
+block.x = 128, grid.x = 131072
+recursive exhaustive GPU optimization smem, res: 3606600, event time: 38.420498
+
+
+
+./main 1 1 36 100000 1 16777216
+N = 36, n = 36
+000000000001000000000000000000000000
+block.x = 256, grid.x = 65536
+recursive exhaustive GPU optimization smem, res: 3606600, event time: 37.931988
+000000000001000000000000000000000000
+block.x = 256, grid.x = 65536
+recursive exhaustive GPU optimization smem, res: 3606600, event time: 37.865273
+000000000001000000000000000000000000
+block.x = 256, grid.x = 65536
+recursive exhaustive GPU optimization smem, res: 3606600, event time: 37.834846
+000000000001000000000000000000000000
+block.x = 256, grid.x = 65536
+recursive exhaustive GPU optimization smem, res: 3606600, event time: 37.878109
+000000000001000000000000000000000000
+block.x = 256, grid.x = 65536
+recursive exhaustive GPU optimization smem, res: 3606600, event time: 37.877472
+
+
+
+./main 1 1 36 100000 1 16777216
+N = 36, n = 36
+000000000001000000000000000000000000
+block.x = 512, grid.x = 32768
+recursive exhaustive GPU optimization smem, res: 3606600, event time: 37.824371
+000000000001000000000000000000000000
+block.x = 512, grid.x = 32768
+recursive exhaustive GPU optimization smem, res: 3606600, event time: 37.268784
+000000000001000000000000000000000000
+block.x = 512, grid.x = 32768
+recursive exhaustive GPU optimization smem, res: 3606600, event time: 37.284191
+000000000001000000000000000000000000
+block.x = 512, grid.x = 32768
+recursive exhaustive GPU optimization smem, res: 3606600, event time: 37.335140
+000000000001000000000000000000000000
+block.x = 512, grid.x = 32768
+recursive exhaustive GPU optimization smem, res: 3606600, event time: 37.278919
+
+
+
+./main 1 1 36 100000 1 16777216
+N = 36, n = 36
+000000000001000000000000000000000000
+block.x = 1024, grid.x = 16384
+recursive exhaustive GPU optimization smem, res: 3606600, event time: 43.867989
+000000000001000000000000000000000000
+block.x = 1024, grid.x = 16384
+recursive exhaustive GPU optimization smem, res: 3606600, event time: 43.601376
+000000000001000000000000000000000000
+block.x = 1024, grid.x = 16384
+recursive exhaustive GPU optimization smem, res: 3606600, event time: 43.735317
+000000000001000000000000000000000000
+block.x = 1024, grid.x = 16384
+recursive exhaustive GPU optimization smem, res: 3606600, event time: 43.792629
+000000000001000000000000000000000000
+block.x = 1024, grid.x = 16384
+recursive exhaustive GPU optimization smem, res: 3606600, event time: 43.647587
+
+
+
+
+
+
+

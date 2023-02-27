@@ -73,34 +73,34 @@ int main(int argc, char **argv){
     float msEvent;
 
     //-----------------------------------GPU v1-----------------------------------
-    if(0){
-    //This approach (v1) is incredibly slow because of memory copies between host and device
-    start = seconds();
-    res = capacity;
-    n_vols_agumented = n_vols + (int) log2(capacity) + 1;
+    if(EXECUTE_GPU_INEFFICIENT){
+      //This approach (v1) is incredibly slow because of memory copies between host and device
+      start = seconds();
+      res = capacity;
+      n_vols_agumented = n_vols + (int) log2(capacity) + 1;
 
-    CHECK(cudaEventCreate(&eStart));
-    CHECK(cudaEventCreate(&eEnd));
-    CHECK(cudaEventRecord(eStart, 0));
+      CHECK(cudaEventCreate(&eStart));
+      CHECK(cudaEventCreate(&eEnd));
+      CHECK(cudaEventRecord(eStart, 0));
 
-    for(int i = 0; i<= (int) log2(capacity); i++){
-      n_vols_agumented--;
-      if(DP_v1_GPU(vols_agumented, res, n_vols_agumented, row_h, old_row_d, new_row_d, grid, block) == FALSE){
-        res = res - vols_agumented[n_vols_agumented];
+      for(int i = 0; i<= (int) log2(capacity); i++){
+        n_vols_agumented--;
+        if(DP_v1_GPU(vols_agumented, res, n_vols_agumented, row_h, old_row_d, new_row_d, grid, block) == FALSE){
+          res = res - vols_agumented[n_vols_agumented];
+        }
       }
-    }
 
-    CHECK(cudaEventRecord(eEnd, 0));
-    CHECK(cudaEventSynchronize(eEnd));
+      CHECK(cudaEventRecord(eEnd, 0));
+      CHECK(cudaEventSynchronize(eEnd));
 
-    CHECK(cudaEventElapsedTime(&msEvent, eStart, eEnd));
+      CHECK(cudaEventElapsedTime(&msEvent, eStart, eEnd));
 
-    end = seconds();
-    msEvent = msEvent / 1000;
-    printf("DP v1 GPU, res: %d, elapsed: %f, event time: %f\n", res, elapsedTime(start, end), msEvent);
+      end = seconds();
+      msEvent = msEvent / 1000;
+      printf("DP v1 GPU, res: %d, elapsed: %f, event time: %f\n", res, elapsedTime(start, end), msEvent);
 
-    CHECK(cudaEventDestroy(eStart));
-    CHECK(cudaEventDestroy(eEnd));
+      CHECK(cudaEventDestroy(eStart));
+      CHECK(cudaEventDestroy(eEnd));
     }
     //-----------------------------------GPU v2-----------------------------------
 

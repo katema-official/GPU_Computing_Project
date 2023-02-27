@@ -4,6 +4,9 @@ compile_main: main.cu GPU_dp_basic.cu
 exec_main_0:
 	./main 1 1 36 100000 1
 
+exec_main_0_ex:
+	ncu --metrics sm__warps_active.avg.pct_of_peak_sustained_active ./main 1 1 36 100000 1
+
 exec_main_1:
 	./main 0 1 100 1000000000 1
 

@@ -1,0 +1,1101 @@
+==PROF== Connected to process 11480 (/content/myProject/DIR___GPU_cp_dp/DIR___GPU_cp_dp_uroll/main)
+==PROF== Profiling "kernel_v2_a_uroll8" - 0: 0%....50%....100% - 3 passes
+==PROF== Profiling "kernel_v2_b_uroll8" - 1: 0%....50%....100% - 3 passes
+==PROF== Profiling "kernel_v2_b_uroll8" - 2: 0%....50%....100% - 3 passes
+==PROF== Profiling "kernel_v2_b_uroll8" - 3: 0%....50%....100% - 3 passes
+==PROF== Profiling "kernel_v2_b_uroll8" - 4: 0%....50%....100% - 3 passes
+==PROF== Profiling "kernel_v2_b_uroll8" - 5: 0%....50%....100% - 3 passes
+==PROF== Profiling "kernel_v2_b_uroll8" - 6: 0%....50%....100% - 3 passes
+==PROF== Profiling "kernel_v2_b_uroll8" - 7: 0%....50%....100% - 3 passes
+==PROF== Profiling "kernel_v2_b_uroll8" - 8: 0%....50%....100% - 3 passes
+==PROF== Profiling "kernel_v2_b_uroll8" - 9: 0%....50%....100% - 3 passes
+==PROF== Profiling "kernel_v2_b_uroll8" - 10: 0%....50%....100% - 3 passes
+==PROF== Profiling "kernel_v2_b_uroll8" - 11: 0%....50%....100% - 3 passes
+==PROF== Profiling "kernel_v2_b_uroll8" - 12: 0%....50%....100% - 3 passes
+==PROF== Profiling "kernel_v2_b_uroll8" - 13: 0%....50%....100% - 3 passes
+==PROF== Profiling "kernel_v2_b_uroll8" - 14: 0%....50%....100% - 3 passes
+==PROF== Profiling "kernel_v2_b_uroll8" - 15: 0%....50%....100% - 3 passes
+==PROF== Profiling "kernel_v2_b_uroll8" - 16: 0%....50%....100% - 3 passes
+==PROF== Profiling "kernel_v2_b_uroll8" - 17: 0%....50%....100% - 3 passes
+==PROF== Profiling "kernel_v2_b_uroll8" - 18: 0%....50%....100% - 3 passes
+==PROF== Profiling "kernel_v2_b_uroll8" - 19: 0%....50%....100% - 3 passes
+==PROF== Profiling "kernel_v2_b_uroll8" - 20: 0%....50%....100% - 3 passes
+==PROF== Profiling "kernel_v2_b_uroll8" - 21: 0%....50%....100% - 3 passes
+==PROF== Profiling "kernel_v2_b_uroll8" - 22: 0%....50%....100% - 3 passes
+==PROF== Profiling "kernel_v2_b_uroll8" - 23: 0%....50%....100% - 3 passes
+==PROF== Profiling "kernel_v2_b_uroll8" - 24: 0%....50%....100% - 3 passes
+==PROF== Profiling "kernel_v2_b_uroll8" - 25: 0%....50%....100% - 3 passes
+==PROF== Profiling "kernel_v2_b_uroll8" - 26: 0%....50%....100% - 3 passes
+==PROF== Profiling "kernel_v2_b_uroll8" - 27: 0%....50%....100% - 3 passes
+==PROF== Profiling "kernel_v2_b_uroll8" - 28: 0%....50%....100% - 3 passes
+==PROF== Profiling "kernel_v2_b_uroll8" - 29: 0%....50%....100% - 3 passes
+==PROF== Profiling "kernel_v2_b_uroll8" - 30: 0%....50%....100% - 3 passes
+==PROF== Profiling "kernel_v2_b_uroll8" - 31: 0%....50%....100% - 3 passes
+==PROF== Profiling "kernel_v2_b_uroll8" - 32: 0%....50%....100% - 3 passes
+==PROF== Profiling "kernel_v2_b_uroll8" - 33: 0%....50%....100% - 3 passes
+==PROF== Profiling "kernel_v2_b_uroll8" - 34: 0%....50%....100% - 3 passes
+==PROF== Profiling "kernel_v2_b_uroll8" - 35: 0%....50%....100% - 3 passes
+==PROF== Profiling "kernel_v2_b_uroll8" - 36: 0%....50%....100% - 3 passes
+==PROF== Profiling "kernel_v2_b_uroll8" - 37: 0%....50%....100% - 3 passes
+==PROF== Profiling "kernel_v2_b_uroll8" - 38: 0%....50%....100% - 3 passes
+==PROF== Profiling "kernel_v2_b_uroll8" - 39: 0%....50%....100% - 3 passes
+==PROF== Profiling "kernel_v2_b_uroll8" - 40: 0%....50%....100% - 3 passes
+==PROF== Profiling "kernel_v2_b_uroll8" - 41: 0%....50%....100% - 3 passes
+==PROF== Profiling "kernel_v2_b_uroll8" - 42: 0%....50%....100% - 3 passes
+==PROF== Profiling "kernel_v2_b_uroll8" - 43: 0%....50%....100% - 3 passes
+==PROF== Profiling "kernel_v2_b_uroll8" - 44: 0%....50%....100% - 3 passes
+==PROF== Profiling "kernel_v2_b_uroll8" - 45: 0%....50%....100% - 3 passes
+==PROF== Profiling "kernel_v2_b_uroll8" - 46: 0%....50%....100% - 3 passes
+==PROF== Profiling "kernel_v2_b_uroll8" - 47: 0%....50%....100% - 3 passes
+==PROF== Profiling "kernel_v2_b_uroll8" - 48: 0%....50%....100% - 3 passes
+==PROF== Profiling "kernel_v2_b_uroll8" - 49: 0%....50%....100% - 3 passes
+==PROF== Profiling "kernel_v2_b_uroll8" - 50: 0%....50%....100% - 3 passes
+==PROF== Profiling "kernel_v2_b_uroll8" - 51: 0%....50%....100% - 3 passes
+==PROF== Profiling "kernel_v2_b_uroll8" - 52: 0%....50%....100% - 3 passes
+==PROF== Profiling "kernel_v2_b_uroll8" - 53: 0%....50%....100% - 3 passes
+==PROF== Profiling "kernel_v2_b_uroll8" - 54: 0%....50%....100% - 3 passes
+==PROF== Profiling "kernel_v2_b_uroll8" - 55: 0%....50%....100% - 3 passes
+==PROF== Profiling "kernel_v2_b_uroll8" - 56: 0%....50%....100% - 3 passes
+==PROF== Profiling "kernel_v2_b_uroll8" - 57: 0%....50%....100% - 3 passes
+==PROF== Profiling "kernel_v2_b_uroll8" - 58: 0%....50%....100% - 3 passes
+==PROF== Profiling "kernel_v2_b_uroll8" - 59: 0%....50%....100% - 3 passes
+==PROF== Profiling "kernel_v2_b_uroll8" - 60: 0%....50%....100% - 3 passes
+==PROF== Profiling "kernel_v2_b_uroll8" - 61: 0%....50%....100% - 3 passes
+==PROF== Profiling "kernel_v2_b_uroll8" - 62: 0%....50%....100% - 3 passes
+==PROF== Profiling "kernel_v2_b_uroll8" - 63: 0%....50%....100% - 3 passes
+==PROF== Profiling "kernel_v2_b_uroll8" - 64: 0%....50%....100% - 3 passes
+==PROF== Profiling "kernel_v2_b_uroll8" - 65: 0%....50%....100% - 3 passes
+==PROF== Profiling "kernel_v2_b_uroll8" - 66: 0%....50%....100% - 3 passes
+==PROF== Profiling "kernel_v2_b_uroll8" - 67: 0%....50%....100% - 3 passes
+==PROF== Profiling "kernel_v2_b_uroll8" - 68: 0%....50%....100% - 3 passes
+==PROF== Profiling "kernel_v2_b_uroll8" - 69: 0%....50%....100% - 3 passes
+==PROF== Profiling "kernel_v2_b_uroll8" - 70: 0%....50%....100% - 3 passes
+==PROF== Profiling "kernel_v2_b_uroll8" - 71: 0%....50%....100% - 3 passes
+==PROF== Profiling "kernel_v2_b_uroll8" - 72: 0%....50%....100% - 3 passes
+==PROF== Profiling "kernel_v2_b_uroll8" - 73: 0%....50%....100% - 3 passes
+==PROF== Profiling "kernel_v2_b_uroll8" - 74: 0%....50%....100% - 3 passes
+==PROF== Profiling "kernel_v2_b_uroll8" - 75: 0%....50%....100% - 3 passes
+==PROF== Profiling "kernel_v2_b_uroll8" - 76: 0%....50%....100% - 3 passes
+==PROF== Profiling "kernel_v2_b_uroll8" - 77: 0%....50%....100% - 3 passes
+==PROF== Profiling "kernel_v2_b_uroll8" - 78: 0%....50%.==PROF== Received signal
+==PROF== Trying to shutdown target application
+ - 2 passes
+==ERROR== Failed to profile kernel "kernel_v2_b_uroll8" in process 11480
+==PROF== Trying to shutdown target application
+==ERROR== An error occurred while trying to profile.
+==WARNING== Found outstanding GPU clock reset, trying to revert...Success.
+[11480] main@127.0.0.1
+  kernel_v2_a_uroll8(unsigned char *, int), 2023-Feb-25 16:06:46, Context 1, Stream 7
+    Section: Command line profiler metrics
+    ---------------------------------------------------------------------- --------------- ------------------------------
+    dram__bytes_read.sum.per_second                                           Gbyte/second                          59.97
+    dram__bytes_write.sum.per_second                                          Gbyte/second                          51.51
+    l1tex__t_bytes_pipe_lsu_mem_global_op_ld.sum.per_second                    byte/second                              0
+    l1tex__t_bytes_pipe_lsu_mem_global_op_st.sum.per_second                   Gbyte/second                         353.17
+    sm__warps_active.avg.pct_of_peak_sustained_active                                    %                          88.44
+    smsp__sass_average_branch_targets_threads_uniform.pct                                %                         100.00
+    smsp__sass_average_data_bytes_per_sector_mem_global_op_ld.pct                        %                              0
+    smsp__sass_average_data_bytes_per_sector_mem_global_op_st.pct                        %                          12.50
+    ---------------------------------------------------------------------- --------------- ------------------------------
+
+  kernel_v2_b_uroll8(int, unsigned char *, unsigned char *, int, int), 2023-Feb-25 16:06:47, Context 1, Stream 7
+    Section: Command line profiler metrics
+    ---------------------------------------------------------------------- --------------- ------------------------------
+    dram__bytes_read.sum.per_second                                           Gbyte/second                         136.53
+    dram__bytes_write.sum.per_second                                          Gbyte/second                          41.84
+    l1tex__t_bytes_pipe_lsu_mem_global_op_ld.sum.per_second                   Gbyte/second                         602.38
+    l1tex__t_bytes_pipe_lsu_mem_global_op_st.sum.per_second                   Gbyte/second                         284.19
+    sm__warps_active.avg.pct_of_peak_sustained_active                                    %                          89.27
+    smsp__sass_average_branch_targets_threads_uniform.pct                                %                         100.00
+    smsp__sass_average_data_bytes_per_sector_mem_global_op_ld.pct                        %                          11.77
+    smsp__sass_average_data_bytes_per_sector_mem_global_op_st.pct                        %                          12.50
+    ---------------------------------------------------------------------- --------------- ------------------------------
+
+  kernel_v2_b_uroll8(int, unsigned char *, unsigned char *, int, int), 2023-Feb-25 16:06:48, Context 1, Stream 7
+    Section: Command line profiler metrics
+    ---------------------------------------------------------------------- --------------- ------------------------------
+    dram__bytes_read.sum.per_second                                           Gbyte/second                         137.25
+    dram__bytes_write.sum.per_second                                          Gbyte/second                          41.84
+    l1tex__t_bytes_pipe_lsu_mem_global_op_ld.sum.per_second                   Gbyte/second                         599.02
+    l1tex__t_bytes_pipe_lsu_mem_global_op_st.sum.per_second                   Gbyte/second                         283.55
+    sm__warps_active.avg.pct_of_peak_sustained_active                                    %                          89.42
+    smsp__sass_average_branch_targets_threads_uniform.pct                                %                         100.00
+    smsp__sass_average_data_bytes_per_sector_mem_global_op_ld.pct                        %                          11.77
+    smsp__sass_average_data_bytes_per_sector_mem_global_op_st.pct                        %                          12.50
+    ---------------------------------------------------------------------- --------------- ------------------------------
+
+  kernel_v2_b_uroll8(int, unsigned char *, unsigned char *, int, int), 2023-Feb-25 16:06:49, Context 1, Stream 7
+    Section: Command line profiler metrics
+    ---------------------------------------------------------------------- --------------- ------------------------------
+    dram__bytes_read.sum.per_second                                           Gbyte/second                         137.15
+    dram__bytes_write.sum.per_second                                          Gbyte/second                          41.98
+    l1tex__t_bytes_pipe_lsu_mem_global_op_ld.sum.per_second                   Gbyte/second                         566.09
+    l1tex__t_bytes_pipe_lsu_mem_global_op_st.sum.per_second                   Gbyte/second                         284.28
+    sm__warps_active.avg.pct_of_peak_sustained_active                                    %                          89.46
+    smsp__sass_average_branch_targets_threads_uniform.pct                                %                         100.00
+    smsp__sass_average_data_bytes_per_sector_mem_global_op_ld.pct                        %                          12.50
+    smsp__sass_average_data_bytes_per_sector_mem_global_op_st.pct                        %                          12.50
+    ---------------------------------------------------------------------- --------------- ------------------------------
+
+  kernel_v2_b_uroll8(int, unsigned char *, unsigned char *, int, int), 2023-Feb-25 16:06:50, Context 1, Stream 7
+    Section: Command line profiler metrics
+    ---------------------------------------------------------------------- --------------- ------------------------------
+    dram__bytes_read.sum.per_second                                           Gbyte/second                         136.70
+    dram__bytes_write.sum.per_second                                          Gbyte/second                          41.83
+    l1tex__t_bytes_pipe_lsu_mem_global_op_ld.sum.per_second                   Gbyte/second                         593.98
+    l1tex__t_bytes_pipe_lsu_mem_global_op_st.sum.per_second                   Gbyte/second                         284.33
+    sm__warps_active.avg.pct_of_peak_sustained_active                                    %                          89.44
+    smsp__sass_average_branch_targets_threads_uniform.pct                                %                         100.00
+    smsp__sass_average_data_bytes_per_sector_mem_global_op_ld.pct                        %                          11.94
+    smsp__sass_average_data_bytes_per_sector_mem_global_op_st.pct                        %                          12.50
+    ---------------------------------------------------------------------- --------------- ------------------------------
+
+  kernel_v2_b_uroll8(int, unsigned char *, unsigned char *, int, int), 2023-Feb-25 16:06:51, Context 1, Stream 7
+    Section: Command line profiler metrics
+    ---------------------------------------------------------------------- --------------- ------------------------------
+    dram__bytes_read.sum.per_second                                           Gbyte/second                         136.39
+    dram__bytes_write.sum.per_second                                          Gbyte/second                          41.99
+    l1tex__t_bytes_pipe_lsu_mem_global_op_ld.sum.per_second                   Gbyte/second                         598.15
+    l1tex__t_bytes_pipe_lsu_mem_global_op_st.sum.per_second                   Gbyte/second                         283.66
+    sm__warps_active.avg.pct_of_peak_sustained_active                                    %                          89.69
+    smsp__sass_average_branch_targets_threads_uniform.pct                                %                         100.00
+    smsp__sass_average_data_bytes_per_sector_mem_global_op_ld.pct                        %                          11.77
+    smsp__sass_average_data_bytes_per_sector_mem_global_op_st.pct                        %                          12.50
+    ---------------------------------------------------------------------- --------------- ------------------------------
+
+  kernel_v2_b_uroll8(int, unsigned char *, unsigned char *, int, int), 2023-Feb-25 16:06:52, Context 1, Stream 7
+    Section: Command line profiler metrics
+    ---------------------------------------------------------------------- --------------- ------------------------------
+    dram__bytes_read.sum.per_second                                           Gbyte/second                         137.43
+    dram__bytes_write.sum.per_second                                          Gbyte/second                          41.86
+    l1tex__t_bytes_pipe_lsu_mem_global_op_ld.sum.per_second                   Gbyte/second                         598.37
+    l1tex__t_bytes_pipe_lsu_mem_global_op_st.sum.per_second                   Gbyte/second                         283.74
+    sm__warps_active.avg.pct_of_peak_sustained_active                                    %                          90.02
+    smsp__sass_average_branch_targets_threads_uniform.pct                                %                         100.00
+    smsp__sass_average_data_bytes_per_sector_mem_global_op_ld.pct                        %                          11.77
+    smsp__sass_average_data_bytes_per_sector_mem_global_op_st.pct                        %                          12.50
+    ---------------------------------------------------------------------- --------------- ------------------------------
+
+  kernel_v2_b_uroll8(int, unsigned char *, unsigned char *, int, int), 2023-Feb-25 16:06:53, Context 1, Stream 7
+    Section: Command line profiler metrics
+    ---------------------------------------------------------------------- --------------- ------------------------------
+    dram__bytes_read.sum.per_second                                           Gbyte/second                         137.36
+    dram__bytes_write.sum.per_second                                          Gbyte/second                          41.87
+    l1tex__t_bytes_pipe_lsu_mem_global_op_ld.sum.per_second                   Gbyte/second                         572.13
+    l1tex__t_bytes_pipe_lsu_mem_global_op_st.sum.per_second                   Gbyte/second                         283.69
+    sm__warps_active.avg.pct_of_peak_sustained_active                                    %                          89.77
+    smsp__sass_average_branch_targets_threads_uniform.pct                                %                         100.00
+    smsp__sass_average_data_bytes_per_sector_mem_global_op_ld.pct                        %                          12.31
+    smsp__sass_average_data_bytes_per_sector_mem_global_op_st.pct                        %                          12.50
+    ---------------------------------------------------------------------- --------------- ------------------------------
+
+  kernel_v2_b_uroll8(int, unsigned char *, unsigned char *, int, int), 2023-Feb-25 16:06:54, Context 1, Stream 7
+    Section: Command line profiler metrics
+    ---------------------------------------------------------------------- --------------- ------------------------------
+    dram__bytes_read.sum.per_second                                           Gbyte/second                         137.54
+    dram__bytes_write.sum.per_second                                          Gbyte/second                          41.82
+    l1tex__t_bytes_pipe_lsu_mem_global_op_ld.sum.per_second                   Gbyte/second                         590.02
+    l1tex__t_bytes_pipe_lsu_mem_global_op_st.sum.per_second                   Gbyte/second                         283.72
+    sm__warps_active.avg.pct_of_peak_sustained_active                                    %                          89.91
+    smsp__sass_average_branch_targets_threads_uniform.pct                                %                         100.00
+    smsp__sass_average_data_bytes_per_sector_mem_global_op_ld.pct                        %                          11.94
+    smsp__sass_average_data_bytes_per_sector_mem_global_op_st.pct                        %                          12.50
+    ---------------------------------------------------------------------- --------------- ------------------------------
+
+  kernel_v2_b_uroll8(int, unsigned char *, unsigned char *, int, int), 2023-Feb-25 16:06:55, Context 1, Stream 7
+    Section: Command line profiler metrics
+    ---------------------------------------------------------------------- --------------- ------------------------------
+    dram__bytes_read.sum.per_second                                           Gbyte/second                         136.71
+    dram__bytes_write.sum.per_second                                          Gbyte/second                          41.89
+    l1tex__t_bytes_pipe_lsu_mem_global_op_ld.sum.per_second                   Gbyte/second                         602.79
+    l1tex__t_bytes_pipe_lsu_mem_global_op_st.sum.per_second                   Gbyte/second                         284.38
+    sm__warps_active.avg.pct_of_peak_sustained_active                                    %                          89.36
+    smsp__sass_average_branch_targets_threads_uniform.pct                                %                         100.00
+    smsp__sass_average_data_bytes_per_sector_mem_global_op_ld.pct                        %                          11.77
+    smsp__sass_average_data_bytes_per_sector_mem_global_op_st.pct                        %                          12.50
+    ---------------------------------------------------------------------- --------------- ------------------------------
+
+  kernel_v2_b_uroll8(int, unsigned char *, unsigned char *, int, int), 2023-Feb-25 16:06:56, Context 1, Stream 7
+    Section: Command line profiler metrics
+    ---------------------------------------------------------------------- --------------- ------------------------------
+    dram__bytes_read.sum.per_second                                           Gbyte/second                         137.10
+    dram__bytes_write.sum.per_second                                          Gbyte/second                          41.94
+    l1tex__t_bytes_pipe_lsu_mem_global_op_ld.sum.per_second                   Gbyte/second                         603.39
+    l1tex__t_bytes_pipe_lsu_mem_global_op_st.sum.per_second                   Gbyte/second                         284.60
+    sm__warps_active.avg.pct_of_peak_sustained_active                                    %                          89.96
+    smsp__sass_average_branch_targets_threads_uniform.pct                                %                         100.00
+    smsp__sass_average_data_bytes_per_sector_mem_global_op_ld.pct                        %                          11.77
+    smsp__sass_average_data_bytes_per_sector_mem_global_op_st.pct                        %                          12.50
+    ---------------------------------------------------------------------- --------------- ------------------------------
+
+  kernel_v2_b_uroll8(int, unsigned char *, unsigned char *, int, int), 2023-Feb-25 16:06:57, Context 1, Stream 7
+    Section: Command line profiler metrics
+    ---------------------------------------------------------------------- --------------- ------------------------------
+    dram__bytes_read.sum.per_second                                           Gbyte/second                         136.36
+    dram__bytes_write.sum.per_second                                          Gbyte/second                          41.87
+    l1tex__t_bytes_pipe_lsu_mem_global_op_ld.sum.per_second                   Gbyte/second                         599.00
+    l1tex__t_bytes_pipe_lsu_mem_global_op_st.sum.per_second                   Gbyte/second                         283.62
+    sm__warps_active.avg.pct_of_peak_sustained_active                                    %                          89.77
+    smsp__sass_average_branch_targets_threads_uniform.pct                                %                         100.00
+    smsp__sass_average_data_bytes_per_sector_mem_global_op_ld.pct                        %                          11.77
+    smsp__sass_average_data_bytes_per_sector_mem_global_op_st.pct                        %                          12.50
+    ---------------------------------------------------------------------- --------------- ------------------------------
+
+  kernel_v2_b_uroll8(int, unsigned char *, unsigned char *, int, int), 2023-Feb-25 16:06:58, Context 1, Stream 7
+    Section: Command line profiler metrics
+    ---------------------------------------------------------------------- --------------- ------------------------------
+    dram__bytes_read.sum.per_second                                           Gbyte/second                         136.82
+    dram__bytes_write.sum.per_second                                          Gbyte/second                          41.91
+    l1tex__t_bytes_pipe_lsu_mem_global_op_ld.sum.per_second                   Gbyte/second                         577.29
+    l1tex__t_bytes_pipe_lsu_mem_global_op_st.sum.per_second                   Gbyte/second                         283.73
+    sm__warps_active.avg.pct_of_peak_sustained_active                                    %                          90.15
+    smsp__sass_average_branch_targets_threads_uniform.pct                                %                         100.00
+    smsp__sass_average_data_bytes_per_sector_mem_global_op_ld.pct                        %                          12.21
+    smsp__sass_average_data_bytes_per_sector_mem_global_op_st.pct                        %                          12.50
+    ---------------------------------------------------------------------- --------------- ------------------------------
+
+  kernel_v2_b_uroll8(int, unsigned char *, unsigned char *, int, int), 2023-Feb-25 16:06:59, Context 1, Stream 7
+    Section: Command line profiler metrics
+    ---------------------------------------------------------------------- --------------- ------------------------------
+    dram__bytes_read.sum.per_second                                           Gbyte/second                         124.52
+    dram__bytes_write.sum.per_second                                          Gbyte/second                          42.05
+    l1tex__t_bytes_pipe_lsu_mem_global_op_ld.sum.per_second                   Gbyte/second                         577.64
+    l1tex__t_bytes_pipe_lsu_mem_global_op_st.sum.per_second                   Gbyte/second                         283.53
+    sm__warps_active.avg.pct_of_peak_sustained_active                                    %                          89.90
+    smsp__sass_average_branch_targets_threads_uniform.pct                                %                         100.00
+    smsp__sass_average_data_bytes_per_sector_mem_global_op_ld.pct                        %                          12.21
+    smsp__sass_average_data_bytes_per_sector_mem_global_op_st.pct                        %                          12.50
+    ---------------------------------------------------------------------- --------------- ------------------------------
+
+  kernel_v2_b_uroll8(int, unsigned char *, unsigned char *, int, int), 2023-Feb-25 16:07:00, Context 1, Stream 7
+    Section: Command line profiler metrics
+    ---------------------------------------------------------------------- --------------- ------------------------------
+    dram__bytes_read.sum.per_second                                           Gbyte/second                         136.95
+    dram__bytes_write.sum.per_second                                          Gbyte/second                          41.93
+    l1tex__t_bytes_pipe_lsu_mem_global_op_ld.sum.per_second                   Gbyte/second                         602.81
+    l1tex__t_bytes_pipe_lsu_mem_global_op_st.sum.per_second                   Gbyte/second                         284.57
+    sm__warps_active.avg.pct_of_peak_sustained_active                                    %                          89.72
+    smsp__sass_average_branch_targets_threads_uniform.pct                                %                          99.99
+    smsp__sass_average_data_bytes_per_sector_mem_global_op_ld.pct                        %                          11.77
+    smsp__sass_average_data_bytes_per_sector_mem_global_op_st.pct                        %                          12.50
+    ---------------------------------------------------------------------- --------------- ------------------------------
+
+  kernel_v2_b_uroll8(int, unsigned char *, unsigned char *, int, int), 2023-Feb-25 16:07:01, Context 1, Stream 7
+    Section: Command line profiler metrics
+    ---------------------------------------------------------------------- --------------- ------------------------------
+    dram__bytes_read.sum.per_second                                           Gbyte/second                         137.83
+    dram__bytes_write.sum.per_second                                          Gbyte/second                          41.86
+    l1tex__t_bytes_pipe_lsu_mem_global_op_ld.sum.per_second                   Gbyte/second                         600.35
+    l1tex__t_bytes_pipe_lsu_mem_global_op_st.sum.per_second                   Gbyte/second                         283.79
+    sm__warps_active.avg.pct_of_peak_sustained_active                                    %                          89.72
+    smsp__sass_average_branch_targets_threads_uniform.pct                                %                          99.99
+    smsp__sass_average_data_bytes_per_sector_mem_global_op_ld.pct                        %                          11.77
+    smsp__sass_average_data_bytes_per_sector_mem_global_op_st.pct                        %                          12.50
+    ---------------------------------------------------------------------- --------------- ------------------------------
+
+  kernel_v2_b_uroll8(int, unsigned char *, unsigned char *, int, int), 2023-Feb-25 16:07:02, Context 1, Stream 7
+    Section: Command line profiler metrics
+    ---------------------------------------------------------------------- --------------- ------------------------------
+    dram__bytes_read.sum.per_second                                           Gbyte/second                         136.30
+    dram__bytes_write.sum.per_second                                          Gbyte/second                          41.89
+    l1tex__t_bytes_pipe_lsu_mem_global_op_ld.sum.per_second                   Gbyte/second                         559.92
+    l1tex__t_bytes_pipe_lsu_mem_global_op_st.sum.per_second                   Gbyte/second                         283.57
+    sm__warps_active.avg.pct_of_peak_sustained_active                                    %                          89.94
+    smsp__sass_average_branch_targets_threads_uniform.pct                                %                          99.98
+    smsp__sass_average_data_bytes_per_sector_mem_global_op_ld.pct                        %                          12.50
+    smsp__sass_average_data_bytes_per_sector_mem_global_op_st.pct                        %                          12.50
+    ---------------------------------------------------------------------- --------------- ------------------------------
+
+  kernel_v2_b_uroll8(int, unsigned char *, unsigned char *, int, int), 2023-Feb-25 16:07:03, Context 1, Stream 7
+    Section: Command line profiler metrics
+    ---------------------------------------------------------------------- --------------- ------------------------------
+    dram__bytes_read.sum.per_second                                           Gbyte/second                         137.50
+    dram__bytes_write.sum.per_second                                          Gbyte/second                          41.88
+    l1tex__t_bytes_pipe_lsu_mem_global_op_ld.sum.per_second                   Gbyte/second                         598.18
+    l1tex__t_bytes_pipe_lsu_mem_global_op_st.sum.per_second                   Gbyte/second                         283.80
+    sm__warps_active.avg.pct_of_peak_sustained_active                                    %                          90.15
+    smsp__sass_average_branch_targets_threads_uniform.pct                                %                          99.96
+    smsp__sass_average_data_bytes_per_sector_mem_global_op_ld.pct                        %                          11.77
+    smsp__sass_average_data_bytes_per_sector_mem_global_op_st.pct                        %                          12.50
+    ---------------------------------------------------------------------- --------------- ------------------------------
+
+  kernel_v2_b_uroll8(int, unsigned char *, unsigned char *, int, int), 2023-Feb-25 16:07:05, Context 1, Stream 7
+    Section: Command line profiler metrics
+    ---------------------------------------------------------------------- --------------- ------------------------------
+    dram__bytes_read.sum.per_second                                           Gbyte/second                         136.47
+    dram__bytes_write.sum.per_second                                          Gbyte/second                          41.90
+    l1tex__t_bytes_pipe_lsu_mem_global_op_ld.sum.per_second                   Gbyte/second                         593.80
+    l1tex__t_bytes_pipe_lsu_mem_global_op_st.sum.per_second                   Gbyte/second                         283.49
+    sm__warps_active.avg.pct_of_peak_sustained_active                                    %                          89.80
+    smsp__sass_average_branch_targets_threads_uniform.pct                                %                          99.92
+    smsp__sass_average_data_bytes_per_sector_mem_global_op_ld.pct                        %                          11.85
+    smsp__sass_average_data_bytes_per_sector_mem_global_op_st.pct                        %                          12.50
+    ---------------------------------------------------------------------- --------------- ------------------------------
+
+  kernel_v2_b_uroll8(int, unsigned char *, unsigned char *, int, int), 2023-Feb-25 16:07:06, Context 1, Stream 7
+    Section: Command line profiler metrics
+    ---------------------------------------------------------------------- --------------- ------------------------------
+    dram__bytes_read.sum.per_second                                           Gbyte/second                         137.68
+    dram__bytes_write.sum.per_second                                          Gbyte/second                          41.89
+    l1tex__t_bytes_pipe_lsu_mem_global_op_ld.sum.per_second                   Gbyte/second                         600.53
+    l1tex__t_bytes_pipe_lsu_mem_global_op_st.sum.per_second                   Gbyte/second                         283.97
+    sm__warps_active.avg.pct_of_peak_sustained_active                                    %                          89.62
+    smsp__sass_average_branch_targets_threads_uniform.pct                                %                          99.85
+    smsp__sass_average_data_bytes_per_sector_mem_global_op_ld.pct                        %                          11.77
+    smsp__sass_average_data_bytes_per_sector_mem_global_op_st.pct                        %                          12.50
+    ---------------------------------------------------------------------- --------------- ------------------------------
+
+  kernel_v2_b_uroll8(int, unsigned char *, unsigned char *, int, int), 2023-Feb-25 16:07:07, Context 1, Stream 7
+    Section: Command line profiler metrics
+    ---------------------------------------------------------------------- --------------- ------------------------------
+    dram__bytes_read.sum.per_second                                           Gbyte/second                         137.95
+    dram__bytes_write.sum.per_second                                          Gbyte/second                          41.87
+    l1tex__t_bytes_pipe_lsu_mem_global_op_ld.sum.per_second                   Gbyte/second                         600.27
+    l1tex__t_bytes_pipe_lsu_mem_global_op_st.sum.per_second                   Gbyte/second                         283.92
+    sm__warps_active.avg.pct_of_peak_sustained_active                                    %                          89.94
+    smsp__sass_average_branch_targets_threads_uniform.pct                                %                          99.72
+    smsp__sass_average_data_bytes_per_sector_mem_global_op_ld.pct                        %                          11.77
+    smsp__sass_average_data_bytes_per_sector_mem_global_op_st.pct                        %                          12.50
+    ---------------------------------------------------------------------- --------------- ------------------------------
+
+  kernel_v2_b_uroll8(int, unsigned char *, unsigned char *, int, int), 2023-Feb-25 16:07:08, Context 1, Stream 7
+    Section: Command line profiler metrics
+    ---------------------------------------------------------------------- --------------- ------------------------------
+    dram__bytes_read.sum.per_second                                           Gbyte/second                         136.73
+    dram__bytes_write.sum.per_second                                          Gbyte/second                          41.88
+    l1tex__t_bytes_pipe_lsu_mem_global_op_ld.sum.per_second                   Gbyte/second                         602.17
+    l1tex__t_bytes_pipe_lsu_mem_global_op_st.sum.per_second                   Gbyte/second                         284.54
+    sm__warps_active.avg.pct_of_peak_sustained_active                                    %                          89.66
+    smsp__sass_average_branch_targets_threads_uniform.pct                                %                          99.51
+    smsp__sass_average_data_bytes_per_sector_mem_global_op_ld.pct                        %                          11.77
+    smsp__sass_average_data_bytes_per_sector_mem_global_op_st.pct                        %                          12.50
+    ---------------------------------------------------------------------- --------------- ------------------------------
+
+  kernel_v2_b_uroll8(int, unsigned char *, unsigned char *, int, int), 2023-Feb-25 16:07:09, Context 1, Stream 7
+    Section: Command line profiler metrics
+    ---------------------------------------------------------------------- --------------- ------------------------------
+    dram__bytes_read.sum.per_second                                           Gbyte/second                         136.47
+    dram__bytes_write.sum.per_second                                          Gbyte/second                          41.86
+    l1tex__t_bytes_pipe_lsu_mem_global_op_ld.sum.per_second                   Gbyte/second                         598.04
+    l1tex__t_bytes_pipe_lsu_mem_global_op_st.sum.per_second                   Gbyte/second                         283.53
+    sm__warps_active.avg.pct_of_peak_sustained_active                                    %                          89.62
+    smsp__sass_average_branch_targets_threads_uniform.pct                                %                          99.24
+    smsp__sass_average_data_bytes_per_sector_mem_global_op_ld.pct                        %                          11.77
+    smsp__sass_average_data_bytes_per_sector_mem_global_op_st.pct                        %                          12.50
+    ---------------------------------------------------------------------- --------------- ------------------------------
+
+  kernel_v2_b_uroll8(int, unsigned char *, unsigned char *, int, int), 2023-Feb-25 16:07:10, Context 1, Stream 7
+    Section: Command line profiler metrics
+    ---------------------------------------------------------------------- --------------- ------------------------------
+    dram__bytes_read.sum.per_second                                           Gbyte/second                         136.72
+    dram__bytes_write.sum.per_second                                          Gbyte/second                          41.80
+    l1tex__t_bytes_pipe_lsu_mem_global_op_ld.sum.per_second                   Gbyte/second                         601.65
+    l1tex__t_bytes_pipe_lsu_mem_global_op_st.sum.per_second                   Gbyte/second                         284.62
+    sm__warps_active.avg.pct_of_peak_sustained_active                                    %                          90.12
+    smsp__sass_average_branch_targets_threads_uniform.pct                                %                          98.96
+    smsp__sass_average_data_bytes_per_sector_mem_global_op_ld.pct                        %                          11.77
+    smsp__sass_average_data_bytes_per_sector_mem_global_op_st.pct                        %                          12.50
+    ---------------------------------------------------------------------- --------------- ------------------------------
+
+  kernel_v2_b_uroll8(int, unsigned char *, unsigned char *, int, int), 2023-Feb-25 16:07:11, Context 1, Stream 7
+    Section: Command line profiler metrics
+    ---------------------------------------------------------------------- --------------- ------------------------------
+    dram__bytes_read.sum.per_second                                           Gbyte/second                         136.49
+    dram__bytes_write.sum.per_second                                          Gbyte/second                          41.81
+    l1tex__t_bytes_pipe_lsu_mem_global_op_ld.sum.per_second                   Gbyte/second                         560.92
+    l1tex__t_bytes_pipe_lsu_mem_global_op_st.sum.per_second                   Gbyte/second                         282.37
+    sm__warps_active.avg.pct_of_peak_sustained_active                                    %                          86.72
+    smsp__sass_average_branch_targets_threads_uniform.pct                                %                          98.72
+    smsp__sass_average_data_bytes_per_sector_mem_global_op_ld.pct                        %                          12.40
+    smsp__sass_average_data_bytes_per_sector_mem_global_op_st.pct                        %                          12.50
+    ---------------------------------------------------------------------- --------------- ------------------------------
+
+  kernel_v2_b_uroll8(int, unsigned char *, unsigned char *, int, int), 2023-Feb-25 16:07:12, Context 1, Stream 7
+    Section: Command line profiler metrics
+    ---------------------------------------------------------------------- --------------- ------------------------------
+    dram__bytes_read.sum.per_second                                           Gbyte/second                         136.73
+    dram__bytes_write.sum.per_second                                          Gbyte/second                          41.91
+    l1tex__t_bytes_pipe_lsu_mem_global_op_ld.sum.per_second                   Gbyte/second                         600.40
+    l1tex__t_bytes_pipe_lsu_mem_global_op_st.sum.per_second                   Gbyte/second                         284.63
+    sm__warps_active.avg.pct_of_peak_sustained_active                                    %                          89.80
+    smsp__sass_average_branch_targets_threads_uniform.pct                                %                          98.53
+    smsp__sass_average_data_bytes_per_sector_mem_global_op_ld.pct                        %                          11.77
+    smsp__sass_average_data_bytes_per_sector_mem_global_op_st.pct                        %                          12.50
+    ---------------------------------------------------------------------- --------------- ------------------------------
+
+  kernel_v2_b_uroll8(int, unsigned char *, unsigned char *, int, int), 2023-Feb-25 16:07:13, Context 1, Stream 7
+    Section: Command line profiler metrics
+    ---------------------------------------------------------------------- --------------- ------------------------------
+    dram__bytes_read.sum.per_second                                           Gbyte/second                         137.59
+    dram__bytes_write.sum.per_second                                          Gbyte/second                          41.85
+    l1tex__t_bytes_pipe_lsu_mem_global_op_ld.sum.per_second                   Gbyte/second                         580.19
+    l1tex__t_bytes_pipe_lsu_mem_global_op_st.sum.per_second                   Gbyte/second                         283.78
+    sm__warps_active.avg.pct_of_peak_sustained_active                                    %                          89.62
+    smsp__sass_average_branch_targets_threads_uniform.pct                                %                          98.30
+    smsp__sass_average_data_bytes_per_sector_mem_global_op_ld.pct                        %                          12.12
+    smsp__sass_average_data_bytes_per_sector_mem_global_op_st.pct                        %                          12.50
+    ---------------------------------------------------------------------- --------------- ------------------------------
+
+  kernel_v2_b_uroll8(int, unsigned char *, unsigned char *, int, int), 2023-Feb-25 16:07:14, Context 1, Stream 7
+    Section: Command line profiler metrics
+    ---------------------------------------------------------------------- --------------- ------------------------------
+    dram__bytes_read.sum.per_second                                           Gbyte/second                         136.55
+    dram__bytes_write.sum.per_second                                          Gbyte/second                          41.84
+    l1tex__t_bytes_pipe_lsu_mem_global_op_ld.sum.per_second                   Gbyte/second                         594.37
+    l1tex__t_bytes_pipe_lsu_mem_global_op_st.sum.per_second                   Gbyte/second                         283.30
+    sm__warps_active.avg.pct_of_peak_sustained_active                                    %                          89.56
+    smsp__sass_average_branch_targets_threads_uniform.pct                                %                          98.09
+    smsp__sass_average_data_bytes_per_sector_mem_global_op_ld.pct                        %                          11.78
+    smsp__sass_average_data_bytes_per_sector_mem_global_op_st.pct                        %                          12.50
+    ---------------------------------------------------------------------- --------------- ------------------------------
+
+  kernel_v2_b_uroll8(int, unsigned char *, unsigned char *, int, int), 2023-Feb-25 16:07:15, Context 1, Stream 7
+    Section: Command line profiler metrics
+    ---------------------------------------------------------------------- --------------- ------------------------------
+    dram__bytes_read.sum.per_second                                           Gbyte/second                         136.57
+    dram__bytes_write.sum.per_second                                          Gbyte/second                          41.84
+    l1tex__t_bytes_pipe_lsu_mem_global_op_ld.sum.per_second                   Gbyte/second                         587.20
+    l1tex__t_bytes_pipe_lsu_mem_global_op_st.sum.per_second                   Gbyte/second                         283.34
+    sm__warps_active.avg.pct_of_peak_sustained_active                                    %                          89.64
+    smsp__sass_average_branch_targets_threads_uniform.pct                                %                          98.04
+    smsp__sass_average_data_bytes_per_sector_mem_global_op_ld.pct                        %                          11.79
+    smsp__sass_average_data_bytes_per_sector_mem_global_op_st.pct                        %                          12.50
+    ---------------------------------------------------------------------- --------------- ------------------------------
+
+  kernel_v2_b_uroll8(int, unsigned char *, unsigned char *, int, int), 2023-Feb-25 16:07:16, Context 1, Stream 7
+    Section: Command line profiler metrics
+    ---------------------------------------------------------------------- --------------- ------------------------------
+    dram__bytes_read.sum.per_second                                           Gbyte/second                         134.64
+    dram__bytes_write.sum.per_second                                          Gbyte/second                          41.91
+    l1tex__t_bytes_pipe_lsu_mem_global_op_ld.sum.per_second                   Gbyte/second                         574.56
+    l1tex__t_bytes_pipe_lsu_mem_global_op_st.sum.per_second                   Gbyte/second                         285.43
+    sm__warps_active.avg.pct_of_peak_sustained_active                                    %                          87.18
+    smsp__sass_average_branch_targets_threads_uniform.pct                                %                          98.43
+    smsp__sass_average_data_bytes_per_sector_mem_global_op_ld.pct                        %                          12.05
+    smsp__sass_average_data_bytes_per_sector_mem_global_op_st.pct                        %                          12.50
+    ---------------------------------------------------------------------- --------------- ------------------------------
+
+  kernel_v2_b_uroll8(int, unsigned char *, unsigned char *, int, int), 2023-Feb-25 16:07:17, Context 1, Stream 7
+    Section: Command line profiler metrics
+    ---------------------------------------------------------------------- --------------- ------------------------------
+    dram__bytes_read.sum.per_second                                           Gbyte/second                         134.76
+    dram__bytes_write.sum.per_second                                          Gbyte/second                          41.93
+    l1tex__t_bytes_pipe_lsu_mem_global_op_ld.sum.per_second                   Gbyte/second                         581.05
+    l1tex__t_bytes_pipe_lsu_mem_global_op_st.sum.per_second                   Gbyte/second                         284.55
+    sm__warps_active.avg.pct_of_peak_sustained_active                                    %                          89.21
+    smsp__sass_average_branch_targets_threads_uniform.pct                                %                          98.69
+    smsp__sass_average_data_bytes_per_sector_mem_global_op_ld.pct                        %                          11.80
+    smsp__sass_average_data_bytes_per_sector_mem_global_op_st.pct                        %                          12.50
+    ---------------------------------------------------------------------- --------------- ------------------------------
+
+  kernel_v2_b_uroll8(int, unsigned char *, unsigned char *, int, int), 2023-Feb-25 16:07:18, Context 1, Stream 7
+    Section: Command line profiler metrics
+    ---------------------------------------------------------------------- --------------- ------------------------------
+    dram__bytes_read.sum.per_second                                           Gbyte/second                         133.68
+    dram__bytes_write.sum.per_second                                          Gbyte/second                          41.90
+    l1tex__t_bytes_pipe_lsu_mem_global_op_ld.sum.per_second                   Gbyte/second                         564.15
+    l1tex__t_bytes_pipe_lsu_mem_global_op_st.sum.per_second                   Gbyte/second                         283.56
+    sm__warps_active.avg.pct_of_peak_sustained_active                                    %                          88.08
+    smsp__sass_average_branch_targets_threads_uniform.pct                                %                          98.85
+    smsp__sass_average_data_bytes_per_sector_mem_global_op_ld.pct                        %                          11.97
+    smsp__sass_average_data_bytes_per_sector_mem_global_op_st.pct                        %                          12.50
+    ---------------------------------------------------------------------- --------------- ------------------------------
+
+  kernel_v2_b_uroll8(int, unsigned char *, unsigned char *, int, int), 2023-Feb-25 16:07:19, Context 1, Stream 7
+    Section: Command line profiler metrics
+    ---------------------------------------------------------------------- --------------- ------------------------------
+    dram__bytes_read.sum.per_second                                           Gbyte/second                          92.06
+    dram__bytes_write.sum.per_second                                          Gbyte/second                          41.83
+    l1tex__t_bytes_pipe_lsu_mem_global_op_ld.sum.per_second                   Gbyte/second                         556.64
+    l1tex__t_bytes_pipe_lsu_mem_global_op_st.sum.per_second                   Gbyte/second                         283.98
+    sm__warps_active.avg.pct_of_peak_sustained_active                                    %                          90.17
+    smsp__sass_average_branch_targets_threads_uniform.pct                                %                          98.96
+    smsp__sass_average_data_bytes_per_sector_mem_global_op_ld.pct                        %                          12.14
+    smsp__sass_average_data_bytes_per_sector_mem_global_op_st.pct                        %                          12.50
+    ---------------------------------------------------------------------- --------------- ------------------------------
+
+  kernel_v2_b_uroll8(int, unsigned char *, unsigned char *, int, int), 2023-Feb-25 16:07:20, Context 1, Stream 7
+    Section: Command line profiler metrics
+    ---------------------------------------------------------------------- --------------- ------------------------------
+    dram__bytes_read.sum.per_second                                           Gbyte/second                         133.26
+    dram__bytes_write.sum.per_second                                          Gbyte/second                          41.94
+    l1tex__t_bytes_pipe_lsu_mem_global_op_ld.sum.per_second                   Gbyte/second                         547.53
+    l1tex__t_bytes_pipe_lsu_mem_global_op_st.sum.per_second                   Gbyte/second                         285.09
+    sm__warps_active.avg.pct_of_peak_sustained_active                                    %                          89.70
+    smsp__sass_average_branch_targets_threads_uniform.pct                                %                          99.05
+    smsp__sass_average_data_bytes_per_sector_mem_global_op_ld.pct                        %                          12.32
+    smsp__sass_average_data_bytes_per_sector_mem_global_op_st.pct                        %                          12.50
+    ---------------------------------------------------------------------- --------------- ------------------------------
+
+  kernel_v2_b_uroll8(int, unsigned char *, unsigned char *, int, int), 2023-Feb-25 16:07:21, Context 1, Stream 7
+    Section: Command line profiler metrics
+    ---------------------------------------------------------------------- --------------- ------------------------------
+    dram__bytes_read.sum.per_second                                           Gbyte/second                         133.63
+    dram__bytes_write.sum.per_second                                          Gbyte/second                          41.93
+    l1tex__t_bytes_pipe_lsu_mem_global_op_ld.sum.per_second                   Gbyte/second                         568.30
+    l1tex__t_bytes_pipe_lsu_mem_global_op_st.sum.per_second                   Gbyte/second                         284.28
+    sm__warps_active.avg.pct_of_peak_sustained_active                                    %                          89.12
+    smsp__sass_average_branch_targets_threads_uniform.pct                                %                          99.09
+    smsp__sass_average_data_bytes_per_sector_mem_global_op_ld.pct                        %                          11.81
+    smsp__sass_average_data_bytes_per_sector_mem_global_op_st.pct                        %                          12.50
+    ---------------------------------------------------------------------- --------------- ------------------------------
+
+  kernel_v2_b_uroll8(int, unsigned char *, unsigned char *, int, int), 2023-Feb-25 16:07:22, Context 1, Stream 7
+    Section: Command line profiler metrics
+    ---------------------------------------------------------------------- --------------- ------------------------------
+    dram__bytes_read.sum.per_second                                           Gbyte/second                         133.46
+    dram__bytes_write.sum.per_second                                          Gbyte/second                          41.89
+    l1tex__t_bytes_pipe_lsu_mem_global_op_ld.sum.per_second                   Gbyte/second                         546.46
+    l1tex__t_bytes_pipe_lsu_mem_global_op_st.sum.per_second                   Gbyte/second                         284.36
+    sm__warps_active.avg.pct_of_peak_sustained_active                                    %                          89.65
+    smsp__sass_average_branch_targets_threads_uniform.pct                                %                          99.15
+    smsp__sass_average_data_bytes_per_sector_mem_global_op_ld.pct                        %                          12.23
+    smsp__sass_average_data_bytes_per_sector_mem_global_op_st.pct                        %                          12.50
+    ---------------------------------------------------------------------- --------------- ------------------------------
+
+  kernel_v2_b_uroll8(int, unsigned char *, unsigned char *, int, int), 2023-Feb-25 16:07:23, Context 1, Stream 7
+    Section: Command line profiler metrics
+    ---------------------------------------------------------------------- --------------- ------------------------------
+    dram__bytes_read.sum.per_second                                           Gbyte/second                         132.14
+    dram__bytes_write.sum.per_second                                          Gbyte/second                          41.92
+    l1tex__t_bytes_pipe_lsu_mem_global_op_ld.sum.per_second                   Gbyte/second                         556.22
+    l1tex__t_bytes_pipe_lsu_mem_global_op_st.sum.per_second                   Gbyte/second                         285.10
+    sm__warps_active.avg.pct_of_peak_sustained_active                                    %                          89.50
+    smsp__sass_average_branch_targets_threads_uniform.pct                                %                          99.20
+    smsp__sass_average_data_bytes_per_sector_mem_global_op_ld.pct                        %                          11.98
+    smsp__sass_average_data_bytes_per_sector_mem_global_op_st.pct                        %                          12.50
+    ---------------------------------------------------------------------- --------------- ------------------------------
+
+  kernel_v2_b_uroll8(int, unsigned char *, unsigned char *, int, int), 2023-Feb-25 16:07:24, Context 1, Stream 7
+    Section: Command line profiler metrics
+    ---------------------------------------------------------------------- --------------- ------------------------------
+    dram__bytes_read.sum.per_second                                           Gbyte/second                          91.70
+    dram__bytes_write.sum.per_second                                          Gbyte/second                          42.20
+    l1tex__t_bytes_pipe_lsu_mem_global_op_ld.sum.per_second                   Gbyte/second                         552.75
+    l1tex__t_bytes_pipe_lsu_mem_global_op_st.sum.per_second                   Gbyte/second                         284.34
+    sm__warps_active.avg.pct_of_peak_sustained_active                                    %                          89.77
+    smsp__sass_average_branch_targets_threads_uniform.pct                                %                          99.23
+    smsp__sass_average_data_bytes_per_sector_mem_global_op_ld.pct                        %                          11.98
+    smsp__sass_average_data_bytes_per_sector_mem_global_op_st.pct                        %                          12.50
+    ---------------------------------------------------------------------- --------------- ------------------------------
+
+  kernel_v2_b_uroll8(int, unsigned char *, unsigned char *, int, int), 2023-Feb-25 16:07:25, Context 1, Stream 7
+    Section: Command line profiler metrics
+    ---------------------------------------------------------------------- --------------- ------------------------------
+    dram__bytes_read.sum.per_second                                           Gbyte/second                          92.64
+    dram__bytes_write.sum.per_second                                          Gbyte/second                          41.84
+    l1tex__t_bytes_pipe_lsu_mem_global_op_ld.sum.per_second                   Gbyte/second                         549.62
+    l1tex__t_bytes_pipe_lsu_mem_global_op_st.sum.per_second                   Gbyte/second                         284.70
+    sm__warps_active.avg.pct_of_peak_sustained_active                                    %                          89.64
+    smsp__sass_average_branch_targets_threads_uniform.pct                                %                          99.28
+    smsp__sass_average_data_bytes_per_sector_mem_global_op_ld.pct                        %                          12.06
+    smsp__sass_average_data_bytes_per_sector_mem_global_op_st.pct                        %                          12.50
+    ---------------------------------------------------------------------- --------------- ------------------------------
+
+  kernel_v2_b_uroll8(int, unsigned char *, unsigned char *, int, int), 2023-Feb-25 16:07:26, Context 1, Stream 7
+    Section: Command line profiler metrics
+    ---------------------------------------------------------------------- --------------- ------------------------------
+    dram__bytes_read.sum.per_second                                           Gbyte/second                         131.51
+    dram__bytes_write.sum.per_second                                          Gbyte/second                          41.95
+    l1tex__t_bytes_pipe_lsu_mem_global_op_ld.sum.per_second                   Gbyte/second                         543.57
+    l1tex__t_bytes_pipe_lsu_mem_global_op_st.sum.per_second                   Gbyte/second                         285.25
+    sm__warps_active.avg.pct_of_peak_sustained_active                                    %                          89.64
+    smsp__sass_average_branch_targets_threads_uniform.pct                                %                          99.32
+    smsp__sass_average_data_bytes_per_sector_mem_global_op_ld.pct                        %                          12.15
+    smsp__sass_average_data_bytes_per_sector_mem_global_op_st.pct                        %                          12.50
+    ---------------------------------------------------------------------- --------------- ------------------------------
+
+  kernel_v2_b_uroll8(int, unsigned char *, unsigned char *, int, int), 2023-Feb-25 16:07:27, Context 1, Stream 7
+    Section: Command line profiler metrics
+    ---------------------------------------------------------------------- --------------- ------------------------------
+    dram__bytes_read.sum.per_second                                           Gbyte/second                         131.11
+    dram__bytes_write.sum.per_second                                          Gbyte/second                          41.92
+    l1tex__t_bytes_pipe_lsu_mem_global_op_ld.sum.per_second                   Gbyte/second                         554.21
+    l1tex__t_bytes_pipe_lsu_mem_global_op_st.sum.per_second                   Gbyte/second                         284.40
+    sm__warps_active.avg.pct_of_peak_sustained_active                                    %                          89.69
+    smsp__sass_average_branch_targets_threads_uniform.pct                                %                          99.35
+    smsp__sass_average_data_bytes_per_sector_mem_global_op_ld.pct                        %                          11.82
+    smsp__sass_average_data_bytes_per_sector_mem_global_op_st.pct                        %                          12.50
+    ---------------------------------------------------------------------- --------------- ------------------------------
+
+  kernel_v2_b_uroll8(int, unsigned char *, unsigned char *, int, int), 2023-Feb-25 16:07:28, Context 1, Stream 7
+    Section: Command line profiler metrics
+    ---------------------------------------------------------------------- --------------- ------------------------------
+    dram__bytes_read.sum.per_second                                           Gbyte/second                         131.88
+    dram__bytes_write.sum.per_second                                          Gbyte/second                          41.93
+    l1tex__t_bytes_pipe_lsu_mem_global_op_ld.sum.per_second                   Gbyte/second                         554.97
+    l1tex__t_bytes_pipe_lsu_mem_global_op_st.sum.per_second                   Gbyte/second                         284.83
+    sm__warps_active.avg.pct_of_peak_sustained_active                                    %                          89.46
+    smsp__sass_average_branch_targets_threads_uniform.pct                                %                          99.38
+    smsp__sass_average_data_bytes_per_sector_mem_global_op_ld.pct                        %                          11.83
+    smsp__sass_average_data_bytes_per_sector_mem_global_op_st.pct                        %                          12.50
+    ---------------------------------------------------------------------- --------------- ------------------------------
+
+  kernel_v2_b_uroll8(int, unsigned char *, unsigned char *, int, int), 2023-Feb-25 16:07:29, Context 1, Stream 7
+    Section: Command line profiler metrics
+    ---------------------------------------------------------------------- --------------- ------------------------------
+    dram__bytes_read.sum.per_second                                           Gbyte/second                          92.86
+    dram__bytes_write.sum.per_second                                          Gbyte/second                          41.71
+    l1tex__t_bytes_pipe_lsu_mem_global_op_ld.sum.per_second                   Gbyte/second                         552.35
+    l1tex__t_bytes_pipe_lsu_mem_global_op_st.sum.per_second                   Gbyte/second                         284.62
+    sm__warps_active.avg.pct_of_peak_sustained_active                                    %                          90.04
+    smsp__sass_average_branch_targets_threads_uniform.pct                                %                          99.41
+    smsp__sass_average_data_bytes_per_sector_mem_global_op_ld.pct                        %                          11.83
+    smsp__sass_average_data_bytes_per_sector_mem_global_op_st.pct                        %                          12.50
+    ---------------------------------------------------------------------- --------------- ------------------------------
+
+  kernel_v2_b_uroll8(int, unsigned char *, unsigned char *, int, int), 2023-Feb-25 16:07:30, Context 1, Stream 7
+    Section: Command line profiler metrics
+    ---------------------------------------------------------------------- --------------- ------------------------------
+    dram__bytes_read.sum.per_second                                           Gbyte/second                         130.25
+    dram__bytes_write.sum.per_second                                          Gbyte/second                          41.94
+    l1tex__t_bytes_pipe_lsu_mem_global_op_ld.sum.per_second                   Gbyte/second                         551.15
+    l1tex__t_bytes_pipe_lsu_mem_global_op_st.sum.per_second                   Gbyte/second                         285.33
+    sm__warps_active.avg.pct_of_peak_sustained_active                                    %                          89.28
+    smsp__sass_average_branch_targets_threads_uniform.pct                                %                          99.44
+    smsp__sass_average_data_bytes_per_sector_mem_global_op_ld.pct                        %                          11.83
+    smsp__sass_average_data_bytes_per_sector_mem_global_op_st.pct                        %                          12.50
+    ---------------------------------------------------------------------- --------------- ------------------------------
+
+  kernel_v2_b_uroll8(int, unsigned char *, unsigned char *, int, int), 2023-Feb-25 16:07:31, Context 1, Stream 7
+    Section: Command line profiler metrics
+    ---------------------------------------------------------------------- --------------- ------------------------------
+    dram__bytes_read.sum.per_second                                           Gbyte/second                         130.32
+    dram__bytes_write.sum.per_second                                          Gbyte/second                          41.98
+    l1tex__t_bytes_pipe_lsu_mem_global_op_ld.sum.per_second                   Gbyte/second                         550.04
+    l1tex__t_bytes_pipe_lsu_mem_global_op_st.sum.per_second                   Gbyte/second                         285.48
+    sm__warps_active.avg.pct_of_peak_sustained_active                                    %                          89.63
+    smsp__sass_average_branch_targets_threads_uniform.pct                                %                          99.45
+    smsp__sass_average_data_bytes_per_sector_mem_global_op_ld.pct                        %                          11.83
+    smsp__sass_average_data_bytes_per_sector_mem_global_op_st.pct                        %                          12.50
+    ---------------------------------------------------------------------- --------------- ------------------------------
+
+  kernel_v2_b_uroll8(int, unsigned char *, unsigned char *, int, int), 2023-Feb-25 16:07:32, Context 1, Stream 7
+    Section: Command line profiler metrics
+    ---------------------------------------------------------------------- --------------- ------------------------------
+    dram__bytes_read.sum.per_second                                           Gbyte/second                         130.30
+    dram__bytes_write.sum.per_second                                          Gbyte/second                          41.94
+    l1tex__t_bytes_pipe_lsu_mem_global_op_ld.sum.per_second                   Gbyte/second                         531.89
+    l1tex__t_bytes_pipe_lsu_mem_global_op_st.sum.per_second                   Gbyte/second                         284.32
+    sm__warps_active.avg.pct_of_peak_sustained_active                                    %                          87.95
+    smsp__sass_average_branch_targets_threads_uniform.pct                                %                          99.47
+    smsp__sass_average_data_bytes_per_sector_mem_global_op_ld.pct                        %                          12.08
+    smsp__sass_average_data_bytes_per_sector_mem_global_op_st.pct                        %                          12.50
+    ---------------------------------------------------------------------- --------------- ------------------------------
+
+  kernel_v2_b_uroll8(int, unsigned char *, unsigned char *, int, int), 2023-Feb-25 16:07:33, Context 1, Stream 7
+    Section: Command line profiler metrics
+    ---------------------------------------------------------------------- --------------- ------------------------------
+    dram__bytes_read.sum.per_second                                           Gbyte/second                         130.51
+    dram__bytes_write.sum.per_second                                          Gbyte/second                          42.01
+    l1tex__t_bytes_pipe_lsu_mem_global_op_ld.sum.per_second                   Gbyte/second                         522.49
+    l1tex__t_bytes_pipe_lsu_mem_global_op_st.sum.per_second                   Gbyte/second                         284.55
+    sm__warps_active.avg.pct_of_peak_sustained_active                                    %                          87.48
+    smsp__sass_average_branch_targets_threads_uniform.pct                                %                          99.48
+    smsp__sass_average_data_bytes_per_sector_mem_global_op_ld.pct                        %                          12.24
+    smsp__sass_average_data_bytes_per_sector_mem_global_op_st.pct                        %                          12.50
+    ---------------------------------------------------------------------- --------------- ------------------------------
+
+  kernel_v2_b_uroll8(int, unsigned char *, unsigned char *, int, int), 2023-Feb-25 16:07:34, Context 1, Stream 7
+    Section: Command line profiler metrics
+    ---------------------------------------------------------------------- --------------- ------------------------------
+    dram__bytes_read.sum.per_second                                           Gbyte/second                         129.40
+    dram__bytes_write.sum.per_second                                          Gbyte/second                          41.97
+    l1tex__t_bytes_pipe_lsu_mem_global_op_ld.sum.per_second                   Gbyte/second                         542.87
+    l1tex__t_bytes_pipe_lsu_mem_global_op_st.sum.per_second                   Gbyte/second                         284.73
+    sm__warps_active.avg.pct_of_peak_sustained_active                                    %                          89.88
+    smsp__sass_average_branch_targets_threads_uniform.pct                                %                          99.49
+    smsp__sass_average_data_bytes_per_sector_mem_global_op_ld.pct                        %                          11.84
+    smsp__sass_average_data_bytes_per_sector_mem_global_op_st.pct                        %                          12.50
+    ---------------------------------------------------------------------- --------------- ------------------------------
+
+  kernel_v2_b_uroll8(int, unsigned char *, unsigned char *, int, int), 2023-Feb-25 16:07:35, Context 1, Stream 7
+    Section: Command line profiler metrics
+    ---------------------------------------------------------------------- --------------- ------------------------------
+    dram__bytes_read.sum.per_second                                           Gbyte/second                         130.19
+    dram__bytes_write.sum.per_second                                          Gbyte/second                          41.92
+    l1tex__t_bytes_pipe_lsu_mem_global_op_ld.sum.per_second                   Gbyte/second                         543.13
+    l1tex__t_bytes_pipe_lsu_mem_global_op_st.sum.per_second                   Gbyte/second                         285.15
+    sm__warps_active.avg.pct_of_peak_sustained_active                                    %                          89.88
+    smsp__sass_average_branch_targets_threads_uniform.pct                                %                          99.51
+    smsp__sass_average_data_bytes_per_sector_mem_global_op_ld.pct                        %                          11.84
+    smsp__sass_average_data_bytes_per_sector_mem_global_op_st.pct                        %                          12.50
+    ---------------------------------------------------------------------- --------------- ------------------------------
+
+  kernel_v2_b_uroll8(int, unsigned char *, unsigned char *, int, int), 2023-Feb-25 16:07:36, Context 1, Stream 7
+    Section: Command line profiler metrics
+    ---------------------------------------------------------------------- --------------- ------------------------------
+    dram__bytes_read.sum.per_second                                           Gbyte/second                         122.94
+    dram__bytes_write.sum.per_second                                          Gbyte/second                          42.09
+    l1tex__t_bytes_pipe_lsu_mem_global_op_ld.sum.per_second                   Gbyte/second                         523.84
+    l1tex__t_bytes_pipe_lsu_mem_global_op_st.sum.per_second                   Gbyte/second                         284.53
+    sm__warps_active.avg.pct_of_peak_sustained_active                                    %                          87.87
+    smsp__sass_average_branch_targets_threads_uniform.pct                                %                          99.53
+    smsp__sass_average_data_bytes_per_sector_mem_global_op_ld.pct                        %                          12.16
+    smsp__sass_average_data_bytes_per_sector_mem_global_op_st.pct                        %                          12.50
+    ---------------------------------------------------------------------- --------------- ------------------------------
+
+  kernel_v2_b_uroll8(int, unsigned char *, unsigned char *, int, int), 2023-Feb-25 16:07:37, Context 1, Stream 7
+    Section: Command line profiler metrics
+    ---------------------------------------------------------------------- --------------- ------------------------------
+    dram__bytes_read.sum.per_second                                           Gbyte/second                         128.74
+    dram__bytes_write.sum.per_second                                          Gbyte/second                          41.93
+    l1tex__t_bytes_pipe_lsu_mem_global_op_ld.sum.per_second                   Gbyte/second                         526.36
+    l1tex__t_bytes_pipe_lsu_mem_global_op_st.sum.per_second                   Gbyte/second                         284.87
+    sm__warps_active.avg.pct_of_peak_sustained_active                                    %                          89.72
+    smsp__sass_average_branch_targets_threads_uniform.pct                                %                          99.56
+    smsp__sass_average_data_bytes_per_sector_mem_global_op_ld.pct                        %                          12.08
+    smsp__sass_average_data_bytes_per_sector_mem_global_op_st.pct                        %                          12.50
+    ---------------------------------------------------------------------- --------------- ------------------------------
+
+  kernel_v2_b_uroll8(int, unsigned char *, unsigned char *, int, int), 2023-Feb-25 16:07:38, Context 1, Stream 7
+    Section: Command line profiler metrics
+    ---------------------------------------------------------------------- --------------- ------------------------------
+    dram__bytes_read.sum.per_second                                           Gbyte/second                          91.94
+    dram__bytes_write.sum.per_second                                          Gbyte/second                          42.19
+    l1tex__t_bytes_pipe_lsu_mem_global_op_ld.sum.per_second                   Gbyte/second                         521.95
+    l1tex__t_bytes_pipe_lsu_mem_global_op_st.sum.per_second                   Gbyte/second                         284.55
+    sm__warps_active.avg.pct_of_peak_sustained_active                                    %                          88.54
+    smsp__sass_average_branch_targets_threads_uniform.pct                                %                          99.55
+    smsp__sass_average_data_bytes_per_sector_mem_global_op_ld.pct                        %                          12.08
+    smsp__sass_average_data_bytes_per_sector_mem_global_op_st.pct                        %                          12.50
+    ---------------------------------------------------------------------- --------------- ------------------------------
+
+  kernel_v2_b_uroll8(int, unsigned char *, unsigned char *, int, int), 2023-Feb-25 16:07:39, Context 1, Stream 7
+    Section: Command line profiler metrics
+    ---------------------------------------------------------------------- --------------- ------------------------------
+    dram__bytes_read.sum.per_second                                           Gbyte/second                         129.11
+    dram__bytes_write.sum.per_second                                          Gbyte/second                          41.98
+    l1tex__t_bytes_pipe_lsu_mem_global_op_ld.sum.per_second                   Gbyte/second                         535.62
+    l1tex__t_bytes_pipe_lsu_mem_global_op_st.sum.per_second                   Gbyte/second                         285.16
+    sm__warps_active.avg.pct_of_peak_sustained_active                                    %                          89.39
+    smsp__sass_average_branch_targets_threads_uniform.pct                                %                          99.57
+    smsp__sass_average_data_bytes_per_sector_mem_global_op_ld.pct                        %                          11.85
+    smsp__sass_average_data_bytes_per_sector_mem_global_op_st.pct                        %                          12.50
+    ---------------------------------------------------------------------- --------------- ------------------------------
+
+  kernel_v2_b_uroll8(int, unsigned char *, unsigned char *, int, int), 2023-Feb-25 16:07:40, Context 1, Stream 7
+    Section: Command line profiler metrics
+    ---------------------------------------------------------------------- --------------- ------------------------------
+    dram__bytes_read.sum.per_second                                           Gbyte/second                         128.05
+    dram__bytes_write.sum.per_second                                          Gbyte/second                          41.93
+    l1tex__t_bytes_pipe_lsu_mem_global_op_ld.sum.per_second                   Gbyte/second                         531.66
+    l1tex__t_bytes_pipe_lsu_mem_global_op_st.sum.per_second                   Gbyte/second                         284.98
+    sm__warps_active.avg.pct_of_peak_sustained_active                                    %                          89.70
+    smsp__sass_average_branch_targets_threads_uniform.pct                                %                          99.58
+    smsp__sass_average_data_bytes_per_sector_mem_global_op_ld.pct                        %                          11.85
+    smsp__sass_average_data_bytes_per_sector_mem_global_op_st.pct                        %                          12.50
+    ---------------------------------------------------------------------- --------------- ------------------------------
+
+  kernel_v2_b_uroll8(int, unsigned char *, unsigned char *, int, int), 2023-Feb-25 16:07:41, Context 1, Stream 7
+    Section: Command line profiler metrics
+    ---------------------------------------------------------------------- --------------- ------------------------------
+    dram__bytes_read.sum.per_second                                           Gbyte/second                         128.38
+    dram__bytes_write.sum.per_second                                          Gbyte/second                          42.01
+    l1tex__t_bytes_pipe_lsu_mem_global_op_ld.sum.per_second                   Gbyte/second                         519.18
+    l1tex__t_bytes_pipe_lsu_mem_global_op_st.sum.per_second                   Gbyte/second                         285.14
+    sm__warps_active.avg.pct_of_peak_sustained_active                                    %                          89.72
+    smsp__sass_average_branch_targets_threads_uniform.pct                                %                          99.59
+    smsp__sass_average_data_bytes_per_sector_mem_global_op_ld.pct                        %                          12.09
+    smsp__sass_average_data_bytes_per_sector_mem_global_op_st.pct                        %                          12.50
+    ---------------------------------------------------------------------- --------------- ------------------------------
+
+  kernel_v2_b_uroll8(int, unsigned char *, unsigned char *, int, int), 2023-Feb-25 16:07:42, Context 1, Stream 7
+    Section: Command line profiler metrics
+    ---------------------------------------------------------------------- --------------- ------------------------------
+    dram__bytes_read.sum.per_second                                           Gbyte/second                          93.56
+    dram__bytes_write.sum.per_second                                          Gbyte/second                          42.19
+    l1tex__t_bytes_pipe_lsu_mem_global_op_ld.sum.per_second                   Gbyte/second                         528.46
+    l1tex__t_bytes_pipe_lsu_mem_global_op_st.sum.per_second                   Gbyte/second                         285.06
+    sm__warps_active.avg.pct_of_peak_sustained_active                                    %                          89.86
+    smsp__sass_average_branch_targets_threads_uniform.pct                                %                          99.58
+    smsp__sass_average_data_bytes_per_sector_mem_global_op_ld.pct                        %                          11.86
+    smsp__sass_average_data_bytes_per_sector_mem_global_op_st.pct                        %                          12.50
+    ---------------------------------------------------------------------- --------------- ------------------------------
+
+  kernel_v2_b_uroll8(int, unsigned char *, unsigned char *, int, int), 2023-Feb-25 16:07:43, Context 1, Stream 7
+    Section: Command line profiler metrics
+    ---------------------------------------------------------------------- --------------- ------------------------------
+    dram__bytes_read.sum.per_second                                           Gbyte/second                         127.33
+    dram__bytes_write.sum.per_second                                          Gbyte/second                          42.00
+    l1tex__t_bytes_pipe_lsu_mem_global_op_ld.sum.per_second                   Gbyte/second                         519.52
+    l1tex__t_bytes_pipe_lsu_mem_global_op_st.sum.per_second                   Gbyte/second                         285.27
+    sm__warps_active.avg.pct_of_peak_sustained_active                                    %                          89.73
+    smsp__sass_average_branch_targets_threads_uniform.pct                                %                          99.60
+    smsp__sass_average_data_bytes_per_sector_mem_global_op_ld.pct                        %                          12.02
+    smsp__sass_average_data_bytes_per_sector_mem_global_op_st.pct                        %                          12.50
+    ---------------------------------------------------------------------- --------------- ------------------------------
+
+  kernel_v2_b_uroll8(int, unsigned char *, unsigned char *, int, int), 2023-Feb-25 16:07:44, Context 1, Stream 7
+    Section: Command line profiler metrics
+    ---------------------------------------------------------------------- --------------- ------------------------------
+    dram__bytes_read.sum.per_second                                           Gbyte/second                         127.46
+    dram__bytes_write.sum.per_second                                          Gbyte/second                          41.93
+    l1tex__t_bytes_pipe_lsu_mem_global_op_ld.sum.per_second                   Gbyte/second                         499.65
+    l1tex__t_bytes_pipe_lsu_mem_global_op_st.sum.per_second                   Gbyte/second                         285.15
+    sm__warps_active.avg.pct_of_peak_sustained_active                                    %                          89.57
+    smsp__sass_average_branch_targets_threads_uniform.pct                                %                          99.62
+    smsp__sass_average_data_bytes_per_sector_mem_global_op_ld.pct                        %                          12.42
+    smsp__sass_average_data_bytes_per_sector_mem_global_op_st.pct                        %                          12.50
+    ---------------------------------------------------------------------- --------------- ------------------------------
+
+  kernel_v2_b_uroll8(int, unsigned char *, unsigned char *, int, int), 2023-Feb-25 16:07:45, Context 1, Stream 7
+    Section: Command line profiler metrics
+    ---------------------------------------------------------------------- --------------- ------------------------------
+    dram__bytes_read.sum.per_second                                           Gbyte/second                         127.05
+    dram__bytes_write.sum.per_second                                          Gbyte/second                          42.05
+    l1tex__t_bytes_pipe_lsu_mem_global_op_ld.sum.per_second                   Gbyte/second                         500.09
+    l1tex__t_bytes_pipe_lsu_mem_global_op_st.sum.per_second                   Gbyte/second                         285.17
+    sm__warps_active.avg.pct_of_peak_sustained_active                                    %                          87.92
+    smsp__sass_average_branch_targets_threads_uniform.pct                                %                          99.60
+    smsp__sass_average_data_bytes_per_sector_mem_global_op_ld.pct                        %                          12.34
+    smsp__sass_average_data_bytes_per_sector_mem_global_op_st.pct                        %                          12.50
+    ---------------------------------------------------------------------- --------------- ------------------------------
+
+  kernel_v2_b_uroll8(int, unsigned char *, unsigned char *, int, int), 2023-Feb-25 16:07:46, Context 1, Stream 7
+    Section: Command line profiler metrics
+    ---------------------------------------------------------------------- --------------- ------------------------------
+    dram__bytes_read.sum.per_second                                           Gbyte/second                         126.57
+    dram__bytes_write.sum.per_second                                          Gbyte/second                          42.00
+    l1tex__t_bytes_pipe_lsu_mem_global_op_ld.sum.per_second                   Gbyte/second                         523.53
+    l1tex__t_bytes_pipe_lsu_mem_global_op_st.sum.per_second                   Gbyte/second                         286.00
+    sm__warps_active.avg.pct_of_peak_sustained_active                                    %                          89.47
+    smsp__sass_average_branch_targets_threads_uniform.pct                                %                          99.61
+    smsp__sass_average_data_bytes_per_sector_mem_global_op_ld.pct                        %                          11.87
+    smsp__sass_average_data_bytes_per_sector_mem_global_op_st.pct                        %                          12.50
+    ---------------------------------------------------------------------- --------------- ------------------------------
+
+  kernel_v2_b_uroll8(int, unsigned char *, unsigned char *, int, int), 2023-Feb-25 16:07:47, Context 1, Stream 7
+    Section: Command line profiler metrics
+    ---------------------------------------------------------------------- --------------- ------------------------------
+    dram__bytes_read.sum.per_second                                           Gbyte/second                         127.34
+    dram__bytes_write.sum.per_second                                          Gbyte/second                          41.96
+    l1tex__t_bytes_pipe_lsu_mem_global_op_ld.sum.per_second                   Gbyte/second                         520.21
+    l1tex__t_bytes_pipe_lsu_mem_global_op_st.sum.per_second                   Gbyte/second                         285.62
+    sm__warps_active.avg.pct_of_peak_sustained_active                                    %                          89.79
+    smsp__sass_average_branch_targets_threads_uniform.pct                                %                          99.63
+    smsp__sass_average_data_bytes_per_sector_mem_global_op_ld.pct                        %                          11.87
+    smsp__sass_average_data_bytes_per_sector_mem_global_op_st.pct                        %                          12.50
+    ---------------------------------------------------------------------- --------------- ------------------------------
+
+  kernel_v2_b_uroll8(int, unsigned char *, unsigned char *, int, int), 2023-Feb-25 16:07:47, Context 1, Stream 7
+    Section: Command line profiler metrics
+    ---------------------------------------------------------------------- --------------- ------------------------------
+    dram__bytes_read.sum.per_second                                           Gbyte/second                         126.15
+    dram__bytes_write.sum.per_second                                          Gbyte/second                          41.98
+    l1tex__t_bytes_pipe_lsu_mem_global_op_ld.sum.per_second                   Gbyte/second                         519.05
+    l1tex__t_bytes_pipe_lsu_mem_global_op_st.sum.per_second                   Gbyte/second                         286.17
+    sm__warps_active.avg.pct_of_peak_sustained_active                                    %                          89.75
+    smsp__sass_average_branch_targets_threads_uniform.pct                                %                          99.63
+    smsp__sass_average_data_bytes_per_sector_mem_global_op_ld.pct                        %                          11.88
+    smsp__sass_average_data_bytes_per_sector_mem_global_op_st.pct                        %                          12.50
+    ---------------------------------------------------------------------- --------------- ------------------------------
+
+  kernel_v2_b_uroll8(int, unsigned char *, unsigned char *, int, int), 2023-Feb-25 16:07:48, Context 1, Stream 7
+    Section: Command line profiler metrics
+    ---------------------------------------------------------------------- --------------- ------------------------------
+    dram__bytes_read.sum.per_second                                           Gbyte/second                         126.50
+    dram__bytes_write.sum.per_second                                          Gbyte/second                          41.97
+    l1tex__t_bytes_pipe_lsu_mem_global_op_ld.sum.per_second                   Gbyte/second                         514.60
+    l1tex__t_bytes_pipe_lsu_mem_global_op_st.sum.per_second                   Gbyte/second                         285.40
+    sm__warps_active.avg.pct_of_peak_sustained_active                                    %                          89.68
+    smsp__sass_average_branch_targets_threads_uniform.pct                                %                          99.63
+    smsp__sass_average_data_bytes_per_sector_mem_global_op_ld.pct                        %                          11.88
+    smsp__sass_average_data_bytes_per_sector_mem_global_op_st.pct                        %                          12.50
+    ---------------------------------------------------------------------- --------------- ------------------------------
+
+  kernel_v2_b_uroll8(int, unsigned char *, unsigned char *, int, int), 2023-Feb-25 16:07:49, Context 1, Stream 7
+    Section: Command line profiler metrics
+    ---------------------------------------------------------------------- --------------- ------------------------------
+    dram__bytes_read.sum.per_second                                           Gbyte/second                         125.01
+    dram__bytes_write.sum.per_second                                          Gbyte/second                          42.02
+    l1tex__t_bytes_pipe_lsu_mem_global_op_ld.sum.per_second                   Gbyte/second                         506.91
+    l1tex__t_bytes_pipe_lsu_mem_global_op_st.sum.per_second                   Gbyte/second                         285.18
+    sm__warps_active.avg.pct_of_peak_sustained_active                                    %                          88.62
+    smsp__sass_average_branch_targets_threads_uniform.pct                                %                          99.63
+    smsp__sass_average_data_bytes_per_sector_mem_global_op_ld.pct                        %                          11.96
+    smsp__sass_average_data_bytes_per_sector_mem_global_op_st.pct                        %                          12.50
+    ---------------------------------------------------------------------- --------------- ------------------------------
+
+  kernel_v2_b_uroll8(int, unsigned char *, unsigned char *, int, int), 2023-Feb-25 16:07:50, Context 1, Stream 7
+    Section: Command line profiler metrics
+    ---------------------------------------------------------------------- --------------- ------------------------------
+    dram__bytes_read.sum.per_second                                           Gbyte/second                         126.02
+    dram__bytes_write.sum.per_second                                          Gbyte/second                          42.00
+    l1tex__t_bytes_pipe_lsu_mem_global_op_ld.sum.per_second                   Gbyte/second                         511.99
+    l1tex__t_bytes_pipe_lsu_mem_global_op_st.sum.per_second                   Gbyte/second                         285.62
+    sm__warps_active.avg.pct_of_peak_sustained_active                                    %                          89.35
+    smsp__sass_average_branch_targets_threads_uniform.pct                                %                          99.63
+    smsp__sass_average_data_bytes_per_sector_mem_global_op_ld.pct                        %                          11.89
+    smsp__sass_average_data_bytes_per_sector_mem_global_op_st.pct                        %                          12.50
+    ---------------------------------------------------------------------- --------------- ------------------------------
+
+  kernel_v2_b_uroll8(int, unsigned char *, unsigned char *, int, int), 2023-Feb-25 16:07:51, Context 1, Stream 7
+    Section: Command line profiler metrics
+    ---------------------------------------------------------------------- --------------- ------------------------------
+    dram__bytes_read.sum.per_second                                           Gbyte/second                         124.63
+    dram__bytes_write.sum.per_second                                          Gbyte/second                          42.00
+    l1tex__t_bytes_pipe_lsu_mem_global_op_ld.sum.per_second                   Gbyte/second                         510.23
+    l1tex__t_bytes_pipe_lsu_mem_global_op_st.sum.per_second                   Gbyte/second                         286.09
+    sm__warps_active.avg.pct_of_peak_sustained_active                                    %                          89.62
+    smsp__sass_average_branch_targets_threads_uniform.pct                                %                          99.65
+    smsp__sass_average_data_bytes_per_sector_mem_global_op_ld.pct                        %                          11.89
+    smsp__sass_average_data_bytes_per_sector_mem_global_op_st.pct                        %                          12.50
+    ---------------------------------------------------------------------- --------------- ------------------------------
+
+  kernel_v2_b_uroll8(int, unsigned char *, unsigned char *, int, int), 2023-Feb-25 16:07:52, Context 1, Stream 7
+    Section: Command line profiler metrics
+    ---------------------------------------------------------------------- --------------- ------------------------------
+    dram__bytes_read.sum.per_second                                           Gbyte/second                          92.58
+    dram__bytes_write.sum.per_second                                          Gbyte/second                          42.23
+    l1tex__t_bytes_pipe_lsu_mem_global_op_ld.sum.per_second                   Gbyte/second                         508.20
+    l1tex__t_bytes_pipe_lsu_mem_global_op_st.sum.per_second                   Gbyte/second                         285.64
+    sm__warps_active.avg.pct_of_peak_sustained_active                                    %                          89.85
+    smsp__sass_average_branch_targets_threads_uniform.pct                                %                          99.63
+    smsp__sass_average_data_bytes_per_sector_mem_global_op_ld.pct                        %                          11.89
+    smsp__sass_average_data_bytes_per_sector_mem_global_op_st.pct                        %                          12.50
+    ---------------------------------------------------------------------- --------------- ------------------------------
+
+  kernel_v2_b_uroll8(int, unsigned char *, unsigned char *, int, int), 2023-Feb-25 16:07:53, Context 1, Stream 7
+    Section: Command line profiler metrics
+    ---------------------------------------------------------------------- --------------- ------------------------------
+    dram__bytes_read.sum.per_second                                           Gbyte/second                         125.10
+    dram__bytes_write.sum.per_second                                          Gbyte/second                          42.01
+    l1tex__t_bytes_pipe_lsu_mem_global_op_ld.sum.per_second                   Gbyte/second                         506.56
+    l1tex__t_bytes_pipe_lsu_mem_global_op_st.sum.per_second                   Gbyte/second                         285.68
+    sm__warps_active.avg.pct_of_peak_sustained_active                                    %                          89.73
+    smsp__sass_average_branch_targets_threads_uniform.pct                                %                          99.65
+    smsp__sass_average_data_bytes_per_sector_mem_global_op_ld.pct                        %                          11.89
+    smsp__sass_average_data_bytes_per_sector_mem_global_op_st.pct                        %                          12.50
+    ---------------------------------------------------------------------- --------------- ------------------------------
+
+  kernel_v2_b_uroll8(int, unsigned char *, unsigned char *, int, int), 2023-Feb-25 16:07:54, Context 1, Stream 7
+    Section: Command line profiler metrics
+    ---------------------------------------------------------------------- --------------- ------------------------------
+    dram__bytes_read.sum.per_second                                           Gbyte/second                         123.97
+    dram__bytes_write.sum.per_second                                          Gbyte/second                          42.07
+    l1tex__t_bytes_pipe_lsu_mem_global_op_ld.sum.per_second                   Gbyte/second                         485.62
+    l1tex__t_bytes_pipe_lsu_mem_global_op_st.sum.per_second                   Gbyte/second                         285.49
+    sm__warps_active.avg.pct_of_peak_sustained_active                                    %                          87.96
+    smsp__sass_average_branch_targets_threads_uniform.pct                                %                          99.68
+    smsp__sass_average_data_bytes_per_sector_mem_global_op_ld.pct                        %                          12.27
+    smsp__sass_average_data_bytes_per_sector_mem_global_op_st.pct                        %                          12.50
+    ---------------------------------------------------------------------- --------------- ------------------------------
+
+  kernel_v2_b_uroll8(int, unsigned char *, unsigned char *, int, int), 2023-Feb-25 16:07:55, Context 1, Stream 7
+    Section: Command line profiler metrics
+    ---------------------------------------------------------------------- --------------- ------------------------------
+    dram__bytes_read.sum.per_second                                           Gbyte/second                         124.73
+    dram__bytes_write.sum.per_second                                          Gbyte/second                          41.96
+    l1tex__t_bytes_pipe_lsu_mem_global_op_ld.sum.per_second                   Gbyte/second                         502.43
+    l1tex__t_bytes_pipe_lsu_mem_global_op_st.sum.per_second                   Gbyte/second                         285.66
+    sm__warps_active.avg.pct_of_peak_sustained_active                                    %                          89.60
+    smsp__sass_average_branch_targets_threads_uniform.pct                                %                          99.65
+    smsp__sass_average_data_bytes_per_sector_mem_global_op_ld.pct                        %                          11.90
+    smsp__sass_average_data_bytes_per_sector_mem_global_op_st.pct                        %                          12.50
+    ---------------------------------------------------------------------- --------------- ------------------------------
+
+  kernel_v2_b_uroll8(int, unsigned char *, unsigned char *, int, int), 2023-Feb-25 16:07:56, Context 1, Stream 7
+    Section: Command line profiler metrics
+    ---------------------------------------------------------------------- --------------- ------------------------------
+    dram__bytes_read.sum.per_second                                           Gbyte/second                         123.95
+    dram__bytes_write.sum.per_second                                          Gbyte/second                          42.08
+    l1tex__t_bytes_pipe_lsu_mem_global_op_ld.sum.per_second                   Gbyte/second                         502.19
+    l1tex__t_bytes_pipe_lsu_mem_global_op_st.sum.per_second                   Gbyte/second                         286.52
+    sm__warps_active.avg.pct_of_peak_sustained_active                                    %                          89.86
+    smsp__sass_average_branch_targets_threads_uniform.pct                                %                          99.68
+    smsp__sass_average_data_bytes_per_sector_mem_global_op_ld.pct                        %                          11.90
+    smsp__sass_average_data_bytes_per_sector_mem_global_op_st.pct                        %                          12.50
+    ---------------------------------------------------------------------- --------------- ------------------------------
+
+  kernel_v2_b_uroll8(int, unsigned char *, unsigned char *, int, int), 2023-Feb-25 16:07:57, Context 1, Stream 7
+    Section: Command line profiler metrics
+    ---------------------------------------------------------------------- --------------- ------------------------------
+    dram__bytes_read.sum.per_second                                           Gbyte/second                         124.43
+    dram__bytes_write.sum.per_second                                          Gbyte/second                          42.03
+    l1tex__t_bytes_pipe_lsu_mem_global_op_ld.sum.per_second                   Gbyte/second                         500.53
+    l1tex__t_bytes_pipe_lsu_mem_global_op_st.sum.per_second                   Gbyte/second                         286.10
+    sm__warps_active.avg.pct_of_peak_sustained_active                                    %                          89.68
+    smsp__sass_average_branch_targets_threads_uniform.pct                                %                          99.66
+    smsp__sass_average_data_bytes_per_sector_mem_global_op_ld.pct                        %                          11.91
+    smsp__sass_average_data_bytes_per_sector_mem_global_op_st.pct                        %                          12.50
+    ---------------------------------------------------------------------- --------------- ------------------------------
+
+  kernel_v2_b_uroll8(int, unsigned char *, unsigned char *, int, int), 2023-Feb-25 16:07:58, Context 1, Stream 7
+    Section: Command line profiler metrics
+    ---------------------------------------------------------------------- --------------- ------------------------------
+    dram__bytes_read.sum.per_second                                           Gbyte/second                         122.46
+    dram__bytes_write.sum.per_second                                          Gbyte/second                          42.10
+    l1tex__t_bytes_pipe_lsu_mem_global_op_ld.sum.per_second                   Gbyte/second                         480.52
+    l1tex__t_bytes_pipe_lsu_mem_global_op_st.sum.per_second                   Gbyte/second                         287.31
+    sm__warps_active.avg.pct_of_peak_sustained_active                                    %                          88.06
+    smsp__sass_average_branch_targets_threads_uniform.pct                                %                          99.67
+    smsp__sass_average_data_bytes_per_sector_mem_global_op_ld.pct                        %                          12.42
+    smsp__sass_average_data_bytes_per_sector_mem_global_op_st.pct                        %                          12.50
+    ---------------------------------------------------------------------- --------------- ------------------------------
+
+  kernel_v2_b_uroll8(int, unsigned char *, unsigned char *, int, int), 2023-Feb-25 16:07:59, Context 1, Stream 7
+    Section: Command line profiler metrics
+    ---------------------------------------------------------------------- --------------- ------------------------------
+    dram__bytes_read.sum.per_second                                           Gbyte/second                         124.01
+    dram__bytes_write.sum.per_second                                          Gbyte/second                          41.96
+    l1tex__t_bytes_pipe_lsu_mem_global_op_ld.sum.per_second                   Gbyte/second                         467.91
+    l1tex__t_bytes_pipe_lsu_mem_global_op_st.sum.per_second                   Gbyte/second                         285.90
+    sm__warps_active.avg.pct_of_peak_sustained_active                                    %                          89.73
+    smsp__sass_average_branch_targets_threads_uniform.pct                                %                          99.71
+    smsp__sass_average_data_bytes_per_sector_mem_global_op_ld.pct                        %                          12.50
+    smsp__sass_average_data_bytes_per_sector_mem_global_op_st.pct                        %                          12.50
+    ---------------------------------------------------------------------- --------------- ------------------------------
+
+  kernel_v2_b_uroll8(int, unsigned char *, unsigned char *, int, int), 2023-Feb-25 16:08:00, Context 1, Stream 7
+    Section: Command line profiler metrics
+    ---------------------------------------------------------------------- --------------- ------------------------------
+    dram__bytes_read.sum.per_second                                           Gbyte/second                         118.28
+    dram__bytes_write.sum.per_second                                          Gbyte/second                          42.15
+    l1tex__t_bytes_pipe_lsu_mem_global_op_ld.sum.per_second                   Gbyte/second                         495.98
+    l1tex__t_bytes_pipe_lsu_mem_global_op_st.sum.per_second                   Gbyte/second                         286.59
+    sm__warps_active.avg.pct_of_peak_sustained_active                                    %                          89.59
+    smsp__sass_average_branch_targets_threads_uniform.pct                                %                          99.67
+    smsp__sass_average_data_bytes_per_sector_mem_global_op_ld.pct                        %                          11.92
+    smsp__sass_average_data_bytes_per_sector_mem_global_op_st.pct                        %                          12.50
+    ---------------------------------------------------------------------- --------------- ------------------------------
+
+  kernel_v2_b_uroll8(int, unsigned char *, unsigned char *, int, int), 2023-Feb-25 16:08:01, Context 1, Stream 7
+    Section: Command line profiler metrics
+    ---------------------------------------------------------------------- --------------- ------------------------------
+    dram__bytes_read.sum.per_second                                           Gbyte/second                         123.35
+    dram__bytes_write.sum.per_second                                          Gbyte/second                          42.04
+    l1tex__t_bytes_pipe_lsu_mem_global_op_ld.sum.per_second                   Gbyte/second                         491.94
+    l1tex__t_bytes_pipe_lsu_mem_global_op_st.sum.per_second                   Gbyte/second                         286.22
+    sm__warps_active.avg.pct_of_peak_sustained_active                                    %                          89.62
+    smsp__sass_average_branch_targets_threads_uniform.pct                                %                          99.72
+    smsp__sass_average_data_bytes_per_sector_mem_global_op_ld.pct                        %                          11.92
+    smsp__sass_average_data_bytes_per_sector_mem_global_op_st.pct                        %                          12.50
+    ---------------------------------------------------------------------- --------------- ------------------------------
+
+  kernel_v2_b_uroll8(int, unsigned char *, unsigned char *, int, int), 2023-Feb-25 16:08:02, Context 1, Stream 7
+    Section: Command line profiler metrics
+    ---------------------------------------------------------------------- --------------- ------------------------------
+    dram__bytes_read.sum.per_second                                           Gbyte/second                         121.73
+    dram__bytes_write.sum.per_second                                          Gbyte/second                          42.03
+    l1tex__t_bytes_pipe_lsu_mem_global_op_ld.sum.per_second                   Gbyte/second                         478.29
+    l1tex__t_bytes_pipe_lsu_mem_global_op_st.sum.per_second                   Gbyte/second                         285.56
+    sm__warps_active.avg.pct_of_peak_sustained_active                                    %                          87.92
+    smsp__sass_average_branch_targets_threads_uniform.pct                                %                          99.68
+    smsp__sass_average_data_bytes_per_sector_mem_global_op_ld.pct                        %                          12.13
+    smsp__sass_average_data_bytes_per_sector_mem_global_op_st.pct                        %                          12.50
+    ---------------------------------------------------------------------- --------------- ------------------------------
+
+  kernel_v2_b_uroll8(int, unsigned char *, unsigned char *, int, int), 2023-Feb-25 16:08:03, Context 1, Stream 7
+    Section: Command line profiler metrics
+    ---------------------------------------------------------------------- --------------- ------------------------------
+    dram__bytes_read.sum.per_second                                           Gbyte/second                         122.09
+    dram__bytes_write.sum.per_second                                          Gbyte/second                          42.10
+    l1tex__t_bytes_pipe_lsu_mem_global_op_ld.sum.per_second                   Gbyte/second                         489.59
+    l1tex__t_bytes_pipe_lsu_mem_global_op_st.sum.per_second                   Gbyte/second                         286.78
+    sm__warps_active.avg.pct_of_peak_sustained_active                                    %                          89.92
+    smsp__sass_average_branch_targets_threads_uniform.pct                                %                          99.70
+    smsp__sass_average_data_bytes_per_sector_mem_global_op_ld.pct                        %                          11.93
+    smsp__sass_average_data_bytes_per_sector_mem_global_op_st.pct                        %                          12.50
+    ---------------------------------------------------------------------- --------------- ------------------------------
+

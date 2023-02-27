@@ -52,7 +52,7 @@ int main(int argc, char **argv){
 
     
     //Since we use shared memory here...
-    CHECK(cudaDeviceSetCacheConfig(cudaFuncCachePreferShared));
+    //CHECK(cudaDeviceSetCacheConfig(cudaFuncCachePreferShared)); <--- CURSE YOU!!!
 
     dim3 block(BLOCK_DIM_X);
     dim3 grid(((capacity + 1) + block.x - 1)/block.x);
