@@ -214,7 +214,7 @@ int subsetSumOptimization_exhaustive_GPU(int volumes[N], int capacity, int jump)
 			if(new_solution > FINAL_RESULT) FINAL_RESULT = new_solution;
 
 			//If we are very lucky...
-			//if(FINAL_RESULT == capacity) break;
+			if(FINAL_RESULT == capacity) break;
 		}
 
 		//Sixth: update the index
