@@ -113,16 +113,20 @@ unsigned char subsetSumDecision_DP_v2(int* volumes, int capacity, int n_items){
 //We also avoid performing useless operations.
 
 unsigned char subsetSumDecision_DP_v3(int* volumes, int capacity, int n_items){
-    if(capacity == 0 || n_items == 0){
-        return 0;
-    }
+    if(capacity == 0){
+		return TRUE;
+	}
+	if(n_items == 0){
+		return FALSE;
+	}
+
     unsigned char* B = (unsigned char*) malloc((capacity+1)*sizeof(unsigned char));
     for(int i = capacity; i > 0; i--){
         B[i] = FALSE;
     }
     B[0] = TRUE;
 
-    unsigned char res = 0;
+    unsigned char res = FALSE;
 
     //now, the value of each cell of each row can be fully determined by the the previous row,
     //that is actually the same row
